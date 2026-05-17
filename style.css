@@ -101,18 +101,18 @@ body {
 .houseGreen {
   position: absolute;
   left: 10%;
-  bottom: 90%;
+  bottom: 80%;
 }
 
 .houseYellow {
   position: absolute;
-  left: 90%;
+  left: 80%;
   bottom: 30%;
 }
 
 .houseBlue {
   position: absolute;
-  left: 90%;
+  left: 80%;
   bottom: 70%;
 }
 
