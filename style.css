@@ -122,20 +122,3 @@ img {
   pointer-events: none;
 }
 
-#rotateDevice {
-  position: fixed;
-  inset: 0;
-  background: black;
-  color: white;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 20000;
-  font-size: 2rem;
-}
-
-@media (orientation: portrait) {
-  #rotateDevice {
-    display: flex;
-  }
-}
