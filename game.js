@@ -1,34 +1,50 @@
+const planeGreen1 = document.getElementById("planeGreen1");
+const planeYellow1 = document.getElementById("planeYellow1");
+const planeBlue1 = document.getElementById("planeBlue1");
+const planeX = window.innerWidth * 0.08;
+//const planeY = window.innerWidth * 0.08;
+const speed = 2;
+
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
 
 const button2 = document.getElementById("arrowBtn2");
 const img2 = document.getElementById("arrowImg2");
 
-const plane = document.getElementById("plane");
-const plane2 = document.getElementById("plane2");
-const plane3 = document.getElementById("plane3");
-const planeX = window.innerWidth * 0.08;
+// GREEN PLANE
+let x = planeX, y = 0; 
+let verticalLock = false;
+let firstDecisionMade = false;
+let secondDecisionMade = false;
 
+// YELLOW PLANE
+let x2 = -250, y2 = 0; //!
+let verticalLock2 = false;
+let firstDecisionMade2 = false;
+let secondDecisionMade2 = false;
+
+// BLUE PLANE
+let x3 = -250, y3 = 0; //!
+let verticalLock3 = false;
+let firstDecisionMade3 = false;
+let secondDecisionMade3 = false;
+
+// SETTINGS
+let decisionPoint1;
+let decisionPoint2;
+
+function updateDecisionPoints() {
+  decisionPoint1 = window.innerHeight * 0.3; //!
+  decisionPoint2 = window.innerHeight * 0.7; //!
+}
+
+
+// BUTTONS
 let mode1Right = false;
 let mode2Right = false;
-
 let mode1Right_2 = false;
 let mode2Right_2 = false;
 
-const countdownEl = document.getElementById("countdown");
-
-let gameOver = false;
-let gameStarted = false;
-
-// GAME OVER FUNCTION
-function triggerGameOver() {
-  if (gameOver) return;
-  gameOver = true;
-
-  document.getElementById("gameOverScreen").style.display = "flex";
-}
-
-// BUTTONS
 button1.addEventListener("click", () => {
   mode1Right = !mode1Right;
 
@@ -49,45 +65,16 @@ button2.addEventListener("click", () => {
   mode2Right_2 = mode2Right;
 });
 
-// SETTINGS
-const speed = 2;
-
-let decisionPoint1;
-let decisionPoint2;
-
-function updateDecisionPoints() {
-  decisionPoint1 = window.innerHeight * 0.3; //!
-  decisionPoint2 = window.innerHeight * 0.7; //!
-}
-
 updateDecisionPoints();
 
 window.addEventListener("resize", updateDecisionPoints);
 
-// GREEN PLANE
-//greenX = window.innerWidth * 0.08;
-let x = planeX, y = 0; //!
-let verticalLock = false;
-let firstDecisionMade = false;
-let secondDecisionMade = false;
 
-// YELLOW PLANE
-let x2 = -250, y2 = 0; //!
-let verticalLock2 = false;
-let firstDecisionMade2 = false;
-let secondDecisionMade2 = false;
-
-// BLUE PLANE
-let x3 = -250, y3 = 0; //!
-let verticalLock3 = false;
-let firstDecisionMade3 = false;
-let secondDecisionMade3 = false;
-
-/* ================= GREEN ================= */
+// ================= GREEN ================= 
 function animate() {
   if (gameOver || !gameStarted) return;
 
-    plane.style.visibility = "visible";
+    planeGreen1.style.visibility = "visible";
 
   if (!verticalLock) {
     y += speed;
@@ -114,18 +101,17 @@ function animate() {
     x += speed;
   }
 
-  plane.style.transform = verticalLock ? "rotate(90deg)" : "rotate(0deg)";
-  plane.style.left = x + "px";
-  plane.style.bottom = y + "px";
-
+  planeGreen1.style.transform = verticalLock ? "rotate(90deg)" : "rotate(0deg)";
+  planeGreen1.style.left = x + "px";
+  planeGreen1.style.bottom = y + "px";
   requestAnimationFrame(animate);
 }
 
-/* ================= YELLOW ================= */
+// ================= YELLOW =================
 function animate2() {
   if (gameOver || !gameStarted) return;
 
-  plane2.style.visibility = "visible";
+  planeYellow1.style.visibility = "visible";
 
   if (!verticalLock2) {
     x2 += speed;
@@ -153,18 +139,17 @@ function animate2() {
     y2 += speed;
   }
 
-  plane2.style.transform = verticalLock2 ? "rotate(-90deg)" : "rotate(0deg)";
-  plane2.style.left = x2 + "px";
-  plane2.style.bottom = y2 + "px";
-
+   planeYellow1.style.transform = verticalLock2 ? "rotate(-90deg)" : "rotate(0deg)";
+   planeYellow1.style.left = x2 + "px";
+   planeYellow1.style.bottom = y2 + "px";
   requestAnimationFrame(animate2);
 }
 
-/* ================= BLUE ================= */
+// ================= BLUE =================
 function animate3() {
   if (gameOver || !gameStarted) return;
 
-  plane3.style.visibility = "visible";
+  planeBlue1.style.visibility = "visible";
 
   if (!verticalLock3) {
     x3 += speed;
@@ -193,39 +178,8 @@ function animate3() {
     y3 += speed;
   }
 
-  plane3.style.transform = verticalLock3 ? "rotate(-90deg)" : "rotate(0deg)";
-  plane3.style.left = x3 + "px";
-  plane3.style.bottom = y3 + "px";
-
+  planeBlue1.style.transform = verticalLock3 ? "rotate(-90deg)" : "rotate(0deg)";
+  planeBlue1.style.left = x3 + "px";
+  planeBlue1.style.bottom = y3 + "px";
   requestAnimationFrame(animate3);
 }
-
-
-
-/* ================= START GAME ================= */
-function startGame() {
-  gameStarted = true;
-
-  animate();
-
-  // KEEP YOUR ORIGINAL STAGGERING
-  setTimeout(() => animate2(), 3000);
-  setTimeout(() => animate3(), 7000);
-}
-
-/* ================= COUNTDOWN ================= */
-let count = 3;
-
-const interval = setInterval(() => {
-  count--;
-
-  if (count > 0) {
-    countdownEl.textContent = count;
-  } else if (count === 0) {
-    countdownEl.textContent = "GO!";
-  } else {
-    clearInterval(interval);
-    countdownEl.style.display = "none";
-    startGame();
-  }
-}, 1000);

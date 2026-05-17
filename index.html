@@ -1,40 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flying Airplane</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaneLogic</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <body>
 
-</head>
+    <div id="game">
 
-<body>
+      <div id="countdown">3</div>
+      <div id="gameOverScreen">GAME OVER</div>
 
-  <div id="game">
+      <img src="pngs/planeGreen.png" class="airplane" id="planeGreen1">
+      <img src="pngs/planeYellow.png" class="airplane" id="planeYellow1">
+      <img src="pngs/planeBlue.png" class="airplane" id="planeBlue1">
+      <img src="pngs/planeRed.png" class="airplane" id="planeRed1">
+      <img src="pngs/planePurple.png" class="airplane" id="planePurple1">
+      <img src="pngs/planePink.png" class="airplane" id="planePink1">
+      <img src="pngs/planeOrange.png" class="airplane" id="planeOrange1">
+      <img src="pngs/planeBlack.png" class="airplane" id="planeBlack1">
+      <img src="pngs/planeDarkGreen.png" class="airplane" id="planeDarkGreen1">
+      <img src="pngs/planeDarkBlue.png" class="airplane" id="planeDarkBlue1">
+      
+      <img src="pngs/houseGreen.png" class="houseGreen" id="houseGreen">
+      <img src="pngs/houseYellow.png" class="houseYellow" id="houseBlue">
+      <img src="pngs/houseBlue.png" class="houseBlue" id="houseYellow">
+      <img src="pngs/houseRed.png" class="houseRed" id="houseRed">
+      <img src="pngs/housePurple.png" class="housePurple" id="housePurple">
+      <img src="pngs/housePink.png" class="housePink" id="housePink">
+      <img src="pngs/houseOrange.png" class="houseOrange" id="houseOrange">
+      <img src="pngs/houseBlack.png" class="houseBlack" id="houseBlack">
+      <img src="pngs/houseDarkGreen.png" class="houseDarkGreen" id="houseDarkGreen">
+      <img src="pngs/houseDarkBlue.png" class="houseDarkBlue" id="houseDarkBlue">
 
-  <div id="countdown">3</div>
-  <div id="gameOverScreen">GAME OVER</div>
+      <!--
+      <img src="pngs/clouds1.png" class="clouds1" id="clouds1">
+      <img src="pngs/clouds2.png" class="clouds2" id="clouds2">
+      <img src="pngs/earth.png" class="earth" id="earth">
+      <img src="pngs/mars.png" class="earth" id="mars">
+      <img src="pngs/appIcon.png" class="appIcon" id="appIcon">
+      -->
 
-  <button class="arrow-button" id="arrowBtn">
-    <img src="pngs/arrowRight.png" alt="arrowUp" class="arrow" id="arrowImg">
-  </button>
+      <button class="arrow-button" id="arrowBtn">
+        <img src="pngs/arrowRight.png" alt="arrowUp" class="arrow" id="arrowImg">
+      </button>
 
-  <button id="arrowBtn2" class="arrow-button">
-    <img src="pngs/arrowRight.png" class="arrowUp" id="arrowImg2">
-  </button>
+      <button id="arrowBtn2" class="arrow-button">
+        <img src="pngs/arrowRight.png" class="arrowUp" id="arrowImg2">
+      </button>
 
-  <img src="pngs/greenUp.png" class="airplane" id="plane">
-  <img src="pngs/yellowRight.png" class="airplane" id="plane2">
-  <img src="pngs/BlueRight.png" class="airplane" id="plane3">
-  <img src="pngs/houseGreen.png" class="houseGreen" id="house1">
-  <img src="pngs/houseYellow.png" class="houseYellow" id="house2">
-  <img src="pngs/houseBlue.png" class="houseBlue" id="house3">
+      <script src="checkOrientation.js"></script>
+      <script src="countdown.js"></script>
+      <script src="startGame.js"></script>
+      <script src="game.js"></script>
+      <script src="gameOver.js"></script>
 
-  </div>
-  
-  <script src="game.js"></script>
+      <div id="rotateOverlay">
+        <div class="rotateMessage">
+          <h1>Rotate Device</h1>
+          <p>Please use portrait mode to play.</p>
+        </div>
+      </div>
 
-</body>
+    </div> 
+
+  </body>
+
 </html>

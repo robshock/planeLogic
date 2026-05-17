@@ -1,3 +1,27 @@
+.houseGreen { position: absolute; left: 10%; bottom: 87%; }
+.houseYellow { position: absolute; left: 80%; bottom: 30%; }
+.houseBlue { position: absolute; left: 80%; bottom: 70%; }
+.houseRed { position: absolute; left: 80%; bottom: 70%; }
+.houseOrange { position: absolute; left: 80%; bottom: 70%; }
+.housePurple { position: absolute; left: 80%; bottom: 70%; }
+.houseBlack { position: absolute; left: 80%; bottom: 70%; }
+.houseDarkGreen { position: absolute; left: 80%; bottom: 70%; }
+.houseDarkBlue { position: absolute; left: 80%; bottom: 70%; }
+
+#planeGreen1 {visibility: hidden;}
+#planeYellow1 {visibility: hidden;}
+#planeBlue1 {visibility: hidden;}
+#planeRed1 {visibility: hidden;}
+#planePurple1 {visibility: hidden;}
+#planePink1 {visibility: hidden;}
+#planeBlack1 {visibility: hidden;}
+#planeOrange {visibility: hidden;}
+#planeDarkGreen {visibility: hidden;}
+#planeDarkBlue1 {visibility: hidden;}
+
+#arrowBtn {left: 10%;bottom: 30%;}
+#arrowBtn2 {left: 10%;bottom: 70%;}
+
 /* Set the body background */
 body {
   margin: 0;
@@ -7,11 +31,40 @@ body {
   font-family: sans-serif;
 }
 
-#game {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+/* Airplane styling (applies to all planes) */
+.airplane {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: clamp(60px, 10vw, 120px);
+  transition: transform 0.3s linear;
+  z-index: 20;
+  will-change: transform, left, bottom;
+}
+
+/* Arrow button styling */
+.arrow-button {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10; /* behind plane */
+}
+
+/* Make all arrow images the same size */
+.arrow,
+.arrowUp {
+  width: clamp(40px, 10vw, 70px);
+  height: auto;
+}
+
+/* button click feedback */
+.arrow-button:active { transform: scale(0.92); }
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 #gameOverScreen {
@@ -43,86 +96,46 @@ body {
       font-family: sans-serif;
 }
 
-
-/* Airplane styling (applies to both planes) */
-.airplane {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-
-  width: clamp(60px, 10vw, 120px);
-
-  transition: transform 0.3s linear;
-  z-index: 20;
-  will-change: transform, left, bottom;
+/* game wrapper */
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-#plane {
-  visibility: hidden;
+/* ROTATE SCREEN OVERLAY */
+#rotateOverlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  z-index: 9999;
+  font-family: Arial, sans-serif;
 }
 
-#plane2 {
-  visibility: hidden;
+.rotateMessage h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-#plane3 {
-  visibility: hidden;
+.rotateMessage p {
+  font-size: 1.2rem;
 }
 
-/* Arrow button styling */
-.arrow-button {
-  position: absolute;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  z-index: 10; /* behind plane */
+/* MOBILE LANDSCAPE ONLY */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #rotateOverlay {
+    display: flex;
+  }
+
+  #game {
+    display: none;
+  }
 }
-
-/* Button positions */
-#arrowBtn {
-  left: 10%;
-  bottom: 30%;
-}
-
-#arrowBtn2 {
-  left: 10%;
-  bottom: 70%;
-}
-
-/* Make all arrow images the same size */
-.arrow,
-.arrowUp {
-  width: clamp(40px, 10vw, 70px);
-  height: auto;
-}
-
-
-.houseGreen {
-  position: absolute;
-  left: 10%;
-  bottom: 87%;
-}
-
-.houseYellow {
-  position: absolute;
-  left: 80%;
-  bottom: 30%;
-}
-
-.houseBlue {
-  position: absolute;
-  left: 80%;
-  bottom: 70%;
-}
-
-.arrow-button:active {
-  transform: scale(0.92);
-}
-
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
