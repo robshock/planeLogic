@@ -7,6 +7,7 @@ const img2 = document.getElementById("arrowImg2");
 const plane = document.getElementById("plane");
 const plane2 = document.getElementById("plane2");
 const plane3 = document.getElementById("plane3");
+const planeX = window.innerWidth * 0.08;
 
 let mode1Right = false;
 let mode2Right = false;
@@ -32,8 +33,8 @@ button1.addEventListener("click", () => {
   mode1Right = !mode1Right;
 
   img1.src = mode1Right
-    ? "pngs/arrowRight.png"
-    : "pngs/arrowUp.png";
+    ? "pngs/arrowUp.png"
+    : "pngs/arrowRight.png";
 
   mode1Right_2 = mode1Right;
 });
@@ -42,8 +43,8 @@ button2.addEventListener("click", () => {
   mode2Right = !mode2Right;
 
   img2.src = mode2Right
-    ? "pngs/arrowRight.png"
-    : "pngs/arrowUp.png";
+    ? "pngs/arrowUp.png"
+    : "pngs/arrowRight.png";
 
   mode2Right_2 = mode2Right;
 });
@@ -55,8 +56,8 @@ let decisionPoint1;
 let decisionPoint2;
 
 function updateDecisionPoints() {
-  decisionPoint1 = window.innerWidth * 0.4;
-  decisionPoint2 = window.innerWidth * 0.75;
+  decisionPoint1 = window.innerHeight * 0.3; //!
+  decisionPoint2 = window.innerHeight * 0.7; //!
 }
 
 updateDecisionPoints();
@@ -64,19 +65,20 @@ updateDecisionPoints();
 window.addEventListener("resize", updateDecisionPoints);
 
 // GREEN PLANE
-let x = 0, y = 0;
+//greenX = window.innerWidth * 0.08;
+let x = planeX, y = 0; //!
 let verticalLock = false;
 let firstDecisionMade = false;
 let secondDecisionMade = false;
 
 // YELLOW PLANE
-let x2 = -250, y2 = 0;
+let x2 = -250, y2 = 0; //!
 let verticalLock2 = false;
 let firstDecisionMade2 = false;
 let secondDecisionMade2 = false;
 
 // BLUE PLANE
-let x3 = -250, y3 = 0;
+let x3 = -250, y3 = 0; //!
 let verticalLock3 = false;
 let firstDecisionMade3 = false;
 let secondDecisionMade3 = false;
@@ -85,10 +87,12 @@ let secondDecisionMade3 = false;
 function animate() {
   if (gameOver || !gameStarted) return;
 
-  if (!verticalLock) {
-    x += speed;
+    plane.style.visibility = "visible";
 
-    if (!firstDecisionMade && x >= decisionPoint1) {
+  if (!verticalLock) {
+    y += speed;
+
+    if (!firstDecisionMade && y >= decisionPoint1) {
       firstDecisionMade = true;
 
       if (!mode1Right) {
@@ -97,7 +101,7 @@ function animate() {
       }
     }
 
-    if (!secondDecisionMade && x >= decisionPoint2) {
+    if (!secondDecisionMade && y >= decisionPoint2) {
       secondDecisionMade = true;
 
       if (!mode2Right) {
@@ -107,10 +111,10 @@ function animate() {
     }
 
   } else {
-    y += speed;
+    x += speed;
   }
 
-  plane.style.transform = verticalLock ? "rotate(-90deg)" : "rotate(0deg)";
+  plane.style.transform = verticalLock ? "rotate(90deg)" : "rotate(0deg)";
   plane.style.left = x + "px";
   plane.style.bottom = y + "px";
 
@@ -171,7 +175,6 @@ function animate3() {
       if (!mode1Right_2) {
         verticalLock3 = true;
         triggerGameOver();
-
       }
     }
 

@@ -48,13 +48,17 @@ body {
 .airplane {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 10%;
 
   width: clamp(60px, 10vw, 120px);
 
   transition: transform 0.3s linear;
   z-index: 20;
   will-change: transform, left, bottom;
+}
+
+#plane {
+  visibility: hidden;
 }
 
 #plane2 {
@@ -77,39 +81,39 @@ body {
 
 /* Button positions */
 #arrowBtn {
-  left: 39%;
-  bottom: 4%;
+  left: 10%;
+  bottom: 30%;
 }
 
 #arrowBtn2 {
-  right: 14%;
-  bottom: 4%;
+  left: 10%;
+  bottom: 70%;
 }
 
 /* Make all arrow images the same size */
 .arrow,
 .arrowUp {
-  width: clamp(80px, 14vw, 140px);
+  width: clamp(40px, 10vw, 70px);
   height: auto;
 }
 
 
 .houseGreen {
   position: absolute;
-  left: 90%;
-  top: 85%;
+  left: 10%;
+  bottom: 90%;
 }
 
 .houseYellow {
   position: absolute;
-  left: 42%;
-  top: 5%;
+  left: 90%;
+  bottom: 30%;
 }
 
 .houseBlue {
   position: absolute;
-  left: 77%;
-  top: 5%;
+  left: 90%;
+  bottom: 70%;
 }
 
 .arrow-button:active {
