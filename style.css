@@ -1,12 +1,13 @@
-.houseGreen { position: absolute; left: 65%; bottom: 20%; }
-.houseYellow { position: absolute; left: 25%; bottom: 90%; }
-.houseBlue { position: absolute; left: 80%; bottom: 70%; }
-.houseRed { position: absolute; left: 80%; bottom: 70%; }
-.houseOrange { position: absolute; left: 80%; bottom: 70%; }
-.housePurple { position: absolute; left: 80%; bottom: 70%; }
-.houseBlack { position: absolute; left: 80%; bottom: 70%; }
-.houseDarkGreen { position: absolute; left: 80%; bottom: 70%; }
-.houseDarkBlue { position: absolute; left: 80%; bottom: 70%; }
+.houseGreen {position: absolute; left: 65%; bottom: 20%;}
+.houseYellow {position: absolute; left: 25%; bottom: 90%;}
+.houseBlue {position: absolute; left: 25%; bottom: 20%;}
+.houseRed {position: absolute; left: 15%; bottom: 45%;}
+.houseOrange {position: absolute; left: 80%; bottom: 30%;}
+.housePurple {position: absolute; left: 15%; bottom: 55%;}
+.houseBlack {position: absolute; left: 80%; bottom: 50%;}
+.houseDarkGreen {position: absolute; left: 25%; bottom: 50%;}
+.houseDarkBlue {position: absolute; left: 80%; bottom: 90%;}
+.housePink {position: absolute; left: 80%; bottom: 80%;}
 
 #planeGreen1 {visibility: hidden;}
 #planeYellow1 {visibility: hidden;}
