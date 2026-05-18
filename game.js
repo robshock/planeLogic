@@ -1,7 +1,7 @@
 const planeGreen1 = document.getElementById("planeGreen1");
 const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
-const planeX1 = window.innerWidth * 0.455;
+const planeX1 = window.innerWidth * 0.45;
 const planeY1 = window.innerWidth * 0.001
 const planeX2 = window.innerWidth * 0.43;
 const planeY2 = window.innerWidth * 0.001
@@ -49,6 +49,9 @@ let seventhDecisionMadeGreen = false;
 let eighthDecisionMadeGreen = false;
 let ninthDecisionMadeGreen = false;
 
+const greenYLimit = window.innerHeight * 0.8;
+const greenXLimit = window.innerWidth * 0.525;
+
 // YELLOW PLANE
 let yellowX = planeX2, yellowY = planeY2; 
 let verticalLockYellow = false;
@@ -80,7 +83,7 @@ function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.4;
   decisionPoint2 = window.innerHeight * 0.5;
   decisionPoint3 = window.innerHeight * 0.6;
-  decisionPoint4 = window.innerHeight * 0.8;
+  decisionPoint4 = window.innerWidth * 0.52;
   decisionPoint5 = window.innerHeight * 0.7;
   decisionPoint6 = window.innerHeight * 0.7;
   decisionPoint7 = window.innerHeight * 0.7;
@@ -210,8 +213,12 @@ function animate() {
 
     planeGreen1.style.visibility = "visible";
 
-  if (!verticalLockGreen) {
-    greenY += speed;
+    if (!verticalLockGreen) {
+      if (greenY < greenYLimit) {
+        greenY += speed;
+        }     else {
+        verticalLockGreen = true;
+        }   
 
     if (!firstDecisionMadeGreen && greenY >= decisionPoint1) {
       firstDecisionMadeGreen = true;
@@ -240,9 +247,20 @@ function animate() {
       }
     }
 
+    if (!fourthDecisionMadeGreen && greenY >= decisionPoint4) {
+      fourthDecisionMadeGreen = true;
+
+      if (!mode4Right) {
+        triggerGameOver();
+        return;
+      }
+    }
+
   } else {
+  if (greenX < greenXLimit) {
     greenX += speed;
   }
+}
 
   planeGreen1.style.transform = verticalLockGreen ? "rotate(90deg)" : "rotate(0deg)";
   planeGreen1.style.left = greenX + "px";
