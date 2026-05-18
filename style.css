@@ -45,7 +45,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 10%;
-  width: clamp(60px, 10vw, 120px);
+  width: clamp(30px, 5vw, 60px);
   transition: transform 0.3s linear;
   z-index: 20;
   will-change: transform, left, bottom;
