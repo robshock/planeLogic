@@ -246,7 +246,7 @@ function animate() {
         return;
       }
     }
-
+/*
     if (!fourthDecisionMadeGreen && greenY >= decisionPoint4) {
       fourthDecisionMadeGreen = true;
 
@@ -254,7 +254,7 @@ function animate() {
         triggerGameOver();
         return;
       }
-    }
+    }*/
 
   } else {
   if (greenX < greenXLimit) {
