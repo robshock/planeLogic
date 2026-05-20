@@ -3,8 +3,8 @@ const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
 const planeX1 = window.innerWidth * 0.45;
 const planeY1 = window.innerWidth * 0.001
-const planeX2 = window.innerWidth * 0.43;
-const planeY2 = window.innerWidth * 0.001
+//const planeX2 = window.innerWidth * 0.43;
+//const planeY2 = window.innerWidth * 0.001
 const speed = 2;
 
 const button1 = document.getElementById("arrowBtn");
@@ -36,7 +36,7 @@ const img9 = document.getElementById("arrowImg9");
 
 
 // GREEN PLANE
-let greenX = planeX1, greenY = planeY1; 
+let greenX = planeX1, greenY = planeY1;
 let verticalLockGreen = false;
 let horizontalLockGreen = false;
 let firstDecisionMadeGreen = false;
@@ -44,28 +44,19 @@ let secondDecisionMadeGreen = false;
 let thirdDecisionMadeGreen = false;
 let fourthDecisionMadeGreen = false;
 let fifthDecisionMadeGreen = false;
-let sixDecisionMadeGreen = false;
+let sixthDecisionMadeGreen = false;
 let seventhDecisionMadeGreen = false;
-let eighthDecisionMadeGreen = false;
-let ninthDecisionMadeGreen = false;
+//let eighthDecisionMadeGreen = false;
+//let ninthDecisionMadeGreen = false;
 
 const greenYLimit = window.innerHeight * 0.8;
+const greenYLimit2 = window.innerHeight * 0.6;
+const greenYLimit3 = window.innerHeight * 0.5;
+const greenYLimit4 = window.innerHeight * 0.4;
 const greenXLimit = window.innerWidth * 0.525;
-
-// YELLOW PLANE
-let yellowX = planeX2, yellowY = planeY2; 
-let verticalLockYellow = false;
-let horizontalLockYellow = false;
-let firstDecisionMadeYellow = false;
-let secondDecisionMadeYellow = false;
-let thirdDecisionMadeYellow = false;
-let fourthDecisionMadeYellow = false;
-let fifthDecisionMadeYellow = false;
-let sixDecisionMadeYellow = false;
-let seventhDecisionMadeYellow = false;
-let eighthDecisionMadeYellow = false;
-let ninthDecisionMadeYellow = false;
-
+const greenXLimit2 = window.innerWidth * 0.6;
+let movingDownGreen = false;
+let greenState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
 // SETTINGS
 let decisionPoint1;
@@ -75,8 +66,8 @@ let decisionPoint4;
 let decisionPoint5;
 let decisionPoint6;
 let decisionPoint7;
-let decisionPoint8;
-let decisionPoint9;
+//let decisionPoint8;
+//let decisionPoint9;
 
 
 function updateDecisionPoints() {
@@ -84,11 +75,11 @@ function updateDecisionPoints() {
   decisionPoint2 = window.innerHeight * 0.5;
   decisionPoint3 = window.innerHeight * 0.6;
   decisionPoint4 = window.innerWidth * 0.52;
-  decisionPoint5 = window.innerHeight * 0.7;
-  decisionPoint6 = window.innerHeight * 0.7;
-  decisionPoint7 = window.innerHeight * 0.7;
-  decisionPoint8 = window.innerHeight * 0.7;
-  decisionPoint9 = window.innerHeight * 0.7;
+  decisionPoint5 = window.innerHeight * 0.61;
+  decisionPoint6 = window.innerHeight * 0.51;
+  decisionPoint7 = window.innerHeight * 0.41;
+  //decisionPoint8 = window.innerHeight * 0.7;
+  //decisionPoint9 = window.innerHeight * 0.7;
 }
 
 
@@ -211,59 +202,113 @@ window.addEventListener("resize", updateDecisionPoints);
 function animate() {
   if (gameOver || !gameStarted) return;
 
-    planeGreen1.style.visibility = "visible";
+  planeGreen1.style.visibility = "visible";
 
-    if (!verticalLockGreen) {
-      if (greenY < greenYLimit) {
-        greenY += speed;
-        }     else {
-        verticalLockGreen = true;
-        }   
+  // ================= UP =================
+  if (greenState === "up") {
+    greenY += speed;
 
     if (!firstDecisionMadeGreen && greenY >= decisionPoint1) {
       firstDecisionMadeGreen = true;
-
-      if (!mode1Right) {
-        triggerGameOver();
-        return;
-      }
+      if (!mode1Right) return triggerGameOver();
     }
 
     if (!secondDecisionMadeGreen && greenY >= decisionPoint2) {
       secondDecisionMadeGreen = true;
-
-      if (!mode2Right) {
-        triggerGameOver();
-        return;
-      }
+      if (!mode2Right) return triggerGameOver();
     }
 
     if (!thirdDecisionMadeGreen && greenY >= decisionPoint3) {
       thirdDecisionMadeGreen = true;
-
-      if (!mode3Right) {
-        triggerGameOver();
-        return;
-      }
+      if (!mode3Right) return triggerGameOver();
     }
-/*
-    if (!fourthDecisionMadeGreen && greenY >= decisionPoint4) {
-      fourthDecisionMadeGreen = true;
 
-      if (!mode4Right) {
-        triggerGameOver();
-        return;
-      }
-    }*/
-
-  } else {
-  if (greenX < greenXLimit) {
-    greenX += speed;
+    if (greenY >= greenYLimit) {
+      greenState = "right1";
+    }
   }
-}
 
-  planeGreen1.style.transform = verticalLockGreen ? "rotate(90deg)" : "rotate(0deg)";
+  // ================= RIGHT (segment 1) =================
+  else if (greenState === "right1") {
+    greenX += speed;
+
+    if (!fourthDecisionMadeGreen && greenX >= decisionPoint4) {
+      fourthDecisionMadeGreen = true;
+      if (!mode4Right) return triggerGameOver();
+    }
+
+    if (greenX >= greenXLimit) {
+      greenState = "right2";
+    }
+  }
+
+  // ================= RIGHT (segment 2) =================
+  else if (greenState === "right2") {
+    greenX += speed;
+
+    if (greenX >= greenXLimit2) {
+      greenState = "down1";
+    }
+  }
+
+  // ================= DOWN (segment 1) =================
+  else if (greenState === "down1") {
+
+    greenY -= speed;
+
+    // FIRST: state transition
+    if (greenY <= greenYLimit2) {
+      greenState = "down2";
+    }
+
+    // SECOND: decision check (must not depend on transition logic)
+    if (!fifthDecisionMadeGreen && greenY <= decisionPoint5) {
+      fifthDecisionMadeGreen = true;
+
+      if (!mode5Right) return triggerGameOver();
+    }
+  }
+
+  // ================= DOWN (segment 2) =================
+  else if (greenState === "down2") {
+    greenY -= speed;
+
+    if (!sixthDecisionMadeGreen && greenY <= decisionPoint6) {
+      sixthDecisionMadeGreen = true;
+      if (!mode6Right) return triggerGameOver();
+    }
+
+    if (greenY <= greenYLimit3) {
+      greenState = "down3";
+    }
+  }
+  
+  // ================= DOWN (segment 3) =================
+  else if (greenState === "down3") {
+    greenY -= speed;
+  
+    if (!seventhDecisionMadeGreen && greenY <= decisionPoint7) {
+      seventhDecisionMadeGreen = true;
+      if (!mode7Right) return triggerGameOver();
+    }
+  
+    if (greenY <= greenYLimit4) {
+      greenState = "down4";
+    }
+  }
+  
+  // ================= DOWN (segment 4) =================
+  else if (greenState === "down4") {
+    greenY -= speed;
+  }
+
+  // ================= ROTATION =================
+  if (greenState === "up") planeGreen1.style.transform = "rotate(0deg)";
+  else if (greenState.startsWith("right")) planeGreen1.style.transform = "rotate(90deg)";
+  else planeGreen1.style.transform = "rotate(180deg)";
+
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
+
   requestAnimationFrame(animate);
 }
