@@ -172,7 +172,7 @@ img {
   top: 86vh;
   left: 58.5vw;
   height: 2px;
-  width: 17.5w;
+  width: 17.5vw;
 }
 
 .v3 {
@@ -186,19 +186,19 @@ img {
   top: 61vh;
   left: 76vw;
   height: 2px;
-  width: 5vw;
+  width: 2.5vw;
 }
 
 .v4 {
   top: 61vh;
-  left: 81vw;
+  left: 78.5vw;
   width: 2px;
   height: 15vh;
 }
 
 .h4 {
-  top: 61vh;
-  left: 81vw;
+  top: 76vh;
+  left: 78.5vw;
   height: 2px;
-  width: 10vw;
+  width: 17.5vw;
 }
