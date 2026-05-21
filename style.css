@@ -140,13 +140,6 @@ img {
   overflow: hidden;
 }
 
-
-
-
-
-
-
-
 /* ---------------------------------------------------------- */
 
 .line {
@@ -154,50 +147,46 @@ img {
   background: white;
 }
 
-/* first vertical */
 .v1 {
-  bottom: 0;
-  left: 52vw;
+  top: 28.5vh;
+  left: 55vw;
   width: 2px;
   height: 72.5vh;
 }
 
-/* first horizontal */
 .h1 {
-  top: 27.5vh;
-  left: 52vw;
+  top: 28.5vh;
+  left: 55vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v2 {
+  top: 28.5vh;
+  left: 57.5vw;
+  width: 2px;
+  height: 57.5vh;
+}
+
+.h2 {
+  top: 86vh;;
+  left: 57.5vw;
   height: 2px;
   width: 7vw;
 }
 
-/* second vertical (down) */
-.v2 {
-  top: 27.5vh;
-  left: 59vw;
-  width: 2px;
-  height: 60vh;
-}
-
-/* second horizontal */
-.h2 {
-  top: 87.5vh;;
-  left: 59vw;
-  height: 2px;
-  width: 8vw;
-}
-
 .v3 {
-  top: 62.5vh;
-  left: 67vw;
+  top: 61vh;
+  left: 64.5vw;
   width: 2px;
   height: 25vh;
 }
 
 .h3 {
-  top: 62.5vh;
-  left: 67vw;
+  top: 61vh;
+  left: 64.5vw;
   height: 2px;
-  width: 6vw;
+  width: 10vw;
 }
 
 
