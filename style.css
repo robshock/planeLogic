@@ -169,24 +169,24 @@ img {
 }
 
 .h2 {
-  top: 86vh;;
+  top: 86vh;
   left: 58.5vw;
   height: 2px;
-  width: 10vw;
+  width: 17.5w;
 }
 
 .v3 {
   top: 61vh;
-  left: 68.5vw;
+  left: 76vw;
   width: 2px;
   height: 25vh;
 }
 
 .h3 {
   top: 61vh;
-  left: 68.5vw;
+  left: 76vw;
   height: 2px;
-  width: 12.5vw;
+  width: 5vw;
 }
 
 .v4 {
@@ -196,5 +196,9 @@ img {
   height: 15vh;
 }
 
-
-
+.h4 {
+  top: 61vh;
+  left: 81vw;
+  height: 2px;
+  width: 10vw;
+}
