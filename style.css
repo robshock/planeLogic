@@ -1,13 +1,13 @@
-.houseGreen { position: absolute; left: 60%; bottom: 15%; width: 10vw; height: auto; }
-.houseYellow { position: absolute; left: 22.5%; bottom: 85%; width: 10vw; height: auto; }
-.houseBlue { position: absolute; left: 22.5%; bottom: 15%; width: 10vw; height: auto; }
-.houseRed { position: absolute; left: 2.5%; bottom: 45%; width: 10vw; height: auto; }
-.houseOrange { position: absolute; left: 80%; bottom: 25%; width: 10vw; height: auto; }
-.housePurple { position: absolute; left: 2.5%; bottom: 55%; width: 10vw; height: auto; }
-.houseBlack { position: absolute; left: 80%; bottom: 50%; width: 10vw; height: auto; }
-.houseDarkGreen { position: absolute; left: 22.5%; bottom: 50%; width: 10vw; height: auto; }
-.houseDarkBlue { position: absolute; left: 80%; bottom: 85%; width: 10vw; height: auto; }
-.housePink { position: absolute; left: 80%; bottom: 75%; width: 10vw; height: auto; }
+.houseGreen { position: absolute; left: 60%; bottom: 15%; width: 20vw; height: auto; }
+.houseYellow { position: absolute; left: 22.5%; bottom: 85%; width: 20vw; height: auto; }
+.houseBlue { position: absolute; left: 22.5%; bottom: 15%; width: 20vw; height: auto; }
+.houseRed { position: absolute; left: 2.5%; bottom: 45%; width: 20vw; height: auto; }
+.houseOrange { position: absolute; left: 80%; bottom: 25%; width: 20vw; height: auto; }
+.housePurple { position: absolute; left: 2.5%; bottom: 55%; width: 20vw; height: auto; }
+.houseBlack { position: absolute; left: 80%; bottom: 50%; width: 20vw; height: auto; }
+.houseDarkGreen { position: absolute; left: 22.5%; bottom: 50%; width: 20vw; height: auto; }
+.houseDarkBlue { position: absolute; left: 80%; bottom: 85%; width: 20vw; height: auto; }
+.housePink { position: absolute; left: 80%; bottom: 75%; width: 20vw; height: auto; }
 
 #planeGreen1 { visibility: hidden; width: 6vw; height: auto; }
 #planeYellow1 { visibility: hidden; width: 6vw; height: auto; }
