@@ -204,8 +204,39 @@ img {
 }
 
 .v5 {
-  top: 50vh;
+  top: 55vh;
   left: 96vw;
-  height: 26vh;
+  height: 21vh;
   width: 2px;
 }
+
+.h5 {
+  top: 55vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v6 {
+  top: 50vh;
+  left: 76vw;
+  height: 5vh;
+  width: 2px;
+}
+
+.h6 {
+  top: 50vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v7 {
+  top: 35vh;
+  left: 96vw;
+  height: 15vh;
+  width: 2px;
+}
+
+
+
