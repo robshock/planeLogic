@@ -1,148 +1,34 @@
-.houseGreen {
-  position: absolute;
-  left: 60%;
-  bottom: 15%;
-}
+.houseGreen {position: absolute;left: 60%;bottom: 15%;}
+.houseYellow {position: absolute;left: 22.5%;bottom: 85%;}
+.houseBlue {position: absolute;left: 22.5%;bottom: 15%;}
+.houseRed {position: absolute;left: 2.5%;bottom: 45%;}
+.houseOrange {position: absolute;left: 80%;bottom: 25%;}
+.housePurple {position: absolute;left: 2.5%;bottom: 55%;}
+.houseBlack {position: absolute;left: 80%;bottom: 50%;}
+.houseDarkGreen {position: absolute;left: 22.5%;bottom: 50%;}
+.houseDarkBlue {position: absolute;left: 80%;bottom: 85%;}
+.housePink {position: absolute;left: 80%;bottom: 75%;}
 
-.houseYellow {
-  position: absolute;
-  left: 22.5%;
-  bottom: 85%;
-}
+#planeGreen1 {visibility: hidden;}
+#planeYellow1 {visibility: hidden;}
+#planeBlue1 {visibility: hidden;}
+#planeRed1 {visibility: hidden;}
+#planePurple1 {visibility: hidden;}
+#planePink1 {visibility: hidden;}
+#planeBlack1 {visibility: hidden;}
+#planeOrange {visibility: hidden;}
+#planeDarkGreen {visibility: hidden;}
+#planeDarkBlue1 {visibility: hidden;}
 
-.houseBlue {
-  position: absolute;
-  left: 22.5%;
-  bottom: 15%;
-}
-
-.houseRed {
-  position: absolute;
-  left: 2.5%;
-  bottom: 45%;
-}
-
-.houseOrange {
-  position: absolute;
-  left: 80%;
-  bottom: 25%;
-}
-
-.housePurple {
-  position: absolute;
-  left: 2.5%;
-  bottom: 55%;
-}
-
-.houseBlack {
-  position: absolute;
-  left: 80%;
-  bottom: 50%;
-}
-
-.houseDarkGreen {
-  position: absolute;
-  left: 22.5%;
-  bottom: 50%;
-}
-
-.houseDarkBlue {
-  position: absolute;
-  left: 80%;
-  bottom: 85%;
-}
-
-.housePink {
-  position: absolute;
-  left: 80%;
-  bottom: 75%;
-}
-
-#planeGreen1 {
-  visibility: hidden;
-}
-
-#planeYellow1 {
-  visibility: hidden;
-}
-
-#planeBlue1 {
-  visibility: hidden;
-}
-
-#planeRed1 {
-  visibility: hidden;
-}
-
-#planePurple1 {
-  visibility: hidden;
-}
-
-#planePink1 {
-  visibility: hidden;
-}
-
-#planeBlack1 {
-  visibility: hidden;
-}
-
-#planeOrange {
-  visibility: hidden;
-}
-
-#planeDarkGreen {
-  visibility: hidden;
-}
-
-#planeDarkBlue1 {
-  visibility: hidden;
-}
-
-
-#arrowBtn {
-  left: 45%;
-  bottom: 40%;
-}
-
-#arrowBtn2 {
-  left: 45%;
-  bottom: 50%;
-}
-
-#arrowBtn3 {
-  left: 45%;
-  bottom: 60%;
-}
-
-#arrowBtn4 {
-  left: 52.5%;
-  bottom: 75%;
-}
-
-#arrowBtn5 {
-  left: 60%;
-  bottom: 60%;
-}
-
-#arrowBtn6 {
-  left: 60%;
-  bottom: 50%;
-}
-
-#arrowBtn7 {
-  left: 60%;
-  bottom: 40%;
-}
-
-#arrowBtn8 {
-  left: 22.5%;
-  bottom: 70%;
-}
-
-#arrowBtn9 {
-  left: 22.5%;
-  bottom: 32.5%;
-}
+#arrowBtn {left: 45%;bottom: 40%;}
+#arrowBtn2 {left: 45%;bottom: 50%;}
+#arrowBtn3 {left: 45%;bottom: 60%;}
+#arrowBtn4 {left: 52.5%;bottom: 75%;}
+#arrowBtn5 {left: 60%;bottom: 60%;}
+#arrowBtn6 {left: 60%;bottom: 50%;}
+#arrowBtn7 {left: 60%;bottom: 40%;}
+#arrowBtn8 {left: 22.5%;bottom: 70%;}
+#arrowBtn9 {left: 22.5%;bottom: 32.5%;}
 
 #restartBtn {
   display: none;
@@ -265,34 +151,40 @@ img {
 
 .line {
   position: fixed;
+  background: white;
+}
+
+/* first vertical */
+.v1 {
   bottom: 0;
-  left: 52.5%;
+  left: 52vw;
   width: 2px;
   height: 72.5vh;
-  background: white;
 }
 
-/* horizontal segment */
-.line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+/* first horizontal */
+.h1 {
+  top: 27.5vh;
+  left: 52vw;
   height: 2px;
-  width: 6.5vw;
-  background: white;
+  width: 7vw;
 }
 
-/* second vertical line going DOWN */
-.line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 6.5vw; /* start at end of horizontal line */
+/* second vertical (down) */
+.v2 {
+  top: 27.5vh;
+  left: 59vw;
   width: 2px;
-  height: 55vh; /* adjust how far down it goes */
-  background: white;
+  height: 55vh;
 }
 
+/* second horizontal 
+.h2 {
+  top: calc(100vh - 72.5vh + 20vh);
+  left: calc(52.5% + 5vw);
+  height: 2px;
+  width: 5vw;
+}
+*/
 
 
