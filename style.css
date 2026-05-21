@@ -175,16 +175,23 @@ img {
   top: 27.5vh;
   left: 59vw;
   width: 2px;
-  height: 55vh;
+  height: 60vh;
 }
 
-/* second horizontal 
+/* second horizontal */
 .h2 {
-  top: calc(100vh - 72.5vh + 20vh);
-  left: calc(52.5% + 5vw);
+  top: 87.5vh;;
+  left: 59vw;
   height: 2px;
-  width: 5vw;
+  width: 8vw;
 }
-*/
+
+.v3 {
+  top: 67.5vh;
+  left: 67vw;
+  width: 2px;
+  height: 20vh;
+}
+
 
 
