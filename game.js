@@ -3,9 +3,9 @@ const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
 const planeX1 = window.innerWidth * 0.45;
 const planeY1 = window.innerWidth * 0.001
-//const planeX2 = window.innerWidth * 0.43;
-//const planeY2 = window.innerWidth * 0.001
 const speed = 2;
+const restartBtn = document.getElementById("restartBtn");
+const gameOverScreen = document.getElementById("gameOverScreen");
 
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
@@ -34,7 +34,6 @@ const img8 = document.getElementById("arrowImg8");
 const button9 = document.getElementById("arrowBtn9");
 const img9 = document.getElementById("arrowImg9");
 
-
 // GREEN PLANE
 let greenX = planeX1, greenY = planeY1;
 let verticalLockGreen = false;
@@ -46,8 +45,6 @@ let fourthDecisionMadeGreen = false;
 let fifthDecisionMadeGreen = false;
 let sixthDecisionMadeGreen = false;
 let seventhDecisionMadeGreen = false;
-//let eighthDecisionMadeGreen = false;
-//let ninthDecisionMadeGreen = false;
 
 const greenYLimit = window.innerHeight * 0.8;
 const greenYLimit2 = window.innerHeight * 0.6;
@@ -66,9 +63,6 @@ let decisionPoint4;
 let decisionPoint5;
 let decisionPoint6;
 let decisionPoint7;
-//let decisionPoint8;
-//let decisionPoint9;
-
 
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.4;
@@ -78,10 +72,7 @@ function updateDecisionPoints() {
   decisionPoint5 = window.innerHeight * 0.61;
   decisionPoint6 = window.innerHeight * 0.51;
   decisionPoint7 = window.innerHeight * 0.41;
-  //decisionPoint8 = window.innerHeight * 0.7;
-  //decisionPoint9 = window.innerHeight * 0.7;
 }
-
 
 // BUTTONS
 let mode1Right = false;
@@ -193,11 +184,13 @@ button9.addEventListener("click", () => {
   mode9Right_2 = mode9Right;
 });
 
-updateDecisionPoints();
+restartBtn.addEventListener("click", restartGame);
 
+
+updateDecisionPoints();
 window.addEventListener("resize", updateDecisionPoints);
 
-///*
+
 // ================= GREEN ================= 
 function animate() {
   if (gameOver || !gameStarted) return;
@@ -311,4 +304,68 @@ function animate() {
   planeGreen1.style.bottom = greenY + "px";
 
   requestAnimationFrame(animate);
+}
+
+
+function restartGame() {
+
+  gameOverScreen.style.display = "none";
+restartBtn.style.display = "none";
+
+  // RESET GAME FLAGS
+  gameOver = false;
+  gameStarted = true;
+
+  // RESET POSITION
+  greenX = planeX1;
+  greenY = planeY1;
+
+  // RESET STATE
+  greenState = "up";
+
+  // RESET DECISIONS
+  firstDecisionMadeGreen = false;
+  secondDecisionMadeGreen = false;
+  thirdDecisionMadeGreen = false;
+  fourthDecisionMadeGreen = false;
+  fifthDecisionMadeGreen = false;
+  sixthDecisionMadeGreen = false;
+  seventhDecisionMadeGreen = false;
+
+  // RESET BUTTON MODES
+  mode1Right = false;
+  mode2Right = false;
+  mode3Right = false;
+  mode4Right = false;
+  mode5Right = false;
+  mode6Right = false;
+  mode7Right = false;
+
+  // RESET BUTTON IMAGES
+  img1.src = "pngs/arrowLeft.png";
+  img2.src = "pngs/arrowLeft.png";
+  img3.src = "pngs/arrowLeft.png";
+  img4.src = "pngs/arrowUp.png";
+  img5.src = "pngs/arrowRight.png";
+  img6.src = "pngs/arrowRight.png";
+  img7.src = "pngs/arrowRight.png";
+
+  // RESET PLANE ROTATION
+  planeGreen1.style.transform = "rotate(0deg)";
+
+  // RESET PLANE POSITION ON SCREEN
+  planeGreen1.style.left = greenX + "px";
+  planeGreen1.style.bottom = greenY + "px";
+
+  // START ANIMATION AGAIN
+  requestAnimationFrame(animate);
+}
+  //*/
+
+  function triggerGameOver() {
+  gameOver = true;
+
+  gameOverScreen.style.display = "flex";
+
+  restartBtn.style.display = "block";
 }
