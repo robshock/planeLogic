@@ -3,7 +3,7 @@
 .houseBlue { position: absolute; left: 21.5%; bottom: 15%; width: 15vw; height: auto; }
 .houseRed { position: absolute; left: 3.5%; bottom: 45%; width: 15vw; height: auto; }
 .houseOrange { position: absolute; left: 80%; bottom: 25%; width: 15vw; height: auto; }
-.housePurple { position: absolute; left: 3.5%; bottom: 55%; width: 15vw; height: auto; }
+.housePurple { position: absolute; left: 3.5%; bottom: 55.5%; width: 15vw; height: auto; }
 .houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkGreen { position: absolute; left: 23.5%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
@@ -399,8 +399,29 @@ img {
 }
 
 .v19 {
-  top: 32.5vh;
+  top: 30vh;
   left: 19.5vw;
   width: 2px;
-  height: 12.5vh;
+  height: 15vh;
+}
+
+.h19 {
+  top: 30vh;
+  left: 19.5vw;
+  height: 2px;
+  width: 1.5vw;
+}
+
+.v20 {
+  top: 30vh;
+  left: 21vw;
+  width: 2px;
+  height: 10vh;
+}
+
+.h20 {
+  top: 40vh;
+  left: 21vw;
+  height: 2px;
+  width: 10vw;
 }
