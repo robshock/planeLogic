@@ -1,9 +1,9 @@
 .houseGreen { position: absolute; left: 60%; bottom: 15%; width: 15vw; height: auto; }
-.houseYellow { position: absolute; left: 22.5%; bottom: 85%; width: 15vw; height: auto; }
-.houseBlue { position: absolute; left: 22.5%; bottom: 15%; width: 15vw; height: auto; }
-.houseRed { position: absolute; left: 2.5%; bottom: 45%; width: 15vw; height: auto; }
+.houseYellow { position: absolute; left: 21.5%; bottom: 85%; width: 15vw; height: auto; }
+.houseBlue { position: absolute; left: 21.5%; bottom: 15%; width: 15vw; height: auto; }
+.houseRed { position: absolute; left: 3.5%; bottom: 45%; width: 15vw; height: auto; }
 .houseOrange { position: absolute; left: 80%; bottom: 25%; width: 15vw; height: auto; }
-.housePurple { position: absolute; left: 2.5%; bottom: 55%; width: 15vw; height: auto; }
+.housePurple { position: absolute; left: 3.5%; bottom: 55%; width: 15vw; height: auto; }
 .houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkGreen { position: absolute; left: 23.5%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
@@ -20,13 +20,13 @@
 #planeDarkGreen { visibility: hidden; width: 6vw; height: auto; }
 #planeDarkBlue1 { visibility: hidden; width: 6vw; height: auto; }
 
-#arrowBtn {left: 46%;bottom: 38%;}
-#arrowBtn2 {left: 46%;bottom: 50%;}
-#arrowBtn3 {left: 46%;bottom: 62%;}
+#arrowBtn {left: 44%;bottom: 38%;}
+#arrowBtn2 {left: 44%;bottom: 50%;}
+#arrowBtn3 {left: 44%;bottom: 62%;}
 #arrowBtn4 {left: 52.5%;bottom: 75%;}
 #arrowBtn5 {left: 62%;bottom: 62%;}
 #arrowBtn6 {left: 62%;bottom: 50%;}
-#arrowBtn7 {left: 62%;bottom: 38%;}
+#arrowBtn7 {left: 62%;bottom: 39%;}
 #arrowBtn8 {left: 24.5%;bottom: 72%;}
 #arrowBtn9 {left: 24.5%;bottom: 30%;}
 
@@ -374,21 +374,21 @@ img {
   top: 7.5vh;
   left: 20vw;
   width: 2px;
-  height: 15vh;
+  height: 12.5vh;
 }
 
 .h17 {
-  top: 22.5vh;
+  top: 20vh;
   left: 2vw;
   height: 2px;
   width: 18vw;
 }
 
 .v18 {
-  top: 22.5vh;
+  top: 20vh;
   left: 2vw;
   width: 2px;
-  height: 22.5vh;
+  height: 25vh;
 }
 
 .h18 {
