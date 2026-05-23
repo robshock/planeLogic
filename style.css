@@ -6,7 +6,7 @@
 .housePurple { position: absolute; left: 2.5%; bottom: 55%; width: 15vw; height: auto; }
 .houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkGreen { position: absolute; left: 22.5%; bottom: 50%; width: 15vw; height: auto; }
-.houseDarkBlue { position: absolute; left: 80%; bottom: 87%; width: 15vw; height: auto; }
+.houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
 .housePink { position: absolute; left: 80%; bottom: 75%; width: 15vw; height: auto; }
 
 #planeGreen1 { visibility: hidden; width: 6vw; height: auto; }
