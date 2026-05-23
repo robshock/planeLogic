@@ -292,3 +292,24 @@ img {
   width: 2px;
   height: 15vh;
 }
+
+.h11 {
+  top: 17vh;
+  left: 73.5vw;
+  width: 2.5vw;
+  height: 2px;
+}
+
+.v12 {
+  top: 15vh;
+  left: 73.5vw;
+  width: 2px;
+  height: 2vh;
+}
+
+.h12 {
+  top: 15vh;
+  left: 73.5vw;
+  width: 22.5vw;
+  height: 2px;
+}
