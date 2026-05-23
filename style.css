@@ -5,7 +5,7 @@
 .houseOrange { position: absolute; left: 80%; bottom: 25%; width: 15vw; height: auto; }
 .housePurple { position: absolute; left: 2.5%; bottom: 55%; width: 15vw; height: auto; }
 .houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
-.houseDarkGreen { position: absolute; left: 22.5%; bottom: 50%; width: 15vw; height: auto; }
+.houseDarkGreen { position: absolute; left: 23.5%; bottom: 50%; width: 15vw; height: auto; }
 .houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
 .housePink { position: absolute; left: 80%; bottom: 75%; width: 15vw; height: auto; }
 
@@ -20,15 +20,15 @@
 #planeDarkGreen { visibility: hidden; width: 6vw; height: auto; }
 #planeDarkBlue1 { visibility: hidden; width: 6vw; height: auto; }
 
-#arrowBtn {left: 45%;bottom: 38%;}
-#arrowBtn2 {left: 45%;bottom: 50%;}
-#arrowBtn3 {left: 45%;bottom: 62%;}
+#arrowBtn {left: 46%;bottom: 38%;}
+#arrowBtn2 {left: 46%;bottom: 50%;}
+#arrowBtn3 {left: 46%;bottom: 62%;}
 #arrowBtn4 {left: 52.5%;bottom: 75%;}
 #arrowBtn5 {left: 62%;bottom: 62%;}
 #arrowBtn6 {left: 62%;bottom: 50%;}
 #arrowBtn7 {left: 62%;bottom: 38%;}
-#arrowBtn8 {left: 22.5%;bottom: 72%;}
-#arrowBtn9 {left: 22.5%;bottom: 30%;}
+#arrowBtn8 {left: 24.5%;bottom: 72%;}
+#arrowBtn9 {left: 24.5%;bottom: 30%;}
 
 #restartBtn {
   display: none;
@@ -295,22 +295,22 @@ img {
 
 .h11 {
   top: 17vh;
-  left: 71vw;
-  width: 5vw;
+  left: 66vw;
+  width: 10vw;
   height: 2px;
 }
 
 .v12 {
   top: 15vh;
-  left: 71vw;
+  left: 66vw;
   width: 2px;
   height: 2vh;
 }
 
 .h12 {
   top: 15vh;
-  left: 71vw;
-  width: 25vw;
+  left: 66vw;
+  width: 30vw;
   height: 2px;
 }
 
@@ -323,14 +323,14 @@ img {
 
 .h13 {
   top: 6vh;
-  left: 45vw;
-  width: 51vw;
+  left: 50vw;
+  width: 46vw;
   height: 2px;
 }
 
 .v14 {
   top: 6vh;
-  left: 45vw;
+  left: 50vw;
   width: 2px;
   height: 11vh;
 }
@@ -338,7 +338,7 @@ img {
 .h14 {
   top: 17vh;
   left: 40vw;
-  width: 5vw;
+  width: 10vw;
   height: 2px;
 }
 
@@ -357,42 +357,42 @@ img {
 }
 
 .v16 {
-  top: 10vh;
+  top: 7.5vh;
   left: 37.5vw;
   width: 2px;
-  height: 22vh;
+  height: 24.5vh;
 }
 
 .h16 {
-  top: 10vh;
+  top: 7.5vh;
   left: 20vw;
   height: 2px;
   width: 17.5vw;
 }
 
 .v17 {
-  top: 10vh;
+  top: 7.5vh;
   left: 20vw;
   width: 2px;
   height: 15vh;
 }
 
 .h17 {
-  top: 25vh;
+  top: 22.5vh;
   left: 2vw;
   height: 2px;
   width: 18vw;
 }
 
 .v18 {
-  top: 25vh;
+  top: 22.5vh;
   left: 2vw;
   width: 2px;
-  height: 15vh;
+  height: 22.5vh;
 }
 
 .h18 {
-  top: 40vh;
+  top: 45vh;
   left: 2vw;
   height: 2px;
   width: 17.5vw;
@@ -402,5 +402,5 @@ img {
   top: 32.5vh;
   left: 19.5vw;
   width: 2px;
-  height: 7.5vh;
+  height: 12.5vh;
 }
