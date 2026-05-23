@@ -218,25 +218,77 @@ img {
 }
 
 .v6 {
-  top: 50vh;
+  top: 52vh;
   left: 76vw;
-  height: 5vh;
+  height: 3vh;
   width: 2px;
 }
 
 .h6 {
-  top: 50vh;
+  top: 52vh;
   left: 76vw;
   height: 2px;
   width: 20vw;
 }
 
 .v7 {
-  top: 35vh;
+  top: 37vh;
   left: 96vw;
   height: 15vh;
   width: 2px;
 }
 
+.h7 {
+  top: 37vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
 
+.v8 {
+  top: 34vh;
+  left: 76vw;
+  height: 3vh;
+  width: 2px;
+}
 
+.h8 {
+  top: 34vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v9 {
+  top: 13vh;
+  left: 96vw;
+  height: 21vh;
+  width: 2px;
+}
+
+.h9 {
+  top: 13vh;
+  left: 78.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v10 {
+  top: 13vh;
+  left: 78.5vw;
+  width: 2px;
+  height: 15vh;
+}
+.h10 {
+  top: 28vh;
+  left: 76vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v11 {
+  top: 8vh;
+  left: 76vw;
+  width: 2px;
+  height: 20vh;
+}
