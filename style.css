@@ -246,14 +246,14 @@ img {
 }
 
 .v8 {
-  top: 38vh;
+  top: 40vh;
   left: 76vw;
-  height: 4vh;
+  height: 2vh;
   width: 2px;
 }
 
 .h8 {
-  top: 38vh;
+  top: 40vh;
   left: 76vw;
   height: 2px;
   width: 20vw;
@@ -262,7 +262,7 @@ img {
 .v9 {
   top: 17vh;
   left: 96vw;
-  height: 21vh;
+  height: 23vh;
   width: 2px;
 }
 
