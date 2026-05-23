@@ -327,3 +327,330 @@ img {
   width: 51vw;
   height: 2px;
 }
+
+.v14 {
+  top: 6vh;
+  left: 45vw;
+  width: 2px;
+  height: 11vh;
+}
+
+.h14 {
+  top: 17vh;
+  left: 40vw;
+  width: 5vw;
+  height: 2px;
+}
+
+.v15 {
+  top: 17vh;
+  left: 40vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h15 {
+  top: 32vh;
+  left: 37.5vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v16 {
+  top: 10vh;
+  left: 37.5vw;
+  width: 2px;
+  height: 22vh;
+}  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 12px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Set the body background */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: skyblue;
+  touch-action: manipulation;
+  font-family: sans-serif;
+}
+
+/* Airplane styling (applies to all planes) */
+.airplane {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: clamp(45px, 7.5vw, 75px);
+  transition: transform 0.3s linear;
+  z-index: 20;
+  will-change: transform, left, bottom;
+}
+
+/* Arrow button styling */
+.arrow-button {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  /* behind plane */
+}
+
+/* Make all arrow images the same size */
+.arrow,
+.arrowUp {
+  width: clamp(40px, 10vw, 70px);
+  height: auto;
+}
+
+/* button click feedback */
+.arrow-button:active {
+  transform: scale(0.92);
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+#gameOverScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: auto;
+  height: auto;
+
+  padding: 30px 40px;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+
+  z-index: 9999;
+}
+
+#countdown {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: sans-serif;
+}
+
+/* game wrapper */
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------- */
+
+.line {
+  position: fixed;
+  background: white;
+}
+
+.v1 {
+  top: 26vh;
+  left: 56vw;
+  width: 2px;
+  height: 72.5vh;
+}
+
+.h1 {
+  top: 26vh;
+  left: 56vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v2 {
+  top: 26vh;
+  left: 58.5vw;
+  width: 2px;
+  height: 60vh;
+}
+
+.h2 {
+  top: 86vh;
+  left: 58.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v3 {
+  top: 63vh;
+  left: 76vw;
+  width: 2px;
+  height: 23vh;
+}
+
+.h3 {
+  top: 63vh;
+  left: 76vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v4 {
+  top: 63vh;
+  left: 78.5vw;
+  width: 2px;
+  height: 13vh;
+}
+
+.h4 {
+  top: 76vh;
+  left: 78.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v5 {
+  top: 53vh;
+  left: 96vw;
+  height: 23vh;
+  width: 2px;
+}
+
+.h5 {
+  top: 53vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v6 {
+  top: 51vh;
+  left: 76vw;
+  height: 2vh;
+  width: 2px;
+}
+
+.h6 {
+  top: 51vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v7 {
+  top: 42vh;
+  left: 96vw;
+  height: 9vh;
+  width: 2px;
+}
+
+.h7 {
+  top: 42vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v8 {
+  top: 40vh;
+  left: 76vw;
+  height: 2vh;
+  width: 2px;
+}
+
+.h8 {
+  top: 40vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v9 {
+  top: 17vh;
+  left: 96vw;
+  height: 23vh;
+  width: 2px;
+}
+
+.h9 {
+  top: 17vh;
+  left: 78.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v10 {
+  top: 17vh;
+  left: 78.5vw;
+  width: 2px;
+  height: 15vh;
+}
+.h10 {
+  top: 32vh;
+  left: 76vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v11 {
+  top: 17vh;
+  left: 76vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h11 {
+  top: 17vh;
+  left: 71vw;
+  width: 5vw;
+  height: 2px;
+}
+
+.v12 {
+  top: 15vh;
+  left: 71vw;
+  width: 2px;
+  height: 2vh;
+}
+
+.h12 {
+  top: 15vh;
+  left: 71vw;
+  width: 25vw;
+  height: 2px;
+}
+
+.v13 {
+  top: 6vh;
+  left: 96vw;
+  width: 2px;
+  height: 9vh;
+}
+
+.h13 {
+  top: 6vh;
+  left: 45vw;
+  width: 51vw;
+  height: 2px;
+}
