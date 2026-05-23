@@ -432,3 +432,45 @@ img {
   width: 2px;
   height: 5vh;
 }
+
+.h21 {
+  top: 45vh;
+  left: 21vw;
+  height: 2px;
+  width: 10vw;
+}
+
+.v22 {
+  top: 45vh;
+  left: 21vw;
+  width: 2px;
+  height: 9vh;
+}
+
+.h22 {
+  top: 54vh;
+  left: 21vw;
+  height: 2px;
+  width: 10vw;
+}
+
+.v23 {
+  top: 54vh;
+  left: 31vw;
+  width: 2px;
+  height: 5vh;
+}
+
+.h23 {
+  top: 59vh;
+  left: 21vw;
+  height: 2px;
+  width: 10vw;
+}
+
+.v24 {
+  top: 59vh;
+  left: 21vw;
+  width: 2px;
+  height: 10vh;
+}
