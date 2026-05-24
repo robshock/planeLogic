@@ -530,3 +530,17 @@ img {
   width: 2px;
   height: 22.5vh;
 }
+
+.h28 {
+  top: 65vh;
+  left: 37.5vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v29 {
+  top: 65vh;
+  left: 40vw;
+  width: 2px;
+  height: 35vh;
+}
