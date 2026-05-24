@@ -49,7 +49,7 @@ let seventhDecisionMadeGreen = false;
 const greenYLimit = window.innerHeight * 0.8;
 const greenYLimit2 = window.innerHeight * 0.6;
 const greenYLimit3 = window.innerHeight * 0.5;
-const greenYLimit4 = window.innerHeight * 0.4;
+const greenYLimit4 = window.innerHeight * 0.39;
 const greenXLimit = window.innerWidth * 0.525;
 const greenXLimit2 = window.innerWidth * 0.6;
 let movingDownGreen = false;
@@ -65,13 +65,13 @@ let decisionPoint6;
 let decisionPoint7;
 
 function updateDecisionPoints() {
-  decisionPoint1 = window.innerHeight * 0.4;
+  decisionPoint1 = window.innerHeight * 0.37;
   decisionPoint2 = window.innerHeight * 0.5;
-  decisionPoint3 = window.innerHeight * 0.6;
-  decisionPoint4 = window.innerWidth * 0.52;
+  decisionPoint3 = window.innerHeight * 0.61;
+  decisionPoint4 = window.innerWidth * 0.525;
   decisionPoint5 = window.innerHeight * 0.61;
-  decisionPoint6 = window.innerHeight * 0.51;
-  decisionPoint7 = window.innerHeight * 0.41;
+  decisionPoint6 = window.innerHeight * 0.50;
+  decisionPoint7 = window.innerHeight * 0.39;
 }
 
 // BUTTONS
