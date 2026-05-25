@@ -34,12 +34,17 @@
   display: none;
   position: fixed;
   top: 80%;
+  left: 50%;
+  z-index: 999999999;
+}
+
+#gameOverScreen {
+  display: none;
+  position: fixed;
+  top: 40%;
   left: 40%;
 
-  width: auto;
-  height: auto;
-
-  padding: 30px 40px;
+    padding: 30px 40px;
 
   background: rgba(0, 0, 0, 0.85);
   color: white;
@@ -52,9 +57,10 @@
   align-items: center;
 
   border-radius: 12px;
-  z-index: 999999999;
-}
 
+  z-index: 9999;
+}
+/*
 #gameOverScreen {
   position: fixed;
   top: 50%;
@@ -80,7 +86,7 @@
 
   z-index: 9999;
 }
-
+*/
 /* Set the body background */
 body {
   margin: 0;
