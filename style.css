@@ -33,7 +33,7 @@
 #restartBtn {
   display: none;
 
-  position: absolute;
+  position: fixed;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -41,7 +41,8 @@
   padding: 12px 24px;
   font-size: 20px;
   cursor: pointer;
-  z-index: 1001;
+
+  z-index: 10001;
 }
 
 /* Set the body background */
