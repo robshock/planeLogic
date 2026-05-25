@@ -32,40 +32,51 @@
 
 #restartBtn {
   display: none;
-
   position: fixed;
+  top: 80%;
+  left: 40%;
 
-  bottom: 20vh;
+  width: auto;
+  height: auto;
 
-  width: 200px;
-  left: calc(50% - 100px);
+  padding: 30px 40px;
 
-  padding: 14px 28px;
-  font-size: 22px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
 
-  background: white;
-  border: 2px solid black;
-  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  border-radius: 12px;
   z-index: 999999999;
 }
 
 #gameOverScreen {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  top: 0;
-  left: 0;
+  width: auto;
+  height: auto;
 
-  width: 100vw;
-  height: 100vh;
+  padding: 30px 40px;
 
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
 
   display: none;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
+  border-radius: 12px;
 
   z-index: 9999;
 }
