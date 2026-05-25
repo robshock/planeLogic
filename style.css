@@ -36,7 +36,7 @@
   position: fixed;
 
   left: 50%;
-  bottom: 20px;
+  bottom: 20vh;
 
   transform: translateX(-50%);
 
