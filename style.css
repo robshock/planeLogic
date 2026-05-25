@@ -35,10 +35,10 @@
 
   position: fixed;
 
-  left: 50%;
   bottom: 20vh;
 
-  transform: translateX(-50%);
+  width: 200px;
+  left: calc(50% - 100px);
 
   padding: 14px 28px;
   font-size: 22px;
