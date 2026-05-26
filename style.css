@@ -30,63 +30,13 @@
 #arrowBtn8 {left: 24.5%;bottom: 72%;}
 #arrowBtn9 {left: 24.5%;bottom: 30%;}
 
-#restartBtn {
-  display: none;
-  position: fixed;
-  top: 80%;
-  left: 50%;
-  z-index: 999999999;
+#restartBtn { 
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  z-index: 999999999; 
 }
-/*
-#gameOverScreen {
-  display: none;
-  position: fixed;
-  top: 40%;
-  left: 40%;
 
-    padding: 30px 40px;
-
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  font-size: 48px;
-  font-family: sans-serif;
-
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 12px;
-
-  z-index: 9999;
-}*/
-/*
-#gameOverScreen {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: auto;
-  height: auto;
-
-  padding: 30px 40px;
-
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  font-size: 48px;
-  font-family: sans-serif;
-
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 12px;
-
-  z-index: 9999;
-}
-*/
 /* Set the body background */
 body {
   margin: 0;
@@ -136,7 +86,31 @@ img {
   pointer-events: none;
 }
 
+#gameOverScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  width: auto;
+  height: auto;
+
+  padding: 30px 40px;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+
+  z-index: 9999;
+}
 
 #countdown {
   position: fixed;
