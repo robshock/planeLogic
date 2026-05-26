@@ -32,7 +32,6 @@
 
 #restartBtn {
   display: none;
-  position: fixed;
   top: 80%;
   left: 50%;
   z-index: 999999999;
@@ -40,7 +39,6 @@
 
 #gameOverScreen {
   display: none;
-  position: fixed;
   top: 40%;
   left: 40%;
 
