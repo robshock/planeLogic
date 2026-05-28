@@ -20,12 +20,14 @@ let movingDownGreen = false;
 let greenState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
 // ================= GREEN ================= 
+
 function animate() {
   if (gameOver || !gameStarted) return;
 
   planeGreen1.style.visibility = "visible";
 
   // ================= UP =================
+
   if (greenState === "up") {
     greenY += speed;
 
@@ -50,6 +52,7 @@ function animate() {
   }
 
   // ================= RIGHT (segment 1) =================
+
   else if (greenState === "right1") {
     greenX += speed;
 
@@ -64,6 +67,7 @@ function animate() {
   }
 
   // ================= RIGHT (segment 2) =================
+
   else if (greenState === "right2") {
     greenX += speed;
 
@@ -73,6 +77,7 @@ function animate() {
   }
 
   // ================= DOWN (segment 1) =================
+
   else if (greenState === "down1") {
 
     greenY -= speed;
@@ -91,6 +96,7 @@ function animate() {
   }
 
   // ================= DOWN (segment 2) =================
+
   else if (greenState === "down2") {
     greenY -= speed;
 
@@ -105,6 +111,7 @@ function animate() {
   }
   
   // ================= DOWN (segment 3) =================
+
   else if (greenState === "down3") {
     greenY -= speed;
   
@@ -115,10 +122,13 @@ function animate() {
   
     if (greenY <= greenYLimit4) {
       greenState = "down4";
+          score+=1;
+    updateScore();
     }
   }
   
   // ================= DOWN (segment 4) =================
+
   else if (greenState === "down4") {
     greenY -= speed;
   }
@@ -136,5 +146,8 @@ requestAnimationFrame(animate);
 setTimeout(() => {
   yellowStarted = true;
   requestAnimationFrame(animateYellow);
-}, 3000);
+}, 1000);
+
+planeYellow1.style.visibility = "hidden";
+
 }

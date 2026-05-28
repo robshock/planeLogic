@@ -9,4 +9,5 @@ function triggerGameOver() {
 
   gameOverScreen.style.display = "flex";
   restartBtn.style.display = "block";
+
 }

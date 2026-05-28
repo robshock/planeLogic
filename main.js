@@ -42,13 +42,25 @@ const img9 = document.getElementById("arrowImg9");
 
 
 // SETTINGS
-let decisionPoint1;
-let decisionPoint2;
-let decisionPoint3;
-let decisionPoint4;
-let decisionPoint5;
-let decisionPoint6;
-let decisionPoint7;
+let decisionPoint1 = window.innerHeight * 0.37;
+let decisionPoint2 = window.innerHeight * 0.5;
+let decisionPoint3 = window.innerHeight * 0.61;
+let decisionPoint4 = window.innerWidth * 0.525;
+let decisionPoint5 = window.innerHeight * 0.61;
+let decisionPoint6 = window.innerHeight * 0.50;
+let decisionPoint7 = window.innerHeight * 0.39;
+
+let decisionPoint4yellow = window.innerHeight * 0.72;
+let decisionPoint5yellow = window.innerHeight * 0.61;
+let decisionPoint6yellow = window.innerHeight * 0.50;
+let decisionPoint7yellow = window.innerHeight * 0.39;
+
+let score = 0;
+function updateScore() {
+  scoreDisplay.textContent = `Score: ${score}`;
+}
+
+
 
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.37;
@@ -58,6 +70,11 @@ function updateDecisionPoints() {
   decisionPoint5 = window.innerHeight * 0.61;
   decisionPoint6 = window.innerHeight * 0.50;
   decisionPoint7 = window.innerHeight * 0.39;
+
+  decisionPoint4yellow = window.innerHeight * 0.72;
+  decisionPoint5yellow = window.innerHeight * 0.61;
+  decisionPoint6yellow = window.innerHeight * 0.50;
+  decisionPoint7yellow = window.innerHeight * 0.39;
 }
 
 // BUTTONS
@@ -181,6 +198,7 @@ function restartGame() {
   gameOverScreen.style.display = "none";
   restartBtn.style.display = "none";
 
+  score = 0;
   // CORE STATE
   gameOver = false;
   gameStarted = true;
@@ -188,7 +206,11 @@ function restartGame() {
   // POSITION RESET
   greenX = planeX1;
   greenY = planeY1;
+  YellowX = planeYellowX;
+  YellowY = planeYellowY;
+
   greenState = "up";
+  YellowState = "up";
 
   // RESET ALL DECISIONS
   firstDecisionMadeGreen = false;
@@ -198,6 +220,15 @@ function restartGame() {
   fifthDecisionMadeGreen = false;
   sixthDecisionMadeGreen = false;
   seventhDecisionMadeGreen = false;
+
+  firstDecisionMadeYellow = false;
+  secondDecisionMadeYellow = false;
+  thirdDecisionMadeYellow = false;
+  fourthDecisionMadeYellow = false;
+  fifthDecisionMadeYellow = false;
+  sixthDecisionMadeYellow = false;
+  seventhDecisionMadeYellow = false;
+
 
   // RESET ALL BUTTON LOGIC (IMPORTANT)
   mode1Right = false;
@@ -209,6 +240,18 @@ function restartGame() {
   mode7Right = false;
   mode8Right = false;
   mode9Right = false;
+
+  mode1Right_2 = false;
+  mode2Right_2 = false;
+  mode3Right_2 = false;
+  mode4Right_2 = false;
+  mode5Right_2 = false;
+  mode6Right_2 = false;
+  mode7Right_2 = false;
+  mode8Right_2 = false;
+  mode9Right_2 = false;
+
+
 
   // RESET VISUALS
   img1.src = "pngs/arrowLeft.png";
@@ -226,12 +269,17 @@ function restartGame() {
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
 
+  planeYellow1.style.transform = "rotate(0deg)";
+  planeYellow1.style.left = YellowX + "px";
+  planeYellow1.style.bottom = YellowY + "px";
+
   // START CLEAN LOOP (IMPORTANT)
   requestAnimationFrame(animate);
+  //requestAnimationFrame(animateYellow);
 }
-  //*/
+//*/
 
-  function triggerGameOver() {
+function triggerGameOver() {
   gameOver = true;
 
   gameOverScreen.style.display = "flex";
