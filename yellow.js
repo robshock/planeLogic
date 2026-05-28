@@ -78,6 +78,7 @@ function animateYellow() {
     planeYellow1.style.left = YellowX + "px";
     planeYellow1.style.bottom = YellowY + "px";
 
-    //requestAnimationFrame(animateYellow);
+    requestAnimationFrame(animateYellow);
 }
+
 

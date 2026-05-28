@@ -19,6 +19,9 @@ const greenXLimit2 = window.innerWidth * 0.6;
 let movingDownGreen = false;
 let greenState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
+let yellowStarted = false;
+
+
 // ================= GREEN ================= 
 
 function animate() {
@@ -143,11 +146,15 @@ function animate() {
 
 requestAnimationFrame(animate);
 
-setTimeout(() => {
+if (!yellowStarted) {
   yellowStarted = true;
-  requestAnimationFrame(animateYellow);
-}, 1000);
 
-planeYellow1.style.visibility = "hidden";
+  setTimeout(() => {
+    requestAnimationFrame(animateYellow);
+  }, 1000);
+}
+
 
 }
+
+
