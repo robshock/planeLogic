@@ -2,7 +2,8 @@
 function startGame() {
   gameStarted = true;
 
-  animate();
+  //animate();
+  requestAnimationFrame(animate);
 
   // KEEP YOUR ORIGINAL STAGGERING
   setTimeout(() => animate2(), 3000);

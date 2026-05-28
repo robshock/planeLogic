@@ -31,6 +31,7 @@
 #arrowBtn9 {left: 24.5%;bottom: 30%;}
 
 #restartBtn { 
+  display: none;
   position: fixed; 
   top: 20px; 
   left: 20px; 
