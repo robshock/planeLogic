@@ -1,3 +1,6 @@
+const restartBtn = document.getElementById("restartBtn");
+const gameOverScreen = document.getElementById("gameOverScreen");
+
 const planeGreen1 = document.getElementById("planeGreen1");
 const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
@@ -8,9 +11,6 @@ const planeYellowY = window.innerHeight * 0.001;
 
 const speed = 2;
 const speedYellow = 2;
-
-const restartBtn = document.getElementById("restartBtn");
-const gameOverScreen = document.getElementById("gameOverScreen");
 
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
@@ -61,7 +61,7 @@ let decisionPoint7yellow = window.innerHeight * 0.39;
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.37;
   decisionPoint2 = window.innerHeight * 0.5;
-  decisionPoint3 = window.innerHeight * 0.61;
+  decisionPoint3 = window.innerHeight * 0.66;
   decisionPoint4 = window.innerWidth * 0.525;
   decisionPoint5 = window.innerHeight * 0.61;
   decisionPoint6 = window.innerHeight * 0.50;

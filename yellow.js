@@ -67,12 +67,22 @@ function animateYellow() {
             fourthDecisionMadeYellow = true;
             if (!mode8Right) return triggerGameOver();
         }
+        if (YellowY >= YellowYLimit2) {
+            YellowState = "up3";
+            score ++;
+            updateScore();
+        }
     }
+    else if (YellowState === "up3") {
+        YellowY += speedYellow;
+    }
+    
+
 
     // ================= ROTATION =================
     if (YellowState === "up") planeYellow1.style.transform = "rotate(0deg)";
     else if (YellowState.startsWith("left")) planeYellow1.style.transform = "rotate(-90deg)";
-    else if (YellowState.startsWith("up2")) planeYellow1.style.transform = "rotate(0deg)";
+    else if (YellowState.startsWith("up")) planeYellow1.style.transform = "rotate(0deg)";
     else planeYellow1.style.transform = "rotate(180deg)";
 
     planeYellow1.style.left = YellowX + "px";
@@ -84,5 +94,3 @@ function animateYellow() {
 
     requestAnimationFrame(animateYellow);
 }
-
-
