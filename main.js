@@ -61,7 +61,7 @@ let decisionPoint7yellow = window.innerHeight * 0.39;
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.37;
   decisionPoint2 = window.innerHeight * 0.5;
-  decisionPoint3 = window.innerHeight * 0.66;
+  decisionPoint3 = window.innerHeight * 0.61;
   decisionPoint4 = window.innerWidth * 0.525;
   decisionPoint5 = window.innerHeight * 0.61;
   decisionPoint6 = window.innerHeight * 0.50;
