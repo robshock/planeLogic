@@ -9,8 +9,8 @@ const planeY1 = window.innerHeight * 0.001;
 const planeYellowX = window.innerWidth * 0.43;
 const planeYellowY = window.innerHeight * 0.001;
 
-const speed = 2;
-const speedYellow = 2;
+const speed = 1.5;
+const speedYellow = 1.5;
 
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
