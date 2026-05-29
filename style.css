@@ -33,7 +33,7 @@
 #scoreDisplay {
   position: absolute;
   top: 10px;
-  right: 100px;
+  right: 50px;
   font-size: 24px;
   font-weight: bold;
   color: black;
@@ -573,12 +573,21 @@ img {
   position: absolute;
   top: 5vh;
   left: 49vw;
-  width: 56.5vw;
+  width: 29.5vw;
   height: 14vh;
   background: rgb(158, 153, 153, 0.75);
 }
 
 .box3 {
+  position: absolute;
+  top: 15vh;
+  left: 19vw;
+  width: 10vw;
+  height: 4vh;
+  background: rgb(158, 153, 153, 0.75);
+}
+/*
+.box4 {
   position: absolute;
   top: 15vh;
   left: 19vw;
