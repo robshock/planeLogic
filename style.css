@@ -556,24 +556,24 @@ img {
   top: 19vh;
   left: 1vw;
   width: 97.5vw;
-  height: 52vh;
+  height: 54vh;
   background: rgb(158, 153, 153);
 }
 
 .box1 {
   position: absolute;
-  top: 8vh;
-  left: 15vw;
+  top: 6vh;
+  left: 18vw;
   width: 20vw;
-  height: 10vh;
+  height: 15vh;
   background: rgb(158, 153, 153);
 }
 
 .box2 {
   position: absolute;
-  top: 7vh;
-  left: 45vw;
-  width: 52.5vw;
-  height: 15vh;
+  top: 5vh;
+  left: 47vw;
+  width: 50.25vw;
+  height: 17vh;
   background: rgb(158, 153, 153);
 }
