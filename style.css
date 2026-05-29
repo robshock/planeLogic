@@ -551,6 +551,12 @@ img {
   height: 35vh;
 }
 
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
 .box {
   position: absolute;
   top: 19vh;
@@ -580,18 +586,18 @@ img {
 
 .box3 {
   position: absolute;
-  top: 15vh;
-  left: 19vw;
+  top: 16.5vh;
+  left: 39vw;
   width: 10vw;
-  height: 4vh;
+  height: 2.5vh;
   background: rgb(158, 153, 153, 0.75);
 }
-/*
+
 .box4 {
   position: absolute;
-  top: 15vh;
-  left: 19vw;
-  width: 10vw;
-  height: 4vh;
+  top: 73vh;
+  left: 78.5vw;
+  width: 20vw;
+  height: 3vh;
   background: rgb(158, 153, 153, 0.75);
 }
