@@ -50,12 +50,23 @@
 
 /* Set the body background */
 body {
+  background-image: url("pngs/clouds1.png");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*
+  body {
   margin: 0;
   overflow: hidden;
   background: skyblue;
   touch-action: manipulation;
   font-family: sans-serif;
 }
+*/
+
 
 /* Airplane styling (applies to all planes) */
 .airplane {
