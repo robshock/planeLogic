@@ -112,24 +112,24 @@ function animate() {
       greenState = "down3";
     }
   }
-  
+
   // ================= DOWN (segment 3) =================
 
   else if (greenState === "down3") {
     greenY -= speed;
-  
+
     if (!seventhDecisionMadeGreen && greenY <= decisionPoint7) {
       seventhDecisionMadeGreen = true;
       if (!mode7Right) return triggerGameOver();
     }
-  
+
     if (greenY <= greenYLimit4) {
       greenState = "down4";
-          score+=1;
-    updateScore();
+      score += 1;
+      updateScore();
     }
   }
-  
+
   // ================= DOWN (segment 4) =================
 
   else if (greenState === "down4") {
@@ -144,15 +144,20 @@ function animate() {
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
 
-requestAnimationFrame(animate);
-
-if (!yellowStarted) {
-  yellowStarted = true;
-
-  setTimeout(() => {
-    requestAnimationFrame(animateYellow);
-  }, 1000);
+  if (greenY < -100) {
+  planeGreen1.style.visibility = "hidden";
+  return;
 }
+
+  requestAnimationFrame(animate);
+
+  if (!yellowStarted) {
+    yellowStarted = true;
+
+    setTimeout(() => {
+      requestAnimationFrame(animateYellow);
+    }, 1000);
+  }
 
 
 }

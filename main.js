@@ -198,6 +198,8 @@ function restartGame() {
   gameOverScreen.style.display = "none";
   restartBtn.style.display = "none";
 
+yellowStarted = false;
+
   score = 0;
   // CORE STATE
   gameOver = false;

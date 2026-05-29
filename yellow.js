@@ -78,6 +78,10 @@ function animateYellow() {
     planeYellow1.style.left = YellowX + "px";
     planeYellow1.style.bottom = YellowY + "px";
 
+    if (YellowY > window.innerHeight + 100) {
+        return;
+    }
+
     requestAnimationFrame(animateYellow);
 }
 
