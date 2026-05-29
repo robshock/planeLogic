@@ -568,3 +568,12 @@ img {
   height: 10vh;
   background: rgb(158, 153, 153);
 }
+
+.box2 {
+  position: absolute;
+  top: 7vh;
+  left: 45vw;
+  width: 52.5vw;
+  height: 15vh;
+  background: rgb(158, 153, 153);
+}
