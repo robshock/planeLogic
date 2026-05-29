@@ -39,7 +39,10 @@ const img8 = document.getElementById("arrowImg8");
 const button9 = document.getElementById("arrowBtn9");
 const img9 = document.getElementById("arrowImg9");
 
-
+let score = 0;
+function updateScore() {
+  scoreDisplay.textContent = `Score: ${score}`;
+}
 
 // SETTINGS
 let decisionPoint1 = window.innerHeight * 0.37;
@@ -54,13 +57,6 @@ let decisionPoint4yellow = window.innerHeight * 0.72;
 let decisionPoint5yellow = window.innerHeight * 0.61;
 let decisionPoint6yellow = window.innerHeight * 0.50;
 let decisionPoint7yellow = window.innerHeight * 0.39;
-
-let score = 0;
-function updateScore() {
-  scoreDisplay.textContent = `Score: ${score}`;
-}
-
-
 
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.37;
