@@ -48,21 +48,10 @@
   z-index: 999999999; 
 }
 
-/* Set the body background */
-/*
-body {
-  background-image: url("pngs/clouds1.png");
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-*/
-
   body {
   margin: 0;
   overflow: hidden;
-  background: skyblue;
+  background: rgb(57, 192, 245);
   touch-action: manipulation;
   font-family: sans-serif;
 }
