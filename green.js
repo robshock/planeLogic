@@ -125,7 +125,7 @@ function animate() {
 
     if (greenY <= greenYLimit4) {
       greenState = "down4";
-      score += 1;
+      score += 2;
       updateScore();
     }
   }
