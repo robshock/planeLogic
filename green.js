@@ -125,7 +125,7 @@ function animate() {
 
     if (greenY <= greenYLimit4) {
       greenState = "down4";
-      score += 2;
+      score += 1;
       updateScore();
     }
   }
@@ -156,10 +156,8 @@ function animate() {
 
     setTimeout(() => {
       requestAnimationFrame(animateYellow);
-    }, 1000);
+    }, 2000);
   }
 
 
 }
-
-
