@@ -601,3 +601,22 @@ img {
   height: 4vh;
   background: rgb(158, 153, 153, 0.75);
 }
+
+.box5 {
+  position: absolute;
+  top: 73vh;
+  left: 18.5vw;
+  width: 60vw;
+  height: 15vh;
+  background: rgb(158, 153, 153, 0.75);
+}
+
+.box6 {
+  position: absolute;
+  top: 88vh;
+  left: 38.5vw;
+  width: 20vw;
+  height: 12vh;
+  background: rgb(158, 153, 153, 0.75);
+}
+
