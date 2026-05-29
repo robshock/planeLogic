@@ -15,7 +15,7 @@ const greenYLimit2 = window.innerHeight * 0.6;
 const greenYLimit3 = window.innerHeight * 0.5;
 const greenYLimit4 = window.innerHeight * 0.39;
 const greenXLimit = window.innerWidth * 0.525;
-const greenXLimit2 = window.innerWidth * 0.61;
+const greenXLimit2 = window.innerWidth * 0.62;
 let movingDownGreen = false;
 let greenState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 

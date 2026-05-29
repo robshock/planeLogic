@@ -10,7 +10,7 @@ let fifthDecisionMadeYellow = false;
 let sixthDecisionMadeYellow = false;
 let seventhDecisionMadeYellow = false;
 
-const YellowYLimit = window.innerHeight * 0.8;
+const YellowYLimit = window.innerHeight * 0.61;
 const YellowYLimit2 = window.innerHeight * 0.72;
 const YellowYLimit3 = window.innerHeight * 0.61;
 const YellowYLimit4 = window.innerHeight * 0.39;
@@ -44,11 +44,13 @@ function animateYellow() {
         if (!thirdDecisionMadeYellow && YellowY >= decisionPoint3) {
             thirdDecisionMadeYellow = true;
             if (mode3Right) return triggerGameOver();
-            else {
-                YellowState = "left";
-            }
+        }
+
+        if (YellowY >= YellowYLimit) {
+            YellowState = "left";
         }
     }
+
 
     // ================= LEFT (segment 1) =================
 
@@ -69,14 +71,14 @@ function animateYellow() {
         }
         if (YellowY >= YellowYLimit2) {
             YellowState = "up3";
-            score ++;
+            score++;
             updateScore();
         }
     }
     else if (YellowState === "up3") {
         YellowY += speedYellow;
     }
-    
+
 
 
     // ================= ROTATION =================
