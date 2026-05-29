@@ -93,7 +93,20 @@ let mode8Right_2 = false;
 let mode9Right = false;
 let mode9Right_2 = false;
 
-button1.addEventListener("click", () => {
+function feedback() {
+
+  // Android vibration
+  if (navigator.vibrate) {
+    navigator.vibrate(10);
+  }
+
+  // Optional sound
+  clickSound.currentTime = 0;
+  clickSound.play();
+
+}
+
+button1.addEventListener("pointerdown", () => {
   mode1Right = !mode1Right;
 
   img1.src = mode1Right
@@ -101,9 +114,10 @@ button1.addEventListener("click", () => {
     : "pngs/arrowLeft.png";
 
   mode1Right_2 = mode1Right;
+  feedback();
 });
 
-button2.addEventListener("click", () => {
+button2.addEventListener("pointerdown", () => {
   mode2Right = !mode2Right;
 
   img2.src = mode2Right
@@ -113,7 +127,7 @@ button2.addEventListener("click", () => {
   mode2Right_2 = mode2Right;
 });
 
-button3.addEventListener("click", () => {
+button3.addEventListener("pointerdown", () => {
   mode3Right = !mode3Right;
 
   img3.src = mode3Right
@@ -123,7 +137,7 @@ button3.addEventListener("click", () => {
   mode3Right_2 = mode3Right;
 });
 
-button4.addEventListener("click", () => {
+button4.addEventListener("pointerdown", () => {
   mode4Right = !mode4Right;
 
   img4.src = mode4Right
@@ -133,7 +147,7 @@ button4.addEventListener("click", () => {
   mode4Right_2 = mode4Right;
 });
 
-button5.addEventListener("click", () => {
+button5.addEventListener("pointerdown", () => {
   mode5Right = !mode5Right;
 
   img5.src = mode5Right
@@ -143,7 +157,7 @@ button5.addEventListener("click", () => {
   mode5Right_2 = mode5Right;
 });
 
-button6.addEventListener("click", () => {
+button6.addEventListener("pointerdown", () => {
   mode6Right = !mode6Right;
 
   img6.src = mode6Right
@@ -153,7 +167,7 @@ button6.addEventListener("click", () => {
   mode6Right_2 = mode6Right;
 });
 
-button7.addEventListener("click", () => {
+button7.addEventListener("pointerdown", () => {
   mode7Right = !mode7Right;
 
   img7.src = mode7Right
@@ -163,7 +177,7 @@ button7.addEventListener("click", () => {
   mode7Right_2 = mode7Right;
 });
 
-button8.addEventListener("click", () => {
+button8.addEventListener("pointerdown", () => {
   mode8Right = !mode8Right;
 
   img8.src = mode8Right
@@ -173,7 +187,7 @@ button8.addEventListener("click", () => {
   mode8Right_2 = mode8Right;
 });
 
-button9.addEventListener("click", () => {
+button9.addEventListener("pointerdown", () => {
   mode9Right = !mode9Right;
 
   img9.src = mode9Right
