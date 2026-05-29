@@ -10,7 +10,7 @@ let fifthDecisionMadeYellow = false;
 let sixthDecisionMadeYellow = false;
 let seventhDecisionMadeYellow = false;
 
-const YellowYLimit = window.innerHeight * 0.61;
+const YellowYLimit = window.innerHeight * 0.66;
 const YellowYLimit2 = window.innerHeight * 0.72;
 const YellowYLimit3 = window.innerHeight * 0.61;
 const YellowYLimit4 = window.innerHeight * 0.39;
