@@ -144,6 +144,8 @@ img {
   overflow: hidden;
 }
 
+
+
 /* ---------------------------------------------------------- */
 
 .line {
@@ -547,4 +549,13 @@ img {
   left: 40vw;
   width: 2px;
   height: 35vh;
+}
+
+.box {
+  position: absolute;
+  top: 17vh;
+  left: 1vw;
+  width: 98vw;
+  height: 60vh;
+  background: gray;
 }
