@@ -4,9 +4,9 @@ const gameOverScreen = document.getElementById("gameOverScreen");
 const planeGreen1 = document.getElementById("planeGreen1");
 const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
-const planeX1 = window.innerWidth * 0.45;
+const planeX1 = window.innerWidth * 0.43;
 const planeY1 = window.innerHeight * 0.001;
-const planeYellowX = window.innerWidth * 0.45;
+const planeYellowX = window.innerWidth * 0.43;
 const planeYellowY = window.innerHeight * 0.001;
 
 const speed = 2;
