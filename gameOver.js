@@ -7,6 +7,7 @@ function triggerGameOver() {
 
   gameOver = true;
     planeYellow1.style.visibility = "hidden";
+    planeGreen1.style.visibility = "hidden";
 
 
   gameOverScreen.style.display = "flex";
