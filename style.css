@@ -553,9 +553,18 @@ img {
 
 .box {
   position: absolute;
-  top: 17vh;
+  top: 18vh;
   left: 1vw;
-  width: 98vw;
-  height: 60vh;
-  background: gray;
+  width: 97.5vw;
+  height: 58vh;
+  background: rgb(158, 153, 153);
+}
+
+.box1 {
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+  width: 15vw;
+  height: 10vh;
+  background: rgb(158, 153, 153);
 }
