@@ -1,13 +1,15 @@
 const restartBtn = document.getElementById("restartBtn");
 const gameOverScreen = document.getElementById("gameOverScreen");
+
 const planeGreen1 = document.getElementById("planeGreen1");
 const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
 const planeOrange1 = document.getElementById("planeOrange1");
+const planePurple1 = document.getElementById("planePurple1;");
+
 /*
 const planeRed1 = document.getElementById("planeBlue1");
 const planePink1 = document.getElementById("planeBlue1");
-const planePurple1 = document.getElementById("planeBlue1");
 const planeBlack1 = document.getElementById("planeBlue1");
 const planeDarkBlue1 = document.getElementById("planeBlue1");
 const planeDarkGreen1 = document.getElementById("planeBlue1");
@@ -20,11 +22,11 @@ const planeBlueX = window.innerWidth * 0.43;
 const planeBlueY = window.innerHeight * 0.001;
 const planeOrangeX = window.innerWidth * 0.43;
 const planeOrangeY = window.innerHeight * 0.001;
+const planePurpleX = window.innerWidth * 0.43;
+const planePurpleY = window.innerHeight * 0.001;
 /*
 const planeRedX = window.innerWidth * 0.43;
 const planeRedY = window.innerHeight * 0.001;
-const planePurpleX = window.innerWidth * 0.43;
-const planePurpleY = window.innerHeight * 0.001;
 const planePinkX = window.innerWidth * 0.43;
 const planePinkY = window.innerHeight * 0.001;
 const planeDarkGreeX = window.innerWidth * 0.43;
@@ -38,9 +40,10 @@ const speed = 1.5;
 const speedYellow = 1.5;
 const speedBlue = 1.5;
 const speedOrange = 1.5;
+const speedPurple = 1.5;
+
 /*
 const speedRed = 1.5;
-const speedPurple = 1.5;
 const speedPink = 1.5;
 const speedBlack = 1.5;
 const speedDarkGreen = 1.5;
@@ -200,6 +203,7 @@ restartBtn.style.display = "none";
 yellowStarted = false;
 blueStarted = false;
 orangeStarted = false;
+purpleStarted = false;
 //redStarted = false;
 score = 0;
 // CORE STATE
@@ -218,6 +222,7 @@ greenState = "up";
 YellowState = "up";
 BlueState = "up";
 OrangeState = "up";
+PurpleState = "up";
 // RESET ALL DECISIONS
 firstDecisionMadeGreen = false;
 secondDecisionMadeGreen = false;
@@ -247,6 +252,15 @@ fourthDecisionMadeOrange = false;
 fifthDecisionMadeOrange = false;
 sixthDecisionMadeOrange = false;
 seventhDecisionMadeOrange = false;
+firstDecisionMadePurple = false;
+secondDecisionMadePurple = false;
+thirdDecisionMadePurple = false;
+fourthDecisionMadePurple = false;
+fifthDecisionMadePurple = false;
+sixthDecisionMadePurple = false;
+seventhDecisionMadePurple = false;
+
+
 // RESET ALL BUTTON LOGIC (IMPORTANT)
 mode1Right = false;
 mode2Right = false;
@@ -289,6 +303,8 @@ planeBlue1.style.bottom = BlueY + "px";
 planeOrange1.style.transform = "rotate(0deg)";
 planeOrange1.style.left = OrangeX + "px";
 planeOrange1.style.bottom = OrangeY + "px";
+planePurple1.style.left = PurpleX + "px";
+planePurple1.style.bottom = PurpleY + "px";
 // START CLEAN LOOP (IMPORTANT)
 requestAnimationFrame(animate);
 //requestAnimationFrame(animateOrange);
