@@ -11,7 +11,7 @@ let sixthDecisionMadePurple = false;
 let seventhDecisionMadePurple = false;
 
 
-const PurpleYLimit = window.innerHeight * 0.66;
+const PurpleYLimit = window.innerHeight * 0.68;
 const PurpleYLimit2 = window.innerHeight * 0.8;
 const PurpleYLimit3 = window.innerHeight * 0.61;
 const PurpleYLimit4 = window.innerHeight * 0.39;
