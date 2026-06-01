@@ -12,7 +12,7 @@ let seventhDecisionMadePurple = false;
 
 
 const PurpleYLimit = window.innerHeight * 0.66;
-const PurpleYLimit2 = window.innerHeight * 0.75;
+const PurpleYLimit2 = window.innerHeight * 0.8;
 const PurpleYLimit3 = window.innerHeight * 0.61;
 const PurpleYLimit4 = window.innerHeight * 0.39;
 const PurpleXLimit = window.innerWidth * 0.245;
@@ -118,7 +118,7 @@ function animatePurple() {
     planePurple1.style.bottom = PurpleY + "px";
 
 
-    if (PurpleState === "down" && PurpleY < window.innerHeight * 0.45) {
+    if (PurpleState === "down" && PurpleY < window.innerHeight * 0.55) {
         planePurple1.style.visibility = "hidden";
         return;
     }
