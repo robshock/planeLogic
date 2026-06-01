@@ -11,6 +11,7 @@ function triggerGameOver() {
   planeBlue1.style.visibility = "hidden";
   planeOrange1.style.visibility = "hidden";
   planePurple1.style.visibility = "hidden";
+  planePink1.style.visibility = "hidden";
 
   gameOverScreen.style.display = "flex";
   restartBtn.style.display = "block";

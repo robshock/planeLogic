@@ -6,10 +6,10 @@ const planeYellow1 = document.getElementById("planeYellow1");
 const planeBlue1 = document.getElementById("planeBlue1");
 const planeOrange1 = document.getElementById("planeOrange1");
 const planePurple1 = document.getElementById("planePurple1");
+const planePink1 = document.getElementById("planePink1");
 
 /*
 const planeRed1 = document.getElementById("planeBlue1");
-const planePink1 = document.getElementById("planeBlue1");
 const planeBlack1 = document.getElementById("planeBlue1");
 const planeDarkBlue1 = document.getElementById("planeBlue1");
 const planeDarkGreen1 = document.getElementById("planeBlue1");
@@ -24,11 +24,11 @@ const planeOrangeX = window.innerWidth * 0.43;
 const planeOrangeY = window.innerHeight * 0.001;
 const planePurpleX = window.innerWidth * 0.43;
 const planePurpleY = window.innerHeight * 0.001;
+const planePinkX = window.innerWidth * 0.43;
+const planePinkY = window.innerHeight * 0.001;
 /*
 const planeRedX = window.innerWidth * 0.43;
 const planeRedY = window.innerHeight * 0.001;
-const planePinkX = window.innerWidth * 0.43;
-const planePinkY = window.innerHeight * 0.001;
 const planeDarkGreeX = window.innerWidth * 0.43;
 const planeDarkBlueY = window.innerHeight * 0.001;
 const planeDarkGreeX = window.innerWidth * 0.43;
@@ -41,10 +41,10 @@ const speedYellow = 1.5;
 const speedBlue = 1.5;
 const speedOrange = 1.5;
 const speedPurple = 1.5;
+const speedPink = 1.5;
 
 /*
 const speedRed = 1.5;
-const speedPink = 1.5;
 const speedBlack = 1.5;
 const speedDarkGreen = 1.5;
 const speedDarkBlue = 1.5;
@@ -214,6 +214,7 @@ function restartGame() {
   blueStarted = false;
   orangeStarted = false;
   purpleStarted = false;
+  pinkStarted = false;
   //redStarted = false;
   score = 0;
   // CORE STATE
@@ -230,11 +231,14 @@ function restartGame() {
   OrangeY = planeOrangeY;
   PurpleX = planePurpleX;
   PurpleY = planePurpleY;
+  PinkX = planePinkX;
+  PinkY = planePinkY;
   greenState = "up";
   YellowState = "up";
   BlueState = "up";
   OrangeState = "up";
   PurpleState = "up";
+  PinkState = "up";
   // RESET ALL DECISIONS
   firstDecisionMadeGreen = false;
   secondDecisionMadeGreen = false;
@@ -271,6 +275,13 @@ function restartGame() {
   fifthDecisionMadePurple = false;
   sixthDecisionMadePurple = false;
   seventhDecisionMadePurple = false;
+  firstDecisionMadePink = false;
+  secondDecisionMadePink = false;
+  thirdDecisionMadePink = false;
+  fourthDecisionMadePink = false;
+  fifthDecisionMadePink = false;
+  sixthDecisionMadePink = false;
+  seventhDecisionMadePink = false;
 
 
   // RESET ALL BUTTON LOGIC (IMPORTANT)
@@ -318,17 +329,15 @@ function restartGame() {
   planePurple1.style.transform = "rotate(0deg)";
   planePurple1.style.left = PurpleX + "px";
   planePurple1.style.bottom = PurpleY + "px";
+    planePink1.style.transform = "rotate(0deg)";
+  planePink1.style.left = PinkX + "px";
+  planePink1.style.bottom = PinkY + "px";
   // START CLEAN LOOP (IMPORTANT)
   //requestAnimationFrame(animate);
-  requestAnimationFrame(animatePurple);
+  requestAnimationFrame(animatePink);
 }
 function triggerGameOver() {
   gameOver = true;
   gameOverScreen.style.display = "flex";
   restartBtn.style.display = "block";
 }
-
-
-
-
-
