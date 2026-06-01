@@ -118,7 +118,7 @@ function animatePurple() {
     planePurple1.style.bottom = PurpleY + "px";
 
 
-    if (PurpleState === "down" && PurpleY < window.innerHeight * 0.55) {
+    if (PurpleState === "down" && PurpleY < window.innerHeight * 0.60) {
         planePurple1.style.visibility = "hidden";
         return;
     }
