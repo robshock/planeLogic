@@ -20,7 +20,7 @@ const PinkXLimit3 = window.innerWidth * 0.8;
 
 let movingDownPink = false;
 let PinkState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
-//let purpleStarted = false;
+let redStarted = false;
 
 // ================= PINK =================
 function animatePink() {
@@ -136,25 +136,25 @@ function animatePink() {
     planePink1.style.left = PinkX + "px";
     planePink1.style.bottom = PinkY + "px";
 
-    /*
-        if (PinkState === "down" && PinkY > window.innerHeight * 0.8) {
+    
+        if (PinkState === "up2" && PinkY > window.innerHeight * 0.8) {
             planePink1.style.visibility = "hidden";
             return;
         }
-    */
+    
 
     requestAnimationFrame(animatePink);
 
-    /*
-       if (!purpleStarted) {
-           purpleStarted = true;
+    
+       if (!redStarted) {
+           redStarted = true;
     
     
            setTimeout(() => {
-               requestAnimationFrame(animatePurple);
+               requestAnimationFrame(animateRed);
            }, 2000);
        }
-    */
+    
 
 }
 
