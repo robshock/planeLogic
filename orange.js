@@ -124,7 +124,7 @@ function animateOrange() {
     }
 
     requestAnimationFrame(animateOrange);
-/*
+
     if (!purpleStarted) {
         purpleStarted = true;
 
@@ -132,5 +132,5 @@ function animateOrange() {
             requestAnimationFrame(animatePurple);
         }, 2000);
     }
-*/
+
 }
