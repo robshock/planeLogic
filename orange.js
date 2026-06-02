@@ -119,7 +119,7 @@ function animateOrange() {
     planeOrange1.style.left = OrangeX + "px";
     planeOrange1.style.bottom = OrangeY + "px";
 
-    if (OrangeState === "down4" && OrangeY < window.innerHeight * 0.2) {
+    if (OrangeState === "down4" && OrangeY < window.innerHeight * 0.25) {
         planeOrange1.style.visibility = "hidden";
         return;
     }
