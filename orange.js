@@ -9,13 +9,13 @@ let fourthDecisionMadeOrange = false;
 let fifthDecisionMadeOrange = false;
 let sixthDecisionMadeOrange = false;
 let seventhDecisionMadeOrange = false;
-const OrangeYLimit = window.innerHeight * 0.85;
+const OrangeYLimit = window.innerHeight * 0.84;
 const OrangeYLimit2 = window.innerHeight * 0.6;
 const OrangeYLimit3 = window.innerHeight * 0.5;
-const OrangeYLimit4 = window.innerHeight * 0.45;
+const OrangeYLimit4 = window.innerHeight * 0.44;
 const OrangeXLimit = window.innerWidth * 0.525;
 const OrangeXLimit2 = window.innerWidth * 0.62;
-const OrangeXLimit3 = window.innerWidth * 0.8;
+const OrangeXLimit3 = window.innerWidth * 0.81;
 
 let movingDownOrange = false;
 let OrangeState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
