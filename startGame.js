@@ -3,8 +3,8 @@ function startGame() {
   gameStarted = true;
   //requestAnimationFrame(animate);
   //requestAnimationFrame(animateBlue);
-  //requestAnimationFrame(animateOrange);
+  requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animatePurple);
-  requestAnimationFrame(animatePink);
+  //requestAnimationFrame(animatePink);
 
 }

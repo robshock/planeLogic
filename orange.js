@@ -129,7 +129,7 @@ function animateOrange() {
         purpleStarted = true;
 
         setTimeout(() => {
-            requestAnimationFrame(animatePurple);
+            //requestAnimationFrame(animatePurple);
         }, 2000);
     }
 
