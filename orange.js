@@ -15,7 +15,7 @@ const OrangeYLimit3 = window.innerHeight * 0.5;
 const OrangeYLimit4 = window.innerHeight * 0.44;
 const OrangeXLimit = window.innerWidth * 0.525;
 const OrangeXLimit2 = window.innerWidth * 0.62;
-const OrangeXLimit3 = window.innerWidth * 0.81;
+const OrangeXLimit3 = window.innerWidth * 0.815;
 
 let movingDownOrange = false;
 let OrangeState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
@@ -119,7 +119,8 @@ function animateOrange() {
     planeOrange1.style.left = OrangeX + "px";
     planeOrange1.style.bottom = OrangeY + "px";
 
-    if (OrangeY < -100) {
+    if (OrangeState === "down4" && OrangeY < window.innerHeight * 0.2) {
+        planeOrange1.style.visibility = "hidden";
         return;
     }
 
