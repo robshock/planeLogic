@@ -72,13 +72,13 @@ function updateScore() {
   scoreDisplay.textContent = `Score: ${score}`;
 }
 // SETTINGS
-let decisionPoint1 = window.innerHeight * 0.37;
-let decisionPoint2 = window.innerHeight * 0.5;
-let decisionPoint3 = window.innerHeight * 0.61;
+let decisionPoint1 = window.innerHeight * 0.39;
+let decisionPoint2 = window.innerHeight * 0.52;
+let decisionPoint3 = window.innerHeight * 0.63;
 let decisionPoint4 = window.innerWidth * 0.525;
-let decisionPoint5 = window.innerHeight * 0.61;
-let decisionPoint6 = window.innerHeight * 0.50;
-let decisionPoint7 = window.innerHeight * 0.39;
+let decisionPoint5 = window.innerHeight * 0.63;
+let decisionPoint6 = window.innerHeight * 0.52;
+let decisionPoint7 = window.innerHeight * 0.41;
 let decisionPoint4yellow = window.innerHeight * 0.72;
 let decisionPoint5yellow = window.innerHeight * 0.61;
 let decisionPoint6yellow = window.innerHeight * 0.50;
@@ -329,12 +329,16 @@ function restartGame() {
   planePurple1.style.transform = "rotate(0deg)";
   planePurple1.style.left = PurpleX + "px";
   planePurple1.style.bottom = PurpleY + "px";
-    planePink1.style.transform = "rotate(0deg)";
+  planePink1.style.transform = "rotate(0deg)";
   planePink1.style.left = PinkX + "px";
   planePink1.style.bottom = PinkY + "px";
   // START CLEAN LOOP (IMPORTANT)
   //requestAnimationFrame(animate);
-  requestAnimationFrame(animatePink);
+  //requestAnimationFrame(animateYellow);
+  requestAnimationFrame(animateOrange);
+  //requestAnimationFrame(animateBlue);
+  //requestAnimationFrame(animatePurple);
+  //requestAnimationFrame(animatePink);
 }
 function triggerGameOver() {
   gameOver = true;
