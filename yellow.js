@@ -1,4 +1,3 @@
-// YELLOW PLANE
 let YellowX = planeYellowX, YellowY = planeYellowY;
 let verticalLockYellow = false;
 let horizontalLockYellow = false;
@@ -19,7 +18,6 @@ let movingDownYellow = false;
 let YellowState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
 let blueStarted = false;
-
 
 // ================= YELLOW =================
 
@@ -53,7 +51,6 @@ function animateYellow() {
         }
     }
 
-
     // ================= LEFT (segment 1) =================
 
     else if (YellowState === "left") {
@@ -80,8 +77,6 @@ function animateYellow() {
     else if (YellowState === "up3") {
         YellowY += speedYellow;
     }
-
-
 
     // ================= ROTATION =================
     if (YellowState === "up") planeYellow1.style.transform = "rotate(0deg)";

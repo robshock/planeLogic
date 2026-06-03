@@ -16,9 +16,7 @@ const PurpleXLimit = window.innerWidth * 0.245;
 const PurpleXLimit2 = window.innerWidth * 0.05;
 
 let movingDownPurple = false;
-let PurpleState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
-
-let pinkStarted = false;
+let PurpleState = "up";
 
 // ================= PURPLE =================
 

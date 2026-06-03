@@ -220,8 +220,8 @@ function restartGame() {
   PurpleY = planePurpleY;
   PinkX = planePinkX;
   PinkY = planePinkY;
-  RedX = planePinkX;
-  RedY = planePinkY;
+  RedX = planeRedX;
+  RedY = planeRedY;
 
   greenState = "up";
   YellowState = "up";
