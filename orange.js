@@ -9,10 +9,11 @@ let fourthDecisionMadeOrange = false;
 let fifthDecisionMadeOrange = false;
 let sixthDecisionMadeOrange = false;
 let seventhDecisionMadeOrange = false;
-const OrangeYLimit = window.innerHeight * 0.84;
-const OrangeYLimit2 = window.innerHeight * 0.6;
-const OrangeYLimit3 = window.innerHeight * 0.5;
+const OrangeYLimit = window.innerHeight * 0.83;
+const OrangeYLimit2 = window.innerHeight * 0.69;
+const OrangeYLimit3 = window.innerHeight * 0.55;
 const OrangeYLimit4 = window.innerHeight * 0.44;
+
 const OrangeXLimit = window.innerWidth * 0.525;
 const OrangeXLimit2 = window.innerWidth * 0.62;
 const OrangeXLimit3 = window.innerWidth * 0.815;
@@ -62,27 +63,25 @@ function animateOrange() {
     }
     // ================= DOWN (segment 1) =================
     else if (OrangeState === "down1") {
-
         OrangeY -= speedOrange;
-        
-        // FIRST: state transition
+
         if (OrangeY <= OrangeYLimit2) {
+            if (!fifthDecisionMadeOrange && OrangeY >= decisionPoint5) {
+                fifthDecisionMadeOrange = true;
+                if (!mode5Right) return triggerGameOver();
+            }
             OrangeState = "down2";
         }
-        // SECOND: decision check (must not depend on transition logic)
-        if (!fifthDecisionMadeOrange && OrangeY <= decisionPoint5) {
-            fifthDecisionMadeOrange = true;
-            if (!mode5Right) return triggerGameOver();
-        }
     }
+    
     // ================= DOWN (segment 2) =================
     else if (OrangeState === "down2") {
         OrangeY -= speedOrange;
-        if (!sixthDecisionMadeOrange && OrangeY <= decisionPoint6) {
-            sixthDecisionMadeOrange = true;
-            if (!mode6Right) return triggerGameOver();
-        }
         if (OrangeY <= OrangeYLimit3) {
+            if (!sixthDecisionMadeOrange && OrangeY >= decisionPoint6) {
+                sixthDecisionMadeOrange = true;
+                if (!mode6Right) return triggerGameOver();
+            }
             OrangeState = "down3";
         }
     }
@@ -90,13 +89,11 @@ function animateOrange() {
 
     else if (OrangeState === "down3") {
         OrangeY -= speedOrange;
-        
-        if (!seventhDecisionMadeOrange && OrangeY <= decisionPoint7) {
-            seventhDecisionMadeOrange = true;
-            if (mode7Right) return triggerGameOver();
-        }
-
         if (OrangeY <= OrangeYLimit4) {
+            if (!seventhDecisionMadeOrange && OrangeY >= decisionPoint7) {
+                seventhDecisionMadeOrange = true;
+                if (mode7Right) return triggerGameOver();
+            }
             OrangeState = "right3";
             score++;
             updateScore();
@@ -130,13 +127,13 @@ function animateOrange() {
     }
 
     requestAnimationFrame(animateOrange);
-
-    if (!purpleStarted) {
-        purpleStarted = true;
-
-        setTimeout(() => {
-            //requestAnimationFrame(animatePurple);
-        }, 2000);
-    }
-
+    /*
+        if (!purpleStarted) {
+            purpleStarted = true;
+    
+            setTimeout(() => {
+                //requestAnimationFrame(animatePurple);
+            }, 2000);
+        }
+    */
 }

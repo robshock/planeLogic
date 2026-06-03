@@ -93,12 +93,13 @@ function animateYellow() {
     planeYellow1.style.left = YellowX + "px";
     planeYellow1.style.bottom = YellowY + "px";
 
-    if (YellowY > window.innerHeight + 100) {
+    if (YellowState === "up3" && YellowY > window.innerHeight * 0.85) {
+        planeYellow1.style.visibility = "hidden";
         return;
     }
 
     requestAnimationFrame(animateYellow);
-
+/*
       if (!blueStarted) {
     blueStarted = true;
 
@@ -106,5 +107,5 @@ function animateYellow() {
       requestAnimationFrame(animateBlue);
     }, 2000);
   }
-  
+  */
 }

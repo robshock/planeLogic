@@ -12,12 +12,14 @@ let sixthDecisionMadeBlue = false;
 let seventhDecisionMadeBlue = false;
 
 
-const BlueYLimit = window.innerHeight * 0.37;
+const BlueYLimit = window.innerHeight * 0.42;
 const BlueYLimit2 = window.innerHeight * 0.3;
 const BlueYLimit3 = window.innerHeight * 0.61;
 const BlueYLimit4 = window.innerHeight * 0.39;
+
 const BlueXLimit = window.innerWidth * 0.245;
 const BlueXLimit2 = window.innerWidth * 0.6;
+
 let movingDownBlue = false;
 let BlueState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
@@ -38,8 +40,6 @@ function animateBlue() {
 
     if (BlueState === "up") {
         BlueY += speedBlue;
-
-
         if (!firstDecisionMadeBlue && BlueY >= decisionPoint1) {
             firstDecisionMadeBlue = true;
             if (mode1Right) return triggerGameOver();
@@ -88,7 +88,8 @@ function animateBlue() {
     planeBlue1.style.left = BlueX + "px";
     planeBlue1.style.bottom = BlueY + "px";
 
-    if (BlueY < -100) {
+    if (BlueState === "down2" && BlueY < window.innerHeight * 0.15) {
+        planeBlue1.style.visibility = "hidden";
         return;
     }
 
@@ -101,5 +102,6 @@ function animateBlue() {
             requestAnimationFrame(animateOrange);
         }, 2000);
     }
+        
 }
 
