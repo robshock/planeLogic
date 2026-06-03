@@ -338,8 +338,8 @@ function restartGame() {
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animatePurple);
-  requestAnimationFrame(animatePink);
-  //requestAnimationFrame(animateRed);
+  //requestAnimationFrame(animatePink);
+  requestAnimationFrame(animateRed);
 }
 function triggerGameOver() {
   gameOver = true;
