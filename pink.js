@@ -106,8 +106,7 @@ function animatePink() {
 
 
     requestAnimationFrame(animatePink);
-
-
+/*
     if (!redStarted) {
         redStarted = true;
 
@@ -116,8 +115,7 @@ function animatePink() {
             requestAnimationFrame(animateRed);
         }, 2000);
     }
-
-
+*/
 }
 
 
