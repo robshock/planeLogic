@@ -10,10 +10,11 @@ let fifthDecisionMadeGreen = false;
 let sixthDecisionMadeGreen = false;
 let seventhDecisionMadeGreen = false;
 
-const greenYLimit = window.innerHeight * 0.84;
-const greenYLimit2 = window.innerHeight * 0.6;
+const greenYLimit = window.innerHeight * 0.80;
+const greenYLimit2 = window.innerHeight * 0.66;
 const greenYLimit3 = window.innerHeight * 0.5;
 const greenYLimit4 = window.innerHeight * 0.44;
+
 const greenXLimit = window.innerWidth * 0.525;
 const greenXLimit2 = window.innerWidth * 0.62;
 let movingDownGreen = false;
@@ -83,11 +84,12 @@ function animate() {
 
   else if (greenState === "down1") {
     greenY -= speed;
-    if (!fifthDecisionMadeGreen && greenY <= decisionPoint5) {
-      fifthDecisionMadeGreen = true;
-      if (!mode5Right) return triggerGameOver();
-    }
+
     if (greenY <= greenYLimit2) {
+      if (!fifthDecisionMadeGreen && greenY <= decisionPoint5) {
+        fifthDecisionMadeGreen = true;
+        if (!mode5Right) return triggerGameOver();
+      }
       greenState = "down2";
     }
   }
@@ -96,13 +98,11 @@ function animate() {
 
   else if (greenState === "down2") {
     greenY -= speed;
-
-    if (!sixthDecisionMadeGreen && greenY <= decisionPoint6) {
-      sixthDecisionMadeGreen = true;
-      if (!mode6Right) return triggerGameOver();
-    }
-
     if (greenY <= greenYLimit3) {
+      if (!sixthDecisionMadeGreen && greenY <= decisionPoint6) {
+        sixthDecisionMadeGreen = true;
+        if (!mode6Right) return triggerGameOver();
+      }
       greenState = "down3";
     }
   }
@@ -111,13 +111,11 @@ function animate() {
 
   else if (greenState === "down3") {
     greenY -= speed;
-
-    if (!seventhDecisionMadeGreen && greenY <= decisionPoint7) {
-      seventhDecisionMadeGreen = true;
-      if (!mode7Right) return triggerGameOver();
-    }
-
     if (greenY <= greenYLimit4) {
+      if (!seventhDecisionMadeGreen && greenY <= decisionPoint7) {
+        seventhDecisionMadeGreen = true;
+        if (!mode7Right) return triggerGameOver();
+      }
       greenState = "down4";
       score++;
       updateScore();
