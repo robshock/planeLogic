@@ -10,10 +10,10 @@ let fifthDecisionMadeGreen = false;
 let sixthDecisionMadeGreen = false;
 let seventhDecisionMadeGreen = false;
 
-const greenYLimit = window.innerHeight * 0.85;
+const greenYLimit = window.innerHeight * 0.84;
 const greenYLimit2 = window.innerHeight * 0.6;
 const greenYLimit3 = window.innerHeight * 0.5;
-const greenYLimit4 = window.innerHeight * 0.39;
+const greenYLimit4 = window.innerHeight * 0.44;
 const greenXLimit = window.innerWidth * 0.525;
 const greenXLimit2 = window.innerWidth * 0.62;
 let movingDownGreen = false;
@@ -82,19 +82,13 @@ function animate() {
   // ================= DOWN (segment 1) =================
 
   else if (greenState === "down1") {
-
     greenY -= speed;
-
-    // FIRST: state transition
-    if (greenY <= greenYLimit2) {
-      greenState = "down2";
-    }
-
-    // SECOND: decision check (must not depend on transition logic)
     if (!fifthDecisionMadeGreen && greenY <= decisionPoint5) {
       fifthDecisionMadeGreen = true;
-
       if (!mode5Right) return triggerGameOver();
+    }
+    if (greenY <= greenYLimit2) {
+      greenState = "down2";
     }
   }
 
@@ -125,7 +119,7 @@ function animate() {
 
     if (greenY <= greenYLimit4) {
       greenState = "down4";
-      score ++;
+      score++;
       updateScore();
     }
   }
@@ -145,19 +139,19 @@ function animate() {
   planeGreen1.style.bottom = greenY + "px";
 
   if (greenY < -100) {
-  planeGreen1.style.visibility = "hidden";
-  return;
-}
-
-  requestAnimationFrame(animate);
-
-  if (!yellowStarted) {
-    yellowStarted = true;
-
-    setTimeout(() => {
-      requestAnimationFrame(animateYellow);
-    }, 2000);
+    planeGreen1.style.visibility = "hidden";
+    return;
   }
 
+  requestAnimationFrame(animate);
+  /*
+    if (!yellowStarted) {
+      yellowStarted = true;
+  
+      setTimeout(() => {
+        requestAnimationFrame(animateYellow);
+      }, 2000);
+    }
+  */
 
 }

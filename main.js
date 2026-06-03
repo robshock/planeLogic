@@ -76,9 +76,9 @@ let decisionPoint1 = window.innerHeight * 0.42;
 let decisionPoint2 = window.innerHeight * 0.55;
 let decisionPoint3 = window.innerHeight * 0.66;
 let decisionPoint4 = window.innerWidth * 0.525;
-let decisionPoint5 = window.innerHeight * 0.56;
-let decisionPoint6 = window.innerHeight * 0.45;
-let decisionPoint7 = window.innerHeight * 0.34;
+let decisionPoint5 = window.innerHeight * 0.61;
+let decisionPoint6 = window.innerHeight * 0.50;
+let decisionPoint7 = window.innerHeight * 0.39;
 let decisionPoint4yellow = window.innerHeight * 0.72;
 let decisionPoint5yellow = window.innerHeight * 0.61;
 let decisionPoint6yellow = window.innerHeight * 0.50;
@@ -335,10 +335,10 @@ function restartGame() {
   // START CLEAN LOOP (IMPORTANT)
   //requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
-  requestAnimationFrame(animateOrange);
+  //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animatePurple);
-  //requestAnimationFrame(animatePink);
+  requestAnimationFrame(animatePink);
 }
 function triggerGameOver() {
   gameOver = true;

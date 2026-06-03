@@ -65,14 +65,13 @@ function animatePink() {
     // ================= DOWN (segment 1) =================
     else if (PinkState === "down1") {
         PinkY -= speedPink;
-        if (!fifthDecisionMadePink && PinkY <= decisionPoint5) {
-            fifthDecisionMadePink = true;
-            if (mode5Right) return triggerGameOver();
-        }
+
         if (PinkY <= PinkYLimit2) {
+            if (!fifthDecisionMadePink && PinkY >= decisionPoint5) {
+                fifthDecisionMadePink = true;
+                if (mode5Right) return triggerGameOver();
+            }
             PinkState = "right3";
-            score++;
-            updateScore();
         }
     }
 
@@ -80,6 +79,8 @@ function animatePink() {
         PinkX += speedPink;
         if (PinkX >= PinkXLimit3) {
             PinkState = "up2"
+            score++;
+            updateScore();
         }
     }
 
@@ -87,45 +88,6 @@ function animatePink() {
         PinkY += speedPink;
     }
 
-    /*
-    // ================= DOWN (segment 2) =================
-    else if (PinkState === "down2") {
-        PinkY -= speedPink;
-        if (!sixthDecisionMadePink && PinkY <= decisionPoint6) {
-            sixthDecisionMadePink = true;
-            if (!mode6Right) return triggerGameOver();
-        }
-        if (PinkY <= PinkYLimit3) {
-            PinkState = "down3";
-        }
-    }
-    // ================= DOWN (segment 3) =================
-    else if (PinkState === "down3") {
-        PinkY -= speedPink;
-        if (!seventhDecisionMadePink && PinkY <= decisionPoint7) {
-            seventhDecisionMadePink = true;
-            if (mode7Right) return triggerGameOver();
-        }
-        if (PinkY <= PinkYLimit4) {
-            PinkState = "right3";
-            score++;
-            updateScore();
-        }
-    }
- 
- 
-    else if (PinkState === "right3") {
-        PinkX += speedPink;
-        if (PinkX >= PinkXLimit3) {
-            PinkState = "down4";
-        }
-    }
- 
- 
-    else if (PinkState === "down4") {
-        PinkY -= speedPink;
-    }
- */
 
     // ================= ROTATION =================
     if (PinkState === "up") planePink1.style.transform = "rotate(0deg)";
@@ -136,25 +98,25 @@ function animatePink() {
     planePink1.style.left = PinkX + "px";
     planePink1.style.bottom = PinkY + "px";
 
-    
-        if (PinkState === "up2" && PinkY > window.innerHeight * 0.8) {
-            planePink1.style.visibility = "hidden";
-            return;
-        }
-    
+
+    if (PinkState === "up2" && PinkY > window.innerHeight * 0.8) {
+        planePink1.style.visibility = "hidden";
+        return;
+    }
+
 
     requestAnimationFrame(animatePink);
 
-    
-       if (!redStarted) {
-           redStarted = true;
-    
-    
-           setTimeout(() => {
-               requestAnimationFrame(animateRed);
-           }, 2000);
-       }
-    
+
+    if (!redStarted) {
+        redStarted = true;
+
+
+        setTimeout(() => {
+            requestAnimationFrame(animateRed);
+        }, 2000);
+    }
+
 
 }
 

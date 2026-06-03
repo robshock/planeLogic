@@ -62,7 +62,9 @@ function animateOrange() {
     }
     // ================= DOWN (segment 1) =================
     else if (OrangeState === "down1") {
+
         OrangeY -= speedOrange;
+        
         // FIRST: state transition
         if (OrangeY <= OrangeYLimit2) {
             OrangeState = "down2";
@@ -85,12 +87,15 @@ function animateOrange() {
         }
     }
     // ================= DOWN (segment 3) =================
+
     else if (OrangeState === "down3") {
         OrangeY -= speedOrange;
+        
         if (!seventhDecisionMadeOrange && OrangeY <= decisionPoint7) {
             seventhDecisionMadeOrange = true;
             if (mode7Right) return triggerGameOver();
         }
+
         if (OrangeY <= OrangeYLimit4) {
             OrangeState = "right3";
             score++;
