@@ -10,9 +10,10 @@ let fifthDecisionMadeYellow = false;
 let sixthDecisionMadeYellow = false;
 let seventhDecisionMadeYellow = false;
 
-const YellowYLimit = window.innerHeight * 0.66;
+const YellowYLimit = window.innerHeight * 0.68;
 const YellowYLimit2 = window.innerHeight * 0.72;
 const YellowYLimit3 = window.innerHeight * 0.61;
+
 const YellowYLimit4 = window.innerHeight * 0.39;
 const YellowXLimit = window.innerWidth * 0.245;
 const YellowXLimit2 = window.innerWidth * 0.6;
@@ -93,7 +94,7 @@ function animateYellow() {
     planeYellow1.style.left = YellowX + "px";
     planeYellow1.style.bottom = YellowY + "px";
 
-    if (YellowState === "up3" && YellowY > window.innerHeight * 0.85) {
+    if (YellowState === "up3" && YellowY > window.innerHeight * 0.9) {
         planeYellow1.style.visibility = "hidden";
         return;
     }

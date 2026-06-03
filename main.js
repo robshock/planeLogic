@@ -7,13 +7,9 @@ const planeBlue1 = document.getElementById("planeBlue1");
 const planeOrange1 = document.getElementById("planeOrange1");
 const planePurple1 = document.getElementById("planePurple1");
 const planePink1 = document.getElementById("planePink1");
+const planeRed1 = document.getElementById("planeRed1");
 
-/*
-const planeRed1 = document.getElementById("planeBlue1");
-const planeBlack1 = document.getElementById("planeBlue1");
-const planeDarkBlue1 = document.getElementById("planeBlue1");
-const planeDarkGreen1 = document.getElementById("planeBlue1");
-*/
+
 const planeX1 = window.innerWidth * 0.43;
 const planeY1 = window.innerHeight * 0.001;
 const planeYellowX = window.innerWidth * 0.43;
@@ -26,9 +22,9 @@ const planePurpleX = window.innerWidth * 0.43;
 const planePurpleY = window.innerHeight * 0.001;
 const planePinkX = window.innerWidth * 0.43;
 const planePinkY = window.innerHeight * 0.001;
-/*
 const planeRedX = window.innerWidth * 0.43;
 const planeRedY = window.innerHeight * 0.001;
+/*
 const planeDarkGreeX = window.innerWidth * 0.43;
 const planeDarkBlueY = window.innerHeight * 0.001;
 const planeDarkGreeX = window.innerWidth * 0.43;
@@ -42,9 +38,8 @@ const speedBlue = 1.5;
 const speedOrange = 1.5;
 const speedPurple = 1.5;
 const speedPink = 1.5;
-
-/*
 const speedRed = 1.5;
+/*
 const speedBlack = 1.5;
 const speedDarkGreen = 1.5;
 const speedDarkBlue = 1.5;
@@ -68,9 +63,11 @@ const img8 = document.getElementById("arrowImg8");
 const button9 = document.getElementById("arrowBtn9");
 const img9 = document.getElementById("arrowImg9");
 let score = 0;
+
 function updateScore() {
   scoreDisplay.textContent = `Score: ${score}`;
 }
+
 // SETTINGS
 let decisionPoint1 = window.innerHeight * 0.42;
 let decisionPoint2 = window.innerHeight * 0.55;
@@ -84,17 +81,12 @@ let decisionPoint5yellow = window.innerHeight * 0.61;
 let decisionPoint6yellow = window.innerHeight * 0.50;
 let decisionPoint7yellow = window.innerHeight * 0.39;
 let decisionPoint2blue = window.innerHeight * 0.3;
+let decisionPoint2red = window.innerHeight * 0.3;
 let decisionPoint4purple = window.innerHeight * 0.72;
 let decisionPoint5purple = window.innerHeight * 0.61;
 let decisionPoint6purple = window.innerHeight * 0.50;
 let decisionPoint7purple = window.innerHeight * 0.39;
-//let decisionPoint?red = window.innerHeight * 0.72;
-//let decisionPoint?pink = window.innerHeight * 0.72;
-//let decisionPoint?purple = window.innerHeight * 0.72;
-//let decisionPoint?orange = window.innerHeight * 0.72;
-//let decisionPoint?black = window.innerHeight * 0.72;
-//let decisionPoint?darkBlue = window.innerHeight * 0.72;
-//let decisionPoint?darkGreen = window.innerHeight * 0.72;
+
 function updateDecisionPoints() {
   decisionPoint1 = window.innerHeight * 0.42;
   decisionPoint2 = window.innerHeight * 0.55;
@@ -108,17 +100,11 @@ function updateDecisionPoints() {
   decisionPoint6yellow = window.innerHeight * 0.50;
   decisionPoint7yellow = window.innerHeight * 0.39;
   decisionPoint2blue = window.innerHeight * 0.3
+  decisionPoint2red = window.innerHeight * 0.3
   decisionPoint4purple = window.innerHeight * 0.72;
   decisionPoint5purple = window.innerHeight * 0.61;
   decisionPoint6purple = window.innerHeight * 0.50;
   decisionPoint7purple = window.innerHeight * 0.39;
-  //let decisionPoint?red = window.innerHeight * 0.72;
-  //let decisionPoint?pink = window.innerHeight * 0.72;
-  //let decisionPoint?purple = window.innerHeight * 0.72;
-  //let decisionPoint?orange = window.innerHeight * 0.72;
-  //let decisionPoint?black = window.innerHeight * 0.72;
-  //let decisionPoint?darkBlue = window.innerHeight * 0.72;
-  //let decisionPoint?darkGreen = window.innerHeight * 0.72;
 }
 // BUTTONS
 let mode1Right = false;
@@ -210,17 +196,18 @@ window.addEventListener("resize", updateDecisionPoints);
 function restartGame() {
   gameOverScreen.style.display = "none";
   restartBtn.style.display = "none";
+
   yellowStarted = false;
   blueStarted = false;
   orangeStarted = false;
   purpleStarted = false;
   pinkStarted = false;
-  //redStarted = false;
+  redStarted = false;
+
   score = 0;
-  // CORE STATE
   gameOver = false;
   gameStarted = true;
-  // POSITION RESET
+
   greenX = planeX1;
   greenY = planeY1;
   BlueX = planeBlueX;
@@ -233,12 +220,17 @@ function restartGame() {
   PurpleY = planePurpleY;
   PinkX = planePinkX;
   PinkY = planePinkY;
+  RedX = planePinkX;
+  RedY = planePinkY;
+
   greenState = "up";
   YellowState = "up";
   BlueState = "up";
   OrangeState = "up";
   PurpleState = "up";
   PinkState = "up";
+  RedState = "up";
+
   // RESET ALL DECISIONS
   firstDecisionMadeGreen = false;
   secondDecisionMadeGreen = false;
@@ -282,9 +274,14 @@ function restartGame() {
   fifthDecisionMadePink = false;
   sixthDecisionMadePink = false;
   seventhDecisionMadePink = false;
+  firstDecisionMadeRed = false;
+  secondDecisionMadeRed = false;
+  thirdDecisionMadeRed = false;
+  fourthDecisionMadeRed = false;
+  fifthDecisionMadeRed = false;
+  sixthDecisionMadeRed = false;
+  seventhDecisionMadeRed = false;
 
-
-  // RESET ALL BUTTON LOGIC (IMPORTANT)
   mode1Right = false;
   mode2Right = false;
   mode3Right = false;
@@ -303,7 +300,7 @@ function restartGame() {
   mode7Right_2 = false;
   mode8Right_2 = false;
   mode9Right_2 = false;
-  // RESET VISUALS
+
   img1.src = "pngs/arrowLeft.png";
   img2.src = "pngs/arrowLeft.png";
   img3.src = "pngs/arrowLeft.png";
@@ -313,7 +310,7 @@ function restartGame() {
   img7.src = "pngs/arrowRight.png";
   img8.src = "pngs/arrowLeft.png";
   img9.src = "pngs/arrowLeft.png";
-  // RESET ROTATION + POSITION
+
   planeGreen1.style.transform = "rotate(0deg)";
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
@@ -332,13 +329,17 @@ function restartGame() {
   planePink1.style.transform = "rotate(0deg)";
   planePink1.style.left = PinkX + "px";
   planePink1.style.bottom = PinkY + "px";
-  // START CLEAN LOOP (IMPORTANT)
+  planeRed1.style.transform = "rotate(0deg)";
+  planeRed1.style.left = PinkX + "px";
+  planeRed1.style.bottom = PinkY + "px";
+
   //requestAnimationFrame(animate);
   requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
+  //requestAnimationFrame(animateRed);
 }
 function triggerGameOver() {
   gameOver = true;
