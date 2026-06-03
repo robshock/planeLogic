@@ -10,7 +10,7 @@ const planePink1 = document.getElementById("planePink1");
 const planeRed1 = document.getElementById("planeRed1");
 const planeDarkBlue1 = document.getElementById("planeDarkBlue1");
 const planeDarkGreen1 = document.getElementById("planeDarkGreen1");
-
+const planeBlack1 = document.getElementById("planeBlack1");
 
 const planeX1 = window.innerWidth * 0.43;
 const planeY1 = window.innerHeight * 0.001;
@@ -30,10 +30,9 @@ const planeDarkBlueX = window.innerWidth * 0.43;
 const planeDarkBlueY = window.innerHeight * 0.001;
 const planeDarkGreenX = window.innerWidth * 0.43;
 const planeDarkGreenY = window.innerHeight * 0.001;
-/*
 const planeBlackX = window.innerWidth * 0.43;
 const planeBlackY = window.innerHeight * 0.001;
-*/
+
 const speed = 1.5;
 const speedYellow = 1.5;
 const speedBlue = 1.5;
@@ -43,9 +42,8 @@ const speedPink = 1.5;
 const speedRed = 1.5;
 const speedDarkBlue = 1.5;
 const speedDarkGreen = 1.5;
-/*
 const speedBlack = 1.5;
-*/
+
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
 const button2 = document.getElementById("arrowBtn2");
@@ -207,6 +205,7 @@ function restartGame() {
   redStarted = false;
   darkBlueStarted = false;
   darkGreenStarted = false;
+  blackStarted = false;
 
   score = 0;
   gameOver = false;
@@ -230,6 +229,8 @@ function restartGame() {
   DarkBlueY = planeDarkBlueY;
   DarkGreenX = planeDarkGreenX;
   DarkGreenY = planeDarkGreenY;
+  BlackX = planeBlackX;
+  BlackY = planeBlackY;
 
   greenState = "up";
   YellowState = "up";
@@ -240,6 +241,7 @@ function restartGame() {
   RedState = "up";
   DarkBlueState = "up";
   DarkGreenState = "up";
+  BlackState = "up";
 
   // RESET ALL DECISIONS
   firstDecisionMadeGreen = false;
@@ -305,6 +307,13 @@ function restartGame() {
   fifthDecisionMadeDarkGreen = false;
   sixthDecisionMadeDarkGreen = false;
   seventhDecisionMadeDarkGreen = false;
+  firstDecisionMadeBlack = false;
+  secondDecisionMadeBlack = false;
+  thirdDecisionMadeBlack = false;
+  fourthDecisionMadeBlack = false;
+  fifthDecisionMadeBlack = false;
+  sixthDecisionMadeBlack = false;
+  seventhDecisionMadeBlack = false;
 
   mode1Right = false;
   mode2Right = false;
@@ -362,6 +371,9 @@ function restartGame() {
   planeDarkGreen1.style.transform = "rotate(0deg)";
   planeDarkGreen1.style.left = DarkGreenX + "px";
   planeDarkGreen1.style.bottom = DarkGreenY + "px";
+  planeBlack1.style.transform = "rotate(0deg)";
+  planeBlack1.style.left = BlackX + "px";
+  planeBlack1.style.bottom = BlackY + "px";
 
   //requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
@@ -372,6 +384,8 @@ function restartGame() {
   //requestAnimationFrame(animateRed);
   requestAnimationFrame(animateDarkBlue);
   //requestAnimationFrame(animateDarkGreen);
+  //requestAnimationFrame(animateBlack);
+
 }
 function triggerGameOver() {
   gameOver = true;

@@ -8,7 +8,7 @@ let sixthDecisionMadeDarkBlue = false;
 let seventhDecisionMadeDarkBlue = false;
 
 const DarkBlueYLimit = window.innerHeight * 0.83;
-const DarkBlueYLimit2 = window.innerHeight * 0.69;
+const DarkBlueYLimit2 = window.innerHeight * 0.9;
 
 const DarkBlueXLimit = window.innerWidth * 0.525;
 const DarkBlueXLimit2 = window.innerWidth * 0.62;
@@ -57,7 +57,7 @@ function animateDarkBlue() {
 
     else if (DarkBlueState === "up2") {
         DarkBlueY += speedDarkBlue
-        if (DarkBlueY >= DarkBlueXLimit2) {
+        if (DarkBlueY >= DarkBlueYLimit2) {
             DarkBlueState = "right2";
         }
     }
