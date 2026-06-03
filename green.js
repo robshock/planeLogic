@@ -136,7 +136,7 @@ function animate() {
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
 
-    if (greenState === "down4" && greenY >= window.innerHeight * 0.15) {
+    if (greenState === "down4" && greenY < window.innerHeight * 0.15) {
         planeGreen1.style.visibility = "hidden";
         return;
     }
