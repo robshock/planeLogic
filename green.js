@@ -86,7 +86,7 @@ function animate() {
     greenY -= speed;
 
     if (greenY <= greenYLimit2) {
-      if (!fifthDecisionMadeGreen && greenY <= decisionPoint5) {
+      if (!fifthDecisionMadeGreen && greenY >= decisionPoint5) {
         fifthDecisionMadeGreen = true;
         if (!mode5Right) return triggerGameOver();
       }
@@ -99,7 +99,7 @@ function animate() {
   else if (greenState === "down2") {
     greenY -= speed;
     if (greenY <= greenYLimit3) {
-      if (!sixthDecisionMadeGreen && greenY <= decisionPoint6) {
+      if (!sixthDecisionMadeGreen && greenY >= decisionPoint6) {
         sixthDecisionMadeGreen = true;
         if (!mode6Right) return triggerGameOver();
       }
@@ -112,7 +112,7 @@ function animate() {
   else if (greenState === "down3") {
     greenY -= speed;
     if (greenY <= greenYLimit4) {
-      if (!seventhDecisionMadeGreen && greenY <= decisionPoint7) {
+      if (!seventhDecisionMadeGreen && greenY >= decisionPoint7) {
         seventhDecisionMadeGreen = true;
         if (!mode7Right) return triggerGameOver();
       }
@@ -136,10 +136,10 @@ function animate() {
   planeGreen1.style.left = greenX + "px";
   planeGreen1.style.bottom = greenY + "px";
 
-  if (greenY < -100) {
-    planeGreen1.style.visibility = "hidden";
-    return;
-  }
+    if (greenState === "down4" && greenY > window.innerHeight * 0.1) {
+        planeGreen1.style.visibility = "hidden";
+        return;
+    }
 
   requestAnimationFrame(animate);
   /*
