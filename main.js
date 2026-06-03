@@ -333,12 +333,12 @@ function restartGame() {
   planePink1.style.left = PinkX + "px";
   planePink1.style.bottom = PinkY + "px";
   // START CLEAN LOOP (IMPORTANT)
-  //requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animatePurple);
-  requestAnimationFrame(animatePink);
+  //requestAnimationFrame(animatePink);
 }
 function triggerGameOver() {
   gameOver = true;

@@ -10,8 +10,8 @@ let fifthDecisionMadeGreen = false;
 let sixthDecisionMadeGreen = false;
 let seventhDecisionMadeGreen = false;
 
-const greenYLimit = window.innerHeight * 0.80;
-const greenYLimit2 = window.innerHeight * 0.66;
+const greenYLimit = window.innerHeight * 0.83;
+const greenYLimit2 = window.innerHeight * 0.69;
 const greenYLimit3 = window.innerHeight * 0.5;
 const greenYLimit4 = window.innerHeight * 0.44;
 
