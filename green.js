@@ -142,7 +142,7 @@ function animate() {
     }
 
   requestAnimationFrame(animate);
-  
+  /*
     if (!yellowStarted) {
       yellowStarted = true;
   
@@ -150,6 +150,5 @@ function animate() {
         requestAnimationFrame(animateYellow);
       }, 2000);
     }
-  
-
+  */
 }
