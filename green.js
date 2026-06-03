@@ -12,7 +12,7 @@ let seventhDecisionMadeGreen = false;
 
 const greenYLimit = window.innerHeight * 0.83;
 const greenYLimit2 = window.innerHeight * 0.69;
-const greenYLimit3 = window.innerHeight * 0.5;
+const greenYLimit3 = window.innerHeight * 0.55;
 const greenYLimit4 = window.innerHeight * 0.44;
 
 const greenXLimit = window.innerWidth * 0.525;
