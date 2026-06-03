@@ -8,6 +8,7 @@ const planeOrange1 = document.getElementById("planeOrange1");
 const planePurple1 = document.getElementById("planePurple1");
 const planePink1 = document.getElementById("planePink1");
 const planeRed1 = document.getElementById("planeRed1");
+const planeDarkBlue1 = document.getElementById("planeDarkBlue1");
 
 
 const planeX1 = window.innerWidth * 0.43;
@@ -24,9 +25,9 @@ const planePinkX = window.innerWidth * 0.43;
 const planePinkY = window.innerHeight * 0.001;
 const planeRedX = window.innerWidth * 0.43;
 const planeRedY = window.innerHeight * 0.001;
-/*
-const planeDarkGreeX = window.innerWidth * 0.43;
+const planeDarkBlueX = window.innerWidth * 0.43;
 const planeDarkBlueY = window.innerHeight * 0.001;
+/*
 const planeDarkGreeX = window.innerWidth * 0.43;
 const planeDarkBlueY = window.innerHeight * 0.001;
 const planeBlackX = window.innerWidth * 0.43;
@@ -39,10 +40,10 @@ const speedOrange = 1.5;
 const speedPurple = 1.5;
 const speedPink = 1.5;
 const speedRed = 1.5;
+const speedDarkBlue = 1.5;
 /*
 const speedBlack = 1.5;
 const speedDarkGreen = 1.5;
-const speedDarkBlue = 1.5;
 */
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");
@@ -203,6 +204,7 @@ function restartGame() {
   purpleStarted = false;
   pinkStarted = false;
   redStarted = false;
+  darkBlueStarted = false;
 
   score = 0;
   gameOver = false;
@@ -222,6 +224,8 @@ function restartGame() {
   PinkY = planePinkY;
   RedX = planeRedX;
   RedY = planeRedY;
+  DarkBlueX = planeDarkBlueX;
+  DarkBlueY = planeDarkBlueY;
 
   greenState = "up";
   YellowState = "up";
@@ -230,6 +234,7 @@ function restartGame() {
   PurpleState = "up";
   PinkState = "up";
   RedState = "up";
+  DarkBlueState = "up";
 
   // RESET ALL DECISIONS
   firstDecisionMadeGreen = false;
@@ -281,6 +286,13 @@ function restartGame() {
   fifthDecisionMadeRed = false;
   sixthDecisionMadeRed = false;
   seventhDecisionMadeRed = false;
+  firstDecisionMadeDarkBlue = false;
+  secondDecisionMadeDarkBlue = false;
+  thirdDecisionMadeDarkBlue = false;
+  fourthDecisionMadeDarkBlue = false;
+  fifthDecisionMadeDarkBlue = false;
+  sixthDecisionMadeDarkBlue = false;
+  seventhDecisionMadeDarkBlue = false;
 
   mode1Right = false;
   mode2Right = false;
@@ -332,6 +344,9 @@ function restartGame() {
   planeRed1.style.transform = "rotate(0deg)";
   planeRed1.style.left = PinkX + "px";
   planeRed1.style.bottom = PinkY + "px";
+    planeDarkBlue1.style.transform = "rotate(0deg)";
+  planeDarkBlue1.style.left = BlueX + "px";
+  planeDarkBlue1.style.bottom = BlueY + "px";
 
   //requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
@@ -339,7 +354,8 @@ function restartGame() {
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
-  requestAnimationFrame(animateRed);
+  //requestAnimationFrame(animateRed);
+  requestAnimationFrame(animateDarkBlue);
 }
 function triggerGameOver() {
   gameOver = true;

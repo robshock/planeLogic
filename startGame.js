@@ -7,5 +7,7 @@ function startGame() {
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
-  requestAnimationFrame(animateRed);
+  //requestAnimationFrame(animateRed);
+  requestAnimationFrame(animateDarkBlue);
+
 }
