@@ -334,10 +334,10 @@ function restartGame() {
   planeRed1.style.bottom = PinkY + "px";
 
   //requestAnimationFrame(animate);
-  requestAnimationFrame(animateYellow);
+  //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
-  //requestAnimationFrame(animatePurple);
+  requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
 }

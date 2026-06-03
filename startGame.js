@@ -2,10 +2,10 @@
 function startGame() {
   gameStarted = true;
   //requestAnimationFrame(animate);
-  requestAnimationFrame(animateYellow);
+  //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animateOrange);
-  //requestAnimationFrame(animatePurple);
+  requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
 }

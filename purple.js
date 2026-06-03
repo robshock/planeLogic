@@ -13,10 +13,10 @@ let seventhDecisionMadePurple = false;
 
 const PurpleYLimit = window.innerHeight * 0.68;
 const PurpleYLimit2 = window.innerHeight * 0.8;
-const PurpleYLimit3 = window.innerHeight * 0.61;
-const PurpleYLimit4 = window.innerHeight * 0.39;
+
 const PurpleXLimit = window.innerWidth * 0.245;
 const PurpleXLimit2 = window.innerWidth * 0.05;
+
 let movingDownPurple = false;
 let PurpleState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
@@ -126,7 +126,7 @@ function animatePurple() {
 
     requestAnimationFrame(animatePurple);
 
-    
+/*   
          if (!pinkStarted) {
        pinkStarted = true;
     
@@ -134,6 +134,5 @@ function animatePurple() {
          requestAnimationFrame(animatePink);
        }, 2000);
      }
-       
+ */      
 }
-

@@ -12,11 +12,9 @@ let seventhDecisionMadeYellow = false;
 
 const YellowYLimit = window.innerHeight * 0.68;
 const YellowYLimit2 = window.innerHeight * 0.72;
-const YellowYLimit3 = window.innerHeight * 0.61;
 
-const YellowYLimit4 = window.innerHeight * 0.39;
 const YellowXLimit = window.innerWidth * 0.245;
-const YellowXLimit2 = window.innerWidth * 0.6;
+
 let movingDownYellow = false;
 let YellowState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
 
@@ -100,7 +98,7 @@ function animateYellow() {
     }
 
     requestAnimationFrame(animateYellow);
-/*
+
       if (!blueStarted) {
     blueStarted = true;
 
@@ -108,5 +106,5 @@ function animateYellow() {
       requestAnimationFrame(animateBlue);
     }, 2000);
   }
-  */
+  
 }
