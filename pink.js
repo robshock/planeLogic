@@ -10,12 +10,11 @@ let fifthDecisionMadePink = false;
 let sixthDecisionMadePink = false;
 let seventhDecisionMadePink = false;
 const PinkYLimit = window.innerHeight * 0.84;
-const PinkYLimit2 = window.innerHeight * 0.66;
-const PinkYLimit3 = window.innerHeight * 0.5;
+const PinkYLimit2 = window.innerHeight * 0.69;
 const PinkYLimit4 = window.innerHeight * 0.44;
 const PinkXLimit = window.innerWidth * 0.525;
 const PinkXLimit2 = window.innerWidth * 0.62;
-const PinkXLimit3 = window.innerWidth * 0.81;
+const PinkXLimit3 = window.innerWidth * 0.82;
 
 
 let movingDownPink = false;
