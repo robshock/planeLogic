@@ -15,7 +15,7 @@ const PinkYLimit3 = window.innerHeight * 0.5;
 const PinkYLimit4 = window.innerHeight * 0.44;
 const PinkXLimit = window.innerWidth * 0.525;
 const PinkXLimit2 = window.innerWidth * 0.62;
-const PinkXLimit3 = window.innerWidth * 0.8;
+const PinkXLimit3 = window.innerWidth * 0.81;
 
 
 let movingDownPink = false;
