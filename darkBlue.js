@@ -17,7 +17,7 @@ const DarkBlueXLimit3 = window.innerWidth * 0.83;
 let movingDownDarkBlue = false;
 let DarkBlueState = "up";
 
-//let redStarted = false;
+//let darkGreenStarted = false;
 
 // ================= DARKBLUE =================
 function animateDarkBlue() {
@@ -75,18 +75,18 @@ function animateDarkBlue() {
     planeDarkBlue1.style.left = DarkBlueX + "px";
     planeDarkBlue1.style.bottom = DarkBlueY + "px";
 
-    if (DarkBlueState === "right2" && DarkBlueX > window.innerHeight * 0.9) {
+    if (DarkBlueState === "right2" && DarkBlueX > window.innerWidth * 0.9) {
         planeDarkBlue1.style.visibility = "hidden";
         return;
     }
 
     requestAnimationFrame(animateDarkBlue);
     /*
-       if (!redStarted) {
-           redStarted = true;
+       if (!darkGreenStarted) {
+           darkGreenStarted = true;
     
            setTimeout(() => {
-               requestAnimationFrame(animateRed);
+               requestAnimationFrame(animateDarkGreen);
            }, 2000);
        }
     */

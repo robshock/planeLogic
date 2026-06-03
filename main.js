@@ -344,7 +344,7 @@ function restartGame() {
   planeRed1.style.transform = "rotate(0deg)";
   planeRed1.style.left = PinkX + "px";
   planeRed1.style.bottom = PinkY + "px";
-    planeDarkBlue1.style.transform = "rotate(0deg)";
+  planeDarkBlue1.style.transform = "rotate(0deg)";
   planeDarkBlue1.style.left = BlueX + "px";
   planeDarkBlue1.style.bottom = BlueY + "px";
 
@@ -356,6 +356,7 @@ function restartGame() {
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
   requestAnimationFrame(animateDarkBlue);
+  //requestAnimationFrame(animateDarkGreen);
 }
 function triggerGameOver() {
   gameOver = true;
