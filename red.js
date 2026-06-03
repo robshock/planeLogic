@@ -11,7 +11,7 @@ let seventhDecisionMadeRed = false;
 
 
 const RedYLimit = window.innerHeight * 0.42;
-const RedYLimit2 = window.innerHeight * 0.3;
+const RedYLimit2 = window.innerHeight * 0.33;
 
 const RedXLimit = window.innerWidth * 0.245;
 const RedXLimit2 = window.innerWidth * 0.07;
