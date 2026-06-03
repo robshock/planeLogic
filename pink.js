@@ -1,123 +1,622 @@
-// PINK PLANE
-let PinkX = planePinkX, PinkY = planePinkY;
-//let verticalLockPink = false;
-//let horizontalLockPink = false;
-let firstDecisionMadePink = false;
-let secondDecisionMadePink = false;
-let thirdDecisionMadePink = false;
-let fourthDecisionMadePink = false;
-let fifthDecisionMadePink = false;
-let sixthDecisionMadePink = false;
-let seventhDecisionMadePink = false;
-const PinkYLimit = window.innerHeight * 0.84;
-const PinkYLimit2 = window.innerHeight * 0.71;
-const PinkXLimit = window.innerWidth * 0.525;
-const PinkXLimit2 = window.innerWidth * 0.62;
-const PinkXLimit3 = window.innerWidth * 0.83;
+.houseGreen { position: absolute; left: 60%; bottom: 15%; width: 15vw; height: auto; }
+.houseYellow { position: absolute; left: 21.5%; bottom: 85%; width: 15vw; height: auto; }
+.houseBlue { position: absolute; left: 21.5%; bottom: 15%; width: 15vw; height: auto; }
+.houseRed { position: absolute; left: 3.5%; bottom: 45%; width: 15vw; height: auto; }
+.houseOrange { position: absolute; left: 80%; bottom: 25%; width: 15vw; height: auto; }
+.housePurple { position: absolute; left: 3.5%; bottom: 55.5%; width: 15vw; height: auto; }
+.houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
+.houseDarkGreen { position: absolute; left: 23.5%; bottom: 50%; width: 15vw; height: auto; }
+.houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
+.housePink { position: absolute; left: 80%; bottom: 75%; width: 15vw; height: auto; }
 
+#planeGreen1 { visibility: hidden; width: 10vw; height: auto; }
+#planeYellow1 { visibility: hidden; width: 10vw; height: auto; }
+#planeBlue1 { visibility: hidden; width: 10vw; height: auto; }
+#planeRed1 { visibility: hidden; width: 10vw; height: auto; }
+#planePurple1 { visibility: hidden; width: 10vw; height: auto; }
+#planePink1 { visibility: hidden; width: 10vw; height: auto; }
+#planeBlack1 { visibility: hidden; width: 10vw; height: auto; }
+#planeOrange1 { visibility: hidden; width: 10vw; height: auto; }
+#planeDarkGreen { visibility: hidden; width: 10vw; height: auto; }
+#planeDarkBlue1 { visibility: hidden; width: 10vw; height: auto; }
 
-let movingDownPink = false;
-let PinkState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
-let redStarted = false;
+#arrowBtn {left: 43%;bottom: 37%;}
+#arrowBtn2 {left: 43%;bottom: 50%;}
+#arrowBtn3 {left: 43%;bottom: 61%;}
+#arrowBtn4 {left: 52.5%;bottom: 75%;}
+#arrowBtn5 {left: 62%;bottom: 61%;}
+#arrowBtn6 {left: 62%;bottom: 50%;}
+#arrowBtn7 {left: 62%;bottom: 39%;}
+#arrowBtn8 {left: 24.5%;bottom: 72%;}
+#arrowBtn9 {left: 24.5%;bottom: 30%;}
 
-// ================= PINK =================
-function animatePink() {
-    if (gameOver || !gameStarted) return;
-    planePink1.style.visibility = "visible";
-    // ================= UP =================
-    if (PinkState === "up") {
-        PinkY += speedPink;
-        if (!firstDecisionMadePink && PinkY >= decisionPoint1) {
-            firstDecisionMadePink = true;
-            if (!mode1Right) return triggerGameOver();
-        }
-        if (!secondDecisionMadePink && PinkY >= decisionPoint2) {
-            secondDecisionMadePink = true;
-            if (!mode2Right) return triggerGameOver();
-        }
-        if (!thirdDecisionMadePink && PinkY >= decisionPoint3) {
-            thirdDecisionMadePink = true;
-            if (!mode3Right) return triggerGameOver();
-        }
-        if (PinkY >= PinkYLimit) {
-            PinkState = "right1";
-        }
-    }
-    else if (PinkState === "right1") {
-        PinkX += speedPink;
-        if (!fourthDecisionMadePink && PinkX >= decisionPoint4) {
-            fourthDecisionMadePink = true;
-            if (!mode4Right) return triggerGameOver();
-        }
-        if (PinkX >= PinkXLimit) {
-            PinkState = "right2";
-        }
-    }
-    // ================= RIGHT (segment 2) =================
-    else if (PinkState === "right2") {
-        PinkX += speedPink;
-        if (PinkX >= PinkXLimit2) {
-            PinkState = "down1";
-        }
-    }
-    // ================= DOWN (segment 1) =================
-    else if (PinkState === "down1") {
-        PinkY -= speedPink;
+#scoreDisplay {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  z-index: 999;
+}
 
-        if (PinkY <= PinkYLimit2) {
-            if (!fifthDecisionMadePink && PinkY >= decisionPoint5) {
-                fifthDecisionMadePink = true;
-                if (mode5Right) return triggerGameOver();
-            }
-            PinkState = "right3";
-        }
-    }
+#restartBtn { 
+  display: none;
+  position: fixed; 
+  top: 20px; 
+  left: 20px; 
+  z-index: 999999999; 
+}
 
-    else if (PinkState === "right3") {
-        PinkX += speedPink;
-        if (PinkX >= PinkXLimit3) {
-            PinkState = "up2"
-            score++;
-            updateScore();
-        }
-    }
-
-    else if (PinkState === "up2") {
-        PinkY += speedPink;
-    }
-
-
-    // ================= ROTATION =================
-    if (PinkState === "up") planePink1.style.transform = "rotate(0deg)";
-    else if (PinkState.startsWith("up")) planePink1.style.transform = "rotate(0deg)";
-    else if (PinkState.startsWith("right")) planePink1.style.transform = "rotate(90deg)";
-    else if (PinkState.startsWith("down")) planePink1.style.transform = "rotate(180deg)";
-    else planePink1.style.transform = "rotate(180deg)";
-    planePink1.style.left = PinkX + "px";
-    planePink1.style.bottom = PinkY + "px";
-
-
-    if (PinkState === "up2" && PinkY > window.innerHeight * 0.8) {
-        planePink1.style.visibility = "hidden";
-        return;
-    }
-
-
-    requestAnimationFrame(animatePink);
-
-
-    if (!redStarted) {
-        redStarted = true;
-
-
-        setTimeout(() => {
-            requestAnimationFrame(animateRed);
-        }, 2000);
-    }
-
-
+  body {
+  margin: 0;
+  overflow: hidden;
+  background: rgb(76, 176, 215);
+  touch-action: manipulation;
+  font-family: sans-serif;
 }
 
 
 
+/* Airplane styling (applies to all planes) */
+.airplane {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: clamp(45px, 7.5vw, 75px);
+  transition: transform 0.3s linear;
+  z-index: 20;
+  will-change: transform, left, bottom;
+}
 
+/* Arrow button styling */
+.arrow-button {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  /* behind plane */
+}
+
+/* Make all arrow images the same size */
+.arrow,
+.arrowUp {
+  width: clamp(40px, 10vw, 70px);
+  height: auto;
+}
+
+/* button click feedback */
+.arrow-button:active {
+  transform: scale(0.92);
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+#gameOverScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: auto;
+  height: auto;
+
+  padding: 30px 40px;
+
+  background: rgba(12, 12, 12, 0.7);
+  color: white;
+  font-size: 48px;
+  font-family: sans-serif;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+
+  z-index: 9999;
+}
+
+#countdown {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: sans-serif;
+}
+
+/* game wrapper */
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+/* ---------------------------------------------------------- */
+
+.line {
+  position: fixed;
+  background: white;
+}
+
+.v1 {
+  top: 26vh;
+  left: 56vw;
+  width: 2px;
+  height: 100vh;
+}
+
+.h1 {
+  top: 26vh;
+  left: 56vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v2 {
+  top: 26vh;
+  left: 58.5vw;
+  width: 2px;
+  height: 60vh;
+}
+
+.h2 {
+  top: 86vh;
+  left: 58.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v3 {
+  top: 63vh;
+  left: 76vw;
+  width: 2px;
+  height: 23vh;
+}
+
+.h3 {
+  top: 63vh;
+  left: 76vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v4 {
+  top: 63vh;
+  left: 78.5vw;
+  width: 2px;
+  height: 13vh;
+}
+
+.h4 {
+  top: 76vh;
+  left: 78.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v5 {
+  top: 53vh;
+  left: 96vw;
+  height: 23vh;
+  width: 2px;
+}
+
+.h5 {
+  top: 53vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v6 {
+  top: 51vh;
+  left: 76vw;
+  height: 2vh;
+  width: 2px;
+}
+
+.h6 {
+  top: 51vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v7 {
+  top: 42vh;
+  left: 96vw;
+  height: 9vh;
+  width: 2px;
+}
+
+.h7 {
+  top: 42vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v8 {
+  top: 40vh;
+  left: 76vw;
+  height: 2vh;
+  width: 2px;
+}
+
+.h8 {
+  top: 40vh;
+  left: 76vw;
+  height: 2px;
+  width: 20vw;
+}
+
+.v9 {
+  top: 17vh;
+  left: 96vw;
+  height: 23vh;
+  width: 2px;
+}
+
+.h9 {
+  top: 17vh;
+  left: 78.5vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v10 {
+  top: 17vh;
+  left: 78.5vw;
+  width: 2px;
+  height: 15vh;
+}
+.h10 {
+  top: 32vh;
+  left: 76vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v11 {
+  top: 17vh;
+  left: 76vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h11 {
+  top: 17vh;
+  left: 66vw;
+  width: 10vw;
+  height: 2px;
+}
+
+.v12 {
+  top: 15vh;
+  left: 66vw;
+  width: 2px;
+  height: 2vh;
+}
+
+.h12 {
+  top: 15vh;
+  left: 66vw;
+  width: 30vw;
+  height: 2px;
+}
+
+.v13 {
+  top: 6vh;
+  left: 96vw;
+  width: 2px;
+  height: 9vh;
+}
+
+.h13 {
+  top: 6vh;
+  left: 50vw;
+  width: 46vw;
+  height: 2px;
+}
+
+.v14 {
+  top: 6vh;
+  left: 50vw;
+  width: 2px;
+  height: 11vh;
+}
+
+.h14 {
+  top: 17vh;
+  left: 40vw;
+  width: 10vw;
+  height: 2px;
+}
+
+.v15 {
+  top: 17vh;
+  left: 40vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h15 {
+  top: 32vh;
+  left: 37.5vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v16 {
+  top: 7.5vh;
+  left: 37.5vw;
+  width: 2px;
+  height: 24.5vh;
+}
+
+.h16 {
+  top: 7.5vh;
+  left: 20vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v17 {
+  top: 7.5vh;
+  left: 20vw;
+  width: 2px;
+  height: 12.5vh;
+}
+
+.h17 {
+  top: 20vh;
+  left: 2vw;
+  height: 2px;
+  width: 18vw;
+}
+
+.v18 {
+  top: 20vh;
+  left: 2vw;
+  width: 2px;
+  height: 25vh;
+}
+
+.h18 {
+  top: 45vh;
+  left: 2vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v19 {
+  top: 30vh;
+  left: 19.5vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h19 {
+  top: 30vh;
+  left: 19.5vw;
+  height: 2px;
+  width: 1.5vw;
+}
+
+.v20 {
+  top: 30vh;
+  left: 21vw;
+  width: 2px;
+  height: 10vh;
+}
+
+.h20 {
+  top: 40vh;
+  left: 21vw;
+  height: 2px;
+  width: 17vw;
+}
+
+.v21 {
+  top: 40vh;
+  left: 38vw;
+  width: 2px;
+  height: 2vh;
+}
+
+.h21 {
+  top: 42vh;
+  left: 21vw;
+  height: 2px;
+  width: 17vw;
+}
+
+.v22 {
+  top: 42vh;
+  left: 21vw;
+  width: 2px;
+  height: 9vh;
+}
+
+.h22 {
+  top: 51vh;
+  left: 21vw;
+  height: 2px;
+  width: 17vw;
+}
+
+.v23 {
+  top: 51vh;
+  left: 38vw;
+  width: 2px;
+  height: 5vh;
+}
+
+.h23 {
+  top: 56vh;
+  left: 21vw;
+  height: 2px;
+  width: 17vw;
+}
+
+.v24 {
+  top: 56vh;
+  left: 21vw;
+  width: 2px;
+  height: 6vh;
+}
+
+.h24 {
+  top: 62vh;
+  left: 19.5vw;
+  height: 2px;
+  width: 1.6vw;
+}
+
+.v25 {
+  top: 47vh;
+  left: 19.5vw;
+  width: 2px;
+  height: 15vh;
+}
+
+.h25 {
+  top: 47vh;
+  left: 2vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v26 {
+  top: 47vh;
+  left: 2vw;
+  width: 2px;
+  height: 25vh;
+}
+
+.h26 {
+  top: 72vh;
+  left: 2vw;
+  height: 2px;
+  width: 18vw;
+}
+
+.v27 {
+  top: 72vh;
+  left: 20vw;
+  width: 2px;
+  height: 14vh;
+}
+
+.h27 {
+  top: 86vh;
+  left: 20vw;
+  height: 2px;
+  width: 17.5vw;
+}
+
+.v28 {
+  top: 65vh;
+  left: 37.5vw;
+  width: 2px;
+  height: 21vh;
+}
+
+.h28 {
+  top: 65vh;
+  left: 37.5vw;
+  height: 2px;
+  width: 2.5vw;
+}
+
+.v29 {
+  top: 65vh;
+  left: 40vw;
+  width: 2px;
+  height: 50vh;
+}
+
+
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
+.box {
+  position: absolute;
+  top: 19vh;
+  left: 1vw;
+  width: 97.5vw;
+  height: 54vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box1 {
+  position: absolute;
+  top: 7vh;
+  left: 19vw;
+  width: 20vw;
+  height: 12vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box2 {
+  position: absolute;
+  top: 5vh;
+  left: 49vw;
+  width: 49.5vw;
+  height: 14vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box3 {
+  position: absolute;
+  top: 16.5vh;
+  left: 39vw;
+  width: 10vw;
+  height: 2.5vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box4 {
+  position: absolute;
+  top: 73vh;
+  left: 78.5vw;
+  width: 20vw;
+  height: 4vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box5 {
+  position: absolute;
+  top: 73vh;
+  left: 18.5vw;
+  width: 60vw;
+  height: 14vh;
+  background: rgb(158, 153, 153, 0.65);
+}
+
+.box6 {
+  position: absolute;
+  top: 87vh;
+  left: 38.5vw;
+  width: 20vw;
+  height: 13vh;
+  background: rgb(158, 153, 153, 0.65);
+}
