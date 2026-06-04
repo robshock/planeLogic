@@ -112,7 +112,7 @@ function animatePink() {
         redStarted = true;
         setTimeout(() => {
             requestAnimationFrame(animateRed);
-        }, 2000);
+        }, 4000);
     }
 
 }

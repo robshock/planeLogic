@@ -147,7 +147,7 @@ function animate() {
   
       setTimeout(() => {
         requestAnimationFrame(animateYellow);
-      }, 2000);
+      }, 4000);
     }
   
 }

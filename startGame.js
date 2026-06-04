@@ -1,7 +1,7 @@
 // START GAME
 function startGame() {
   gameStarted = true;
-  requestAnimationFrame(animate);
+  //requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animateOrange);
@@ -10,6 +10,7 @@ function startGame() {
   //requestAnimationFrame(animateRed);
   //requestAnimationFrame(animateDarkBlue);
   //requestAnimationFrame(animateDarkGreen);
-  //requestAnimationFrame(animateBlack);
+  requestAnimationFrame(animateBlack);
+  
 
 }

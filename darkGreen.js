@@ -62,7 +62,7 @@ function animateDarkGreen() {
    
            setTimeout(() => {
                requestAnimationFrame(animateBlack);
-           }, 2000);
+           }, 4000);
        }
     
 }

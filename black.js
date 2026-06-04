@@ -120,7 +120,7 @@ function animateBlack() {
    
             setTimeout(() => {
                 requestAnimationFrame(animate);
-            }, 2000);
+            }, 4000);
         }
     
 }

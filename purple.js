@@ -112,7 +112,7 @@ function animatePurple() {
 
         setTimeout(() => {
             requestAnimationFrame(animatePink);
-        }, 2000);
+        }, 4000);
     }
 
 }

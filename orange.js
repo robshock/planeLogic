@@ -137,6 +137,6 @@ function animateOrange() {
     
             setTimeout(() => {
                 requestAnimationFrame(animatePurple);
-            }, 2000);
+            }, 4000);
         }   
 }

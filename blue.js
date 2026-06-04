@@ -92,7 +92,7 @@ function animateBlue() {
 
         setTimeout(() => {
             requestAnimationFrame(animateOrange);
-        }, 2000);
+        }, 4000);
     }
         
 }

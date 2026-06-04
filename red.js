@@ -96,7 +96,7 @@ function animateRed() {
     
            setTimeout(() => {
                requestAnimationFrame(animateDarkBlue);
-           }, 2000);
+           }, 4000);
        }
            
 }
