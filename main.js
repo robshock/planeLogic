@@ -382,8 +382,8 @@ function restartGame() {
   //requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
-  requestAnimationFrame(animateDarkBlue);
-  //requestAnimationFrame(animateDarkGreen);
+  //requestAnimationFrame(animateDarkBlue);
+  requestAnimationFrame(animateDarkGreen);
   //requestAnimationFrame(animateBlack);
 
 }

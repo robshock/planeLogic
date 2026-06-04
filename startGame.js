@@ -8,8 +8,8 @@ function startGame() {
   //requestAnimationFrame(animatePurple);
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
-  requestAnimationFrame(animateDarkBlue);
-  //requestAnimationFrame(animateDarkGreen);
-    //requestAnimationFrame(animateBlack);
+  //requestAnimationFrame(animateDarkBlue);
+  requestAnimationFrame(animateDarkGreen);
+  //requestAnimationFrame(animateBlack);
 
 }

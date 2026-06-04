@@ -8,7 +8,7 @@ let sixthDecisionMadeDarkBlue = false;
 let seventhDecisionMadeDarkBlue = false;
 
 const DarkBlueYLimit = window.innerHeight * 0.83;
-const DarkBlueYLimit2 = window.innerHeight * 0.95;
+const DarkBlueYLimit2 = window.innerHeight * 0.96;
 
 const DarkBlueXLimit = window.innerWidth * 0.525;
 const DarkBlueXLimit2 = window.innerWidth * 0.62;
@@ -17,7 +17,7 @@ const DarkBlueXLimit3 = window.innerWidth * 0.83;
 let movingDownDarkBlue = false;
 let DarkBlueState = "up";
 
-//let darkGreenStarted = false;
+let darkGreenStarted = false;
 
 // ================= DARKBLUE =================
 function animateDarkBlue() {
@@ -59,6 +59,8 @@ function animateDarkBlue() {
         DarkBlueY += speedDarkBlue
         if (DarkBlueY >= DarkBlueYLimit2) {
             DarkBlueState = "right2";
+            score++;
+            updateScore();
         }
     }
 
@@ -81,7 +83,7 @@ function animateDarkBlue() {
     }
 
     requestAnimationFrame(animateDarkBlue);
-    /*
+    
        if (!darkGreenStarted) {
            darkGreenStarted = true;
     
@@ -89,5 +91,5 @@ function animateDarkBlue() {
                requestAnimationFrame(animateDarkGreen);
            }, 2000);
        }
-    */
+    
 }
