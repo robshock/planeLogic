@@ -7,7 +7,7 @@ let fifthDecisionMadeDarkGreen = false;
 let sixthDecisionMadeDarkGreen = false;
 let seventhDecisionMadeDarkGreen = false;
 
-const DarkGreenYLimit = window.innerHeight * 0.53;
+const DarkGreenYLimit = window.innerHeight * 0.56;
 
 let movingDownDarkGreen = false;
 let DarkGreenState = "up";

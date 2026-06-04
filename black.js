@@ -8,7 +8,7 @@ let sixthDecisionMadeBlack = false;
 let seventhDecisionMadeBlack = false;
 const BlackYLimit = window.innerHeight * 0.83;
 const BlackYLimit2 = window.innerHeight * 0.69;
-const BlackYLimit3 = window.innerHeight * 0.53;
+const BlackYLimit3 = window.innerHeight * 0.56;
 
 const BlackXLimit = window.innerWidth * 0.525;
 const BlackXLimit2 = window.innerWidth * 0.62;
