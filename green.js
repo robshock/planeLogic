@@ -1,4 +1,3 @@
-// GREEN PLANE
 let greenX = planeX1, greenY = planeY1;
 let verticalLockGreen = false;
 let horizontalLockGreen = false;
@@ -17,11 +16,9 @@ const greenYLimit4 = window.innerHeight * 0.44;
 
 const greenXLimit = window.innerWidth * 0.525;
 const greenXLimit2 = window.innerWidth * 0.62;
-let movingDownGreen = false;
-let greenState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
+let greenState = "up"; 
 
 let yellowStarted = false;
-
 
 // ================= GREEN ================= 
 
@@ -138,7 +135,9 @@ function animate() {
 
   if (greenState === "down4" && greenY < window.innerHeight * 0.15) {
     planeGreen1.style.visibility = "hidden";
+    //yellowStarted = false;
     return;
+
   }
 
   requestAnimationFrame(animate);

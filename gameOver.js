@@ -6,6 +6,20 @@ function triggerGameOver() {
   if (gameOver) return;
 
   gameOver = true;
+  
+/*
+  greenStarted = false;
+  yellowStarted = false;
+  redStarted = false;
+  blueStarted = false;
+  pinkStarted = false;
+  purpleStarted = false;
+  orangeStarted = false;
+  darkBlueStarted = false;
+  darkGreenStarted = false;
+  blackStarted = false;
+  */
+
   planeYellow1.style.visibility = "hidden";
   planeGreen1.style.visibility = "hidden";
   planeBlue1.style.visibility = "hidden";

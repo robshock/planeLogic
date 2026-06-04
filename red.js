@@ -16,10 +16,8 @@ const RedYLimit2 = window.innerHeight * 0.33;
 const RedXLimit = window.innerWidth * 0.245;
 const RedXLimit2 = window.innerWidth * 0.07;
 
-let movingDownRed = false;
 let RedState = "up";
-
-//let darkBlueStarted = false;
+let darkBlueStarted = false;
 
 // ================= RED =================
 
@@ -92,7 +90,7 @@ function animateRed() {
     }
 
     requestAnimationFrame(animateRed);
-    /*
+    
        if (!darkBlueStarted) {
            darkBlueStarted = true;
     
@@ -100,5 +98,5 @@ function animateRed() {
                requestAnimationFrame(animateDarkBlue);
            }, 2000);
        }
-           */
+           
 }

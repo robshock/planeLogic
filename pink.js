@@ -15,8 +15,6 @@ const PinkXLimit = window.innerWidth * 0.525;
 const PinkXLimit2 = window.innerWidth * 0.62;
 const PinkXLimit3 = window.innerWidth * 0.83;
 
-
-let movingDownPink = false;
 let PinkState = "up"; 
 let redStarted = false;
 

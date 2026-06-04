@@ -13,10 +13,8 @@ const BlackYLimit3 = window.innerHeight * 0.56;
 const BlackXLimit = window.innerWidth * 0.525;
 const BlackXLimit2 = window.innerWidth * 0.62;
 
-let movingDownBlack = false;
 let BlackState = "up"; 
-
-//let purpleStarted = false;
+let greenStarted = false;
 
 // ================= BLACK =================
 
@@ -111,17 +109,18 @@ function animateBlack() {
 
     if (BlackState === "right3" && BlackX >= window.innerWidth * 0.9) {
         planeBlack1.style.visibility = "hidden";
+        greenStarted = false;
         return;
     }
 
     requestAnimationFrame(animateBlack);
-    /*
-        if (!purpleStarted) {
-            purpleStarted = true;
+    
+        if (!greenStarted) {
+            greenStarted = true;
    
             setTimeout(() => {
-                //requestAnimationFrame(animatePurple);
+                requestAnimationFrame(animate);
             }, 2000);
         }
-    */
+    
 }

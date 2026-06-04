@@ -9,10 +9,8 @@ let seventhDecisionMadeDarkGreen = false;
 
 const DarkGreenYLimit = window.innerHeight * 0.56;
 
-let movingDownDarkGreen = false;
 let DarkGreenState = "up";
-
-let blackStarted = false;
+let darkGreenStarted = false;
 
 // ================= DARKGREEN =================
 

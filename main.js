@@ -33,16 +33,16 @@ const planeDarkGreenY = window.innerHeight * 0.001;
 const planeBlackX = window.innerWidth * 0.43;
 const planeBlackY = window.innerHeight * 0.001;
 
-const speed = 1.5;
-const speedYellow = 1.5;
-const speedBlue = 1.5;
-const speedOrange = 1.5;
-const speedPurple = 1.5;
-const speedPink = 1.5;
-const speedRed = 1.5;
-const speedDarkBlue = 1.5;
-const speedDarkGreen = 1.5;
-const speedBlack = 1.5;
+const speed = 1;
+const speedYellow = 1;
+const speedBlue = 1;
+const speedOrange = 1;
+const speedPurple = 1;
+const speedPink = 1;
+const speedRed = 1;
+const speedDarkBlue = 1;
+const speedDarkGreen = 1;
+const speedBlack = 1;
 
 const button1 = document.getElementById("arrowBtn");
 const img1 = document.getElementById("arrowImg");

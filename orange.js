@@ -1,7 +1,4 @@
-// ORANGE PLANE
 let OrangeX = planeOrangeX, OrangeY = planeOrangeY;
-//let verticalLockOrange = false;
-//let horizontalLockOrange = false;
 let firstDecisionMadeOrange = false;
 let secondDecisionMadeOrange = false;
 let thirdDecisionMadeOrange = false;
@@ -18,14 +15,18 @@ const OrangeXLimit = window.innerWidth * 0.525;
 const OrangeXLimit2 = window.innerWidth * 0.62;
 const OrangeXLimit3 = window.innerWidth * 0.815;
 
-let movingDownOrange = false;
-let OrangeState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
+let OrangeState = "up"; 
 let purpleStarted = false;
+
 // ================= ORANGE =================
+
 function animateOrange() {
+
     if (gameOver || !gameStarted) return;
     planeOrange1.style.visibility = "visible";
+
     // ================= UP =================
+
     if (OrangeState === "up") {
         OrangeY += speedOrange;
         if (!firstDecisionMadeOrange && OrangeY >= decisionPoint1) {
@@ -55,6 +56,7 @@ function animateOrange() {
         }
     }
     // ================= RIGHT (segment 2) =================
+
     else if (OrangeState === "right2") {
         OrangeX += speedOrange;
         if (OrangeX >= OrangeXLimit2) {
@@ -62,6 +64,7 @@ function animateOrange() {
         }
     }
     // ================= DOWN (segment 1) =================
+
     else if (OrangeState === "down1") {
         OrangeY -= speedOrange;
 
@@ -75,6 +78,7 @@ function animateOrange() {
     }
     
     // ================= DOWN (segment 2) =================
+
     else if (OrangeState === "down2") {
         OrangeY -= speedOrange;
         if (OrangeY <= OrangeYLimit3) {
@@ -86,6 +90,7 @@ function animateOrange() {
         }
     }
     // ================= DOWN (segment 3) =================
+
 
     else if (OrangeState === "down3") {
         OrangeY -= speedOrange;
@@ -111,7 +116,6 @@ function animateOrange() {
         OrangeY -= speedOrange;
     }
 
-
     // ================= ROTATION =================
     if (OrangeState === "up") planeOrange1.style.transform = "rotate(0deg)";
     else if (OrangeState.startsWith("up")) planeOrange1.style.transform = "rotate(0deg)";
@@ -134,6 +138,5 @@ function animateOrange() {
             setTimeout(() => {
                 requestAnimationFrame(animatePurple);
             }, 2000);
-        }
-    
+        }   
 }

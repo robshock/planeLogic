@@ -14,10 +14,8 @@ const DarkBlueXLimit = window.innerWidth * 0.525;
 const DarkBlueXLimit2 = window.innerWidth * 0.62;
 const DarkBlueXLimit3 = window.innerWidth * 0.83;
 
-let movingDownDarkBlue = false;
 let DarkBlueState = "up";
-
-let darkGreenStarted = false;
+let blackStarted = false;
 
 // ================= DARKBLUE =================
 function animateDarkBlue() {

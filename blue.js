@@ -1,5 +1,3 @@
-
-// BLUE PLANE
 let BlueX = planeBlueX, BlueY = planeBlueY;
 let verticalLockBlue = false;
 let horizontalLockBlue = false;
@@ -20,23 +18,17 @@ const BlueYLimit4 = window.innerHeight * 0.39;
 const BlueXLimit = window.innerWidth * 0.245;
 const BlueXLimit2 = window.innerWidth * 0.6;
 
-let movingDownBlue = false;
-let BlueState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
-
+let BlueState = "up";
 let orangeStarted = false;
 
 // ================= BLUE =================
 
-
 function animateBlue() {
     if (gameOver || !gameStarted) return;
 
-
     planeBlue1.style.visibility = "visible";
 
-
     // ================= UP =================
-
 
     if (BlueState === "up") {
         BlueY += speedBlue;
@@ -104,4 +96,3 @@ function animateBlue() {
     }
         
 }
-

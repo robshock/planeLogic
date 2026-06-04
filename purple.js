@@ -15,8 +15,8 @@ const PurpleYLimit2 = window.innerHeight * 0.8;
 const PurpleXLimit = window.innerWidth * 0.245;
 const PurpleXLimit2 = window.innerWidth * 0.05;
 
-let movingDownPurple = false;
 let PurpleState = "up";
+let pinkStarted = false;
 
 // ================= PURPLE =================
 
@@ -106,7 +106,6 @@ function animatePurple() {
     }
 
     requestAnimationFrame(animatePurple);
-
 
     if (!pinkStarted) {
         pinkStarted = true;

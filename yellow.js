@@ -14,9 +14,7 @@ const YellowYLimit2 = window.innerHeight * 0.72;
 
 const YellowXLimit = window.innerWidth * 0.245;
 
-let movingDownYellow = false;
-let YellowState = "up"; // "up" → "right1" → "right2" → "down1" → "down2" → "down3" → "down4"
-
+let YellowState = "up";
 let blueStarted = false;
 
 // ================= YELLOW =================
@@ -94,12 +92,12 @@ function animateYellow() {
 
     requestAnimationFrame(animateYellow);
 
-      if (!blueStarted) {
-    blueStarted = true;
+    if (!blueStarted) {
+        blueStarted = true;
 
-    setTimeout(() => {
-      requestAnimationFrame(animateBlue);
-    }, 2000);
-  }
-  
+        setTimeout(() => {
+            requestAnimationFrame(animateBlue);
+        }, 2000);
+    }
+
 }
