@@ -107,13 +107,13 @@ function animatePurple() {
 
     requestAnimationFrame(animatePurple);
 
-/*   
-         if (!pinkStarted) {
-       pinkStarted = true;
-    
-       setTimeout(() => {
-         requestAnimationFrame(animatePink);
-       }, 2000);
-     }
- */      
+
+    if (!pinkStarted) {
+        pinkStarted = true;
+
+        setTimeout(() => {
+            requestAnimationFrame(animatePink);
+        }, 2000);
+    }
+
 }

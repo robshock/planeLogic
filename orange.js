@@ -127,13 +127,13 @@ function animateOrange() {
     }
 
     requestAnimationFrame(animateOrange);
-    /*
+    
         if (!purpleStarted) {
             purpleStarted = true;
     
             setTimeout(() => {
-                //requestAnimationFrame(animatePurple);
+                requestAnimationFrame(animatePurple);
             }, 2000);
         }
-    */
+    
 }

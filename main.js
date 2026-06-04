@@ -375,7 +375,7 @@ function restartGame() {
   planeBlack1.style.left = BlackX + "px";
   planeBlack1.style.bottom = BlackY + "px";
 
-  //requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
   //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
@@ -383,7 +383,7 @@ function restartGame() {
   //requestAnimationFrame(animatePink);
   //requestAnimationFrame(animateRed);
   //requestAnimationFrame(animateDarkBlue);
-  requestAnimationFrame(animateDarkGreen);
+  //requestAnimationFrame(animateDarkGreen);
   //requestAnimationFrame(animateBlack);
 
 }
