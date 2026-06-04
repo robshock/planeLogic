@@ -7,7 +7,7 @@ let fifthDecisionMadeDarkGreen = false;
 let sixthDecisionMadeDarkGreen = false;
 let seventhDecisionMadeDarkGreen = false;
 
-const DarkGreenYLimit = window.innerHeight * 0.55;
+const DarkGreenYLimit = window.innerHeight * 0.57;
 
 let movingDownDarkGreen = false;
 let DarkGreenState = "up";
@@ -33,8 +33,11 @@ function animateDarkGreen() {
             secondDecisionMadeDarkGreen = true;
             if (mode2Right) return triggerGameOver();
         }
-        if (DarkGreenY >= DarkGreenYLimit)
-        DarkGreenState = "left";
+        if (DarkGreenY >= DarkGreenYLimit) {
+            DarkGreenState = "left";
+            score++;
+            updateScore();
+        }
     }
 
     else if (DarkGreenState === "left") {
