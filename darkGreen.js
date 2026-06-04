@@ -7,12 +7,12 @@ let fifthDecisionMadeDarkGreen = false;
 let sixthDecisionMadeDarkGreen = false;
 let seventhDecisionMadeDarkGreen = false;
 
-const DarkGreenYLimit = window.innerHeight * 0.55;
+const DarkGreenYLimit = window.innerHeight * 0.53;
 
 let movingDownDarkGreen = false;
 let DarkGreenState = "up";
 
-//let blackStarted = false;
+let blackStarted = false;
 
 // ================= DARKGREEN =================
 
@@ -58,7 +58,7 @@ function animateDarkGreen() {
     }
 
     requestAnimationFrame(animateDarkGreen);
-    /*
+    
        if (!blackStarted) {
            blackStarted = true;
    
@@ -66,5 +66,5 @@ function animateDarkGreen() {
                requestAnimationFrame(animateBlack);
            }, 2000);
        }
-    */
+    
 }
