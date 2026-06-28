@@ -244,7 +244,7 @@ body {
 /* Make all arrow images the same size */
 .arrow,
 .arrowUp {
-  width: clamp(40px, 10vw, 70px);
+  width: clamp(70px, 15vw, 70px);
   height: auto;
 }
 

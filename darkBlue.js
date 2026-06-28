@@ -77,17 +77,30 @@ function animateDarkBlue() {
 
     if (DarkBlueState === "right2" && DarkBlueX > window.innerWidth * 0.9) {
         planeDarkBlue1.style.visibility = "hidden";
+        darkGreenStarted = false;
         return;
     }
 
     requestAnimationFrame(animateDarkBlue);
-    
-       if (!darkGreenStarted) {
-           darkGreenStarted = true;
-    
-           setTimeout(() => {
-               requestAnimationFrame(animateDarkGreen);
-           }, 4000);
-       }
-    
+
+    if (!darkGreenStarted) {
+        darkGreenStarted = true;
+        DarkGreenX = planeDarkGreenX;
+        DarkGreenY = planeDarkGreenY;
+        DarkGreenState = "up";
+        firstDecisionMadeDarkGreen = false;
+        secondDecisionMadeDarkGreen = false;
+        thirdDecisionMadeDarkGreen = false;
+        fourthDecisionMadeDarkGreen = false;
+        fifthDecisionMadeDarkGreen = false;
+        sixthDecisionMadeDarkGreen = false;
+        seventhDecisionMadeDarkGreen = false;
+        planeDarkGreen1.style.transform = "rotate(0deg)";
+        planeDarkGreen1.style.left = DarkGreenX + "px";
+        planeDarkGreen1.style.bottom = DarkGreenY + "px";
+
+
+        setTimeout(() => { requestAnimationFrame(animateDarkGreen); }, 4000);
+    }
+
 }

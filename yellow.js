@@ -87,16 +87,34 @@ function animateYellow() {
 
     if (YellowState === "up3" && YellowY > window.innerHeight * 0.9) {
         planeYellow1.style.visibility = "hidden";
+        blueStarted = false;
         return;
     }
 
     requestAnimationFrame(animateYellow);
 
-    if (!blueStarted) {
-        blueStarted = true;
-            setTimeout(() => {
-                requestAnimationFrame(animateBlue);
-            }, 4000);
-    }
+ if (!blueStarted) {
+   blueStarted = true;
+   BlueX = planeBlueX;
+   BlueY = planeBlueY;
+   BlueState = "up";
+   firstDecisionMadeBlue = false;
+   secondDecisionMadeBlue = false;
+   thirdDecisionMadeBlue = false;
+   fourthDecisionMadeBlue = false;
+   fifthDecisionMadeBlue = false;
+   sixthDecisionMadeBlue = false;
+   seventhDecisionMadeBlue = false;
+   planeBlue1.style.transform = "rotate(0deg)";
+   planeBlue1.style.left = BlueX + "px";
+   planeBlue1.style.bottom = BlueY + "px";
+
+
+   setTimeout(() => { requestAnimationFrame(animateBlue); }, 4000);
+ }
+
+
+
+
 
 }

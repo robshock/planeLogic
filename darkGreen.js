@@ -52,17 +52,29 @@ function animateDarkGreen() {
 
     if (DarkGreenState === "left" && DarkGreenX < window.innerWidth * 0.3) {
         planeDarkGreen1.style.visibility = "hidden";
+        blackStarted = false;
         return;
     }
 
     requestAnimationFrame(animateDarkGreen);
-    
-       if (!blackStarted) {
-           blackStarted = true;
-   
-           setTimeout(() => {
-               requestAnimationFrame(animateBlack);
-           }, 4000);
-       }
-    
+
+    if (!blackStarted) {
+        blackStarted = true;
+        BlackX = planeBlackX;
+        BlackY = planeBlackY;
+        BlackState = "up";
+        firstDecisionMadeBlack = false;
+        secondDecisionMadeBlack = false;
+        thirdDecisionMadeBlack = false;
+        fourthDecisionMadeBlack = false;
+        fifthDecisionMadeBlack = false;
+        sixthDecisionMadeBlack = false;
+        seventhDecisionMadeBlack = false;
+        planeBlack1.style.transform = "rotate(0deg)";
+        planeBlack1.style.left = BlackX + "px";
+        planeBlack1.style.bottom = BlackY + "px";
+
+        setTimeout(() => { requestAnimationFrame(animateBlack); }, 4000);
+    }
+
 }

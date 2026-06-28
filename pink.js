@@ -103,16 +103,31 @@ function animatePink() {
 
     if (PinkState === "up2" && PinkY > window.innerHeight * 0.8) {
         planePink1.style.visibility = "hidden";
+           redStarted = false;
         return;
     }
 
     requestAnimationFrame(animatePink);
 
-    if (!redStarted) {
-        redStarted = true;
-        setTimeout(() => {
-            requestAnimationFrame(animateRed);
-        }, 4000);
-    }
+ if (!redStarted) {
+   redStarted = true;
+   RedX = planeRedX;
+   RedY = planeRedY;
+   RedState = "up";
+   firstDecisionMadeRed = false;
+   secondDecisionMadeRed = false;
+   thirdDecisionMadeRed = false;
+   fourthDecisionMadeRed = false;
+   fifthDecisionMadeRed = false;
+   sixthDecisionMadeRed = false;
+   seventhDecisionMadeRed = false;
+   planeRed1.style.transform = "rotate(0deg)";
+   planeRed1.style.left = RedX + "px";
+   planeRed1.style.bottom = RedY + "px";
+
+
+   setTimeout(() => { requestAnimationFrame(animateRed); }, 4000);
+ }
+
 
 }

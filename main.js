@@ -197,6 +197,7 @@ function restartGame() {
   gameOverScreen.style.display = "none";
   restartBtn.classList.remove("enabled");
 
+  greenStartedFromBlack = false;
   yellowStarted = false;
   blueStarted = false;
   orangeStarted = false;

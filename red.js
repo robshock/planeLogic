@@ -65,7 +65,7 @@ function animateRed() {
 
     else if (RedState === "left2") {
         RedX -= speedRed;
-        if (RedX <= RedXLimit2){
+        if (RedX <= RedXLimit2) {
             RedState = "up2";
         }
     }
@@ -86,17 +86,30 @@ function animateRed() {
 
     if (RedState === "up2" && RedY > window.innerHeight * 0.5) {
         planeRed1.style.visibility = "hidden";
+        darkBlueStarted = false;
         return;
     }
 
     requestAnimationFrame(animateRed);
-    
-       if (!darkBlueStarted) {
-           darkBlueStarted = true;
-    
-           setTimeout(() => {
-               requestAnimationFrame(animateDarkBlue);
-           }, 4000);
-       }
-           
+
+    if (!darkBlueStarted) {
+        darkBlueStarted = true;
+        DarkBlueX = planeDarkBlueX;
+        DarkBlueY = planeDarkBlueY;
+        DarkBlueState = "up";
+        firstDecisionMadeDarkBlue = false;
+        secondDecisionMadeDarkBlue = false;
+        thirdDecisionMadeDarkBlue = false;
+        fourthDecisionMadeDarkBlue = false;
+        fifthDecisionMadeDarkBlue = false;
+        sixthDecisionMadeDarkBlue = false;
+        seventhDecisionMadeDarkBlue = false;
+        planeDarkBlue1.style.transform = "rotate(0deg)";
+        planeDarkBlue1.style.left = DarkBlueX + "px";
+        planeDarkBlue1.style.bottom = DarkBlueY + "px";
+
+
+        setTimeout(() => { requestAnimationFrame(animateDarkBlue); }, 4000);
+    }
+
 }

@@ -15,7 +15,7 @@ const OrangeXLimit = window.innerWidth * 0.525;
 const OrangeXLimit2 = window.innerWidth * 0.62;
 const OrangeXLimit3 = window.innerWidth * 0.815;
 
-let OrangeState = "up"; 
+let OrangeState = "up";
 let purpleStarted = false;
 
 // ================= ORANGE =================
@@ -76,7 +76,7 @@ function animateOrange() {
             OrangeState = "down2";
         }
     }
-    
+
     // ================= DOWN (segment 2) =================
 
     else if (OrangeState === "down2") {
@@ -127,17 +127,30 @@ function animateOrange() {
 
     if (OrangeState === "down4" && OrangeY < window.innerHeight * 0.25) {
         planeOrange1.style.visibility = "hidden";
+        purpleStarted = false;
+
         return;
     }
 
     requestAnimationFrame(animateOrange);
-    
-        if (!purpleStarted) {
-            purpleStarted = true;
-    
-            setTimeout(() => {
-                requestAnimationFrame(animatePurple);
-            }, 4000);
-        }   
-            
+
+    if (!purpleStarted) {
+        purpleStarted = true;
+        PurpleX = planePurpleX;
+        PurpleY = planePurpleY;
+        PurpleState = "up";
+        firstDecisionMadePurple = false;
+        secondDecisionMadePurple = false;
+        thirdDecisionMadePurple = false;
+        fourthDecisionMadePurple = false;
+        fifthDecisionMadePurple = false;
+        sixthDecisionMadePurple = false;
+        seventhDecisionMadePurple = false;
+        planePurple1.style.transform = "rotate(0deg)";
+        planePurple1.style.left = PurpleX + "px";
+        planePurple1.style.bottom = PurpleY + "px";
+
+        setTimeout(() => { requestAnimationFrame(animatePurple); }, 4000);
+    }
+
 }

@@ -48,27 +48,6 @@ function animateBlack() {
         if (BlackY >= BlackYLimit) {
             BlackState = "right1";
         }
-
-        // ✅ START GREEN ONLY ONCE
-        if (!greenStartedFromBlack) {
-            greenStartedFromBlack = true;
-            greenX = planeX1;
-            greenY = planeY1;
-            greenState = "up";
-            firstDecisionMadeGreen = false;
-            secondDecisionMadeGreen = false;
-            thirdDecisionMadeGreen = false;
-            fourthDecisionMadeGreen = false;
-            fifthDecisionMadeGreen = false;
-            sixthDecisionMadeGreen = false;
-            seventhDecisionMadeGreen = false;
-            planeGreen1.style.transform = "rotate(0deg)";
-            planeGreen1.style.left = greenX + "px";
-            planeGreen1.style.bottom = greenY + "px";
-            setTimeout(() => {
-                requestAnimationFrame(animateGreen);
-            }, 4000);
-        }
     }
 
     // ================= RIGHT 1 =================
@@ -140,8 +119,29 @@ function animateBlack() {
     // ================= END =================
     if (BlackState === "right3" && BlackX >= window.innerWidth * 0.9) {
         planeBlack1.style.visibility = "hidden";
+        greenStartedFromBlack = false;
         return;
     }
 
     requestAnimationFrame(animateBlack);
+
+    if (!greenStartedFromBlack) {
+        greenStartedFromBlack = true;
+        greenX = planeX1;
+        greenY = planeY1;
+        greenState = "up";
+        firstDecisionMadeGreen = false;
+        secondDecisionMadeGreen = false;
+        thirdDecisionMadeGreen = false;
+        fourthDecisionMadeGreen = false;
+        fifthDecisionMadeGreen = false;
+        sixthDecisionMadeGreen = false;
+        seventhDecisionMadeGreen = false;
+        planeGreen1.style.transform = "rotate(0deg)";
+        planeGreen1.style.left = greenX + "px";
+        planeGreen1.style.bottom = greenY + "px";
+        setTimeout(() => {
+            requestAnimationFrame(animateGreen);
+        }, 4000);
+    }
 }

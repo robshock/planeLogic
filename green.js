@@ -14,9 +14,10 @@ const greenYLimit4 = window.innerHeight * 0.44;
 
 const greenXLimit = window.innerWidth * 0.525;
 const greenXLimit2 = window.innerWidth * 0.62;
-let greenState = "up"; 
+let greenState = "up";
 
 let yellowStarted = false;
+let yellowStartedFromGreen = false;
 
 // ================= GREEN ================= 
 
@@ -33,7 +34,7 @@ function animateGreen() {
     if (!firstDecisionMadeGreen && greenY >= decisionPoint1) {
       firstDecisionMadeGreen = true;
       if (!mode1Right) return triggerGameOver();
-      
+
     }
 
     if (!secondDecisionMadeGreen && greenY >= decisionPoint2) {
@@ -49,6 +50,27 @@ function animateGreen() {
     if (greenY >= greenYLimit) {
       greenState = "right1";
     }
+    /*
+        if (!yellowStartedFromGreen) {
+          yellowStartedFromGreen = true;
+          yellowX = planeYellowX;
+          yellowY = planeYellowY;
+          YellowState = "up";
+          firstDecisionMadeYellow = false;
+          secondDecisionMadeYellow = false;
+          thirdDecisionMadeYellow = false;
+          fourthDecisionMadeYellow = false;
+          fifthDecisionMadeYellow = false;
+          sixthDecisionMadeYellow = false;
+          seventhDecisionMadeYellow = false;
+          planeYellow1.style.transform = "rotate(0deg)";
+          planeYellow1.style.left = yellowX + "px";
+          planeYellow1.style.bottom = yellowY + "px";
+          setTimeout(() => {
+            requestAnimationFrame(animateYellow);
+          }, 4000);
+        }
+    */
   }
 
   // ================= RIGHT (segment 1) =================
@@ -134,17 +156,31 @@ function animateGreen() {
 
   if (greenState === "down4" && greenY < window.innerHeight * 0.15) {
     planeGreen1.style.visibility = "hidden";
-    //greenState = "up";
+    yellowStarted = false;
+
     return;
 
   }
 
   requestAnimationFrame(animateGreen);
 
-    if (!yellowStarted) {
-      yellowStarted = true;
-  
-      setTimeout(() => { requestAnimationFrame(animateYellow);}, 4000);
-    }
-  
+  if (!yellowStarted) {
+    yellowStarted = true;
+    YellowX = planeYellowX;
+    YellowY = planeYellowY;
+    YellowState = "up";
+    firstDecisionMadeYellow = false;
+    secondDecisionMadeYellow = false;
+    thirdDecisionMadeYellow = false;
+    fourthDecisionMadeYellow = false;
+    fifthDecisionMadeYellow = false;
+    sixthDecisionMadeYellow = false;
+    seventhDecisionMadeYellow = false;
+    planeYellow1.style.transform = "rotate(0deg)";
+    planeYellow1.style.left = YellowX + "px";
+    planeYellow1.style.bottom = YellowY + "px";
+
+    setTimeout(() => { requestAnimationFrame(animateYellow); }, 4000);
+  }
+
 }

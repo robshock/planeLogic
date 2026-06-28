@@ -102,6 +102,8 @@ function animatePurple() {
 
     if (PurpleState === "down" && PurpleY < window.innerHeight * 0.60) {
         planePurple1.style.visibility = "hidden";
+        pinkStarted = false;
+
         return;
     }
 
@@ -109,10 +111,22 @@ function animatePurple() {
 
     if (!pinkStarted) {
         pinkStarted = true;
+        PinkX = planePinkX;
+        PinkY = planePinkY;
+        PinkState = "up";
+        firstDecisionMadePink = false;
+        secondDecisionMadePink = false;
+        thirdDecisionMadePink = false;
+        fourthDecisionMadePink = false;
+        fifthDecisionMadePink = false;
+        sixthDecisionMadePink = false;
+        seventhDecisionMadePink = false;
+        planePink1.style.transform = "rotate(0deg)";
+        planePink1.style.left = PinkX + "px";
+        planePink1.style.bottom = PinkY + "px";
 
-        setTimeout(() => {
-            requestAnimationFrame(animatePink);
-        }, 4000);
+
+        setTimeout(() => { requestAnimationFrame(animatePink); }, 4000);
     }
 
 }
