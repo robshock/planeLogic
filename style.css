@@ -194,13 +194,15 @@
 }
 
 #restartBtn {
-  display: block; /* always visible */
+  display: block;
+  /* always visible */
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 999999999;
   opacity: 0.4;
-  pointer-events: none; /* prevents clicking */
+  pointer-events: none;
+  /* prevents clicking */
   transition: opacity 0.3s ease;
 }
 
@@ -244,7 +246,7 @@ body {
 /* Make all arrow images the same size */
 .arrow,
 .arrowUp {
-  width: clamp(70px, 15vw, 70px);
+  width: clamp(40px, 10vw, 70px);
   height: auto;
 }
 
