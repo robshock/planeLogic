@@ -94,10 +94,9 @@ function animateYellow() {
 
     if (!blueStarted) {
         blueStarted = true;
-
-        setTimeout(() => {
-            requestAnimationFrame(animateBlue);
-        }, 4000);
+            setTimeout(() => {
+                requestAnimationFrame(animateBlue);
+            }, 4000);
     }
 
 }

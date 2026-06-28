@@ -1,7 +1,7 @@
 // START GAME
 function startGame() {
   gameStarted = true;
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animateGreen);
   //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateBlue);
   //requestAnimationFrame(animateOrange);

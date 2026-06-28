@@ -15,11 +15,15 @@ function triggerGameOver() {
   planeDarkBlue1.style.visibility = "hidden";
   planeDarkGreen1.style.visibility = "hidden";
   planeBlack1.style.visibility = "hidden";
-  
 
   gameOverScreen.style.display = "flex";
-  restartBtn.style.display = "block";
 
-    gameOver = true;
+  gameOver = true;
 
+  // start locked
+  restartBtn.classList.remove("enabled");
+
+  setTimeout(() => {
+    restartBtn.classList.add("enabled");
+  }, 4000);
 }

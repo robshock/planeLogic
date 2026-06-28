@@ -195,7 +195,7 @@ window.addEventListener("resize", updateDecisionPoints);
 
 function restartGame() {
   gameOverScreen.style.display = "none";
-  restartBtn.style.display = "none";
+  restartBtn.classList.remove("enabled");
 
   yellowStarted = false;
   blueStarted = false;
@@ -375,7 +375,7 @@ function restartGame() {
   planeBlack1.style.left = BlackX + "px";
   planeBlack1.style.bottom = BlackY + "px";
 
-  //requestAnimationFrame(animate);
+  requestAnimationFrame(animateGreen);
   //requestAnimationFrame(animateYellow);
   //requestAnimationFrame(animateOrange);
   //requestAnimationFrame(animateBlue);
@@ -384,11 +384,6 @@ function restartGame() {
   //requestAnimationFrame(animateRed);
   //requestAnimationFrame(animateDarkBlue);
   //requestAnimationFrame(animateDarkGreen);
-  requestAnimationFrame(animateBlack);
+  //requestAnimationFrame(animateBlack);
 
-}
-function triggerGameOver() {
-  gameOver = true;
-  gameOverScreen.style.display = "flex";
-  restartBtn.style.display = "block";
 }

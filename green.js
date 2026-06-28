@@ -1,6 +1,4 @@
 let greenX = planeX1, greenY = planeY1;
-let verticalLockGreen = false;
-let horizontalLockGreen = false;
 let firstDecisionMadeGreen = false;
 let secondDecisionMadeGreen = false;
 let thirdDecisionMadeGreen = false;
@@ -22,7 +20,7 @@ let yellowStarted = false;
 
 // ================= GREEN ================= 
 
-function animate() {
+function animateGreen() {
   if (gameOver || !gameStarted) return;
 
   planeGreen1.style.visibility = "visible";
@@ -35,6 +33,7 @@ function animate() {
     if (!firstDecisionMadeGreen && greenY >= decisionPoint1) {
       firstDecisionMadeGreen = true;
       if (!mode1Right) return triggerGameOver();
+      
     }
 
     if (!secondDecisionMadeGreen && greenY >= decisionPoint2) {
@@ -135,19 +134,17 @@ function animate() {
 
   if (greenState === "down4" && greenY < window.innerHeight * 0.15) {
     planeGreen1.style.visibility = "hidden";
-    //yellowStarted = false;
+    //greenState = "up";
     return;
 
   }
 
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animateGreen);
 
     if (!yellowStarted) {
       yellowStarted = true;
   
-      setTimeout(() => {
-        requestAnimationFrame(animateYellow);
-      }, 4000);
+      setTimeout(() => { requestAnimationFrame(animateYellow);}, 4000);
     }
   
 }

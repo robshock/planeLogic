@@ -1,34 +1,187 @@
-.houseGreen { position: absolute; left: 60%; bottom: 15%; width: 15vw; height: auto; }
-.houseYellow { position: absolute; left: 21.5%; bottom: 85%; width: 15vw; height: auto; }
-.houseBlue { position: absolute; left: 21.5%; bottom: 15%; width: 15vw; height: auto; }
-.houseRed { position: absolute; left: 3.5%; bottom: 45%; width: 15vw; height: auto; }
-.houseOrange { position: absolute; left: 80%; bottom: 25%; width: 15vw; height: auto; }
-.housePurple { position: absolute; left: 3.5%; bottom: 55.5%; width: 15vw; height: auto; }
-.houseBlack { position: absolute; left: 80%; bottom: 50%; width: 15vw; height: auto; }
-.houseDarkGreen { position: absolute; left: 23.5%; bottom: 50%; width: 15vw; height: auto; }
-.houseDarkBlue { position: absolute; left: 80%; bottom: 86%; width: 15vw; height: auto; }
-.housePink { position: absolute; left: 80%; bottom: 75%; width: 15vw; height: auto; }
+.houseGreen {
+  position: absolute;
+  left: 60%;
+  bottom: 15%;
+  width: 15vw;
+  height: auto;
+}
 
-#planeGreen1 { visibility: hidden; width: 10vw; height: auto; }
-#planeYellow1 { visibility: hidden; width: 10vw; height: auto; }
-#planeBlue1 { visibility: hidden; width: 10vw; height: auto; }
-#planeRed1 { visibility: hidden; width: 10vw; height: auto; }
-#planePurple1 { visibility: hidden; width: 10vw; height: auto; }
-#planePink1 { visibility: hidden; width: 10vw; height: auto; }
-#planeBlack1 { visibility: hidden; width: 10vw; height: auto; }
-#planeOrange1 { visibility: hidden; width: 10vw; height: auto; }
-#planeDarkGreen1 { visibility: hidden; width: 10vw; height: auto; }
-#planeDarkBlue1 { visibility: hidden; width: 10vw; height: auto; }
+.houseYellow {
+  position: absolute;
+  left: 21.5%;
+  bottom: 85%;
+  width: 15vw;
+  height: auto;
+}
 
-#arrowBtn {left: 43%;bottom: 37%;}
-#arrowBtn2 {left: 43%;bottom: 50%;}
-#arrowBtn3 {left: 43%;bottom: 61%;}
-#arrowBtn4 {left: 52.5%;bottom: 75%;}
-#arrowBtn5 {left: 62%;bottom: 61%;}
-#arrowBtn6 {left: 62%;bottom: 50%;}
-#arrowBtn7 {left: 62%;bottom: 39%;}
-#arrowBtn8 {left: 24.5%;bottom: 72%;}
-#arrowBtn9 {left: 24.5%;bottom: 30%;}
+.houseBlue {
+  position: absolute;
+  left: 21.5%;
+  bottom: 15%;
+  width: 15vw;
+  height: auto;
+}
+
+.houseRed {
+  position: absolute;
+  left: 3.5%;
+  bottom: 45%;
+  width: 15vw;
+  height: auto;
+}
+
+.houseOrange {
+  position: absolute;
+  left: 80%;
+  bottom: 25%;
+  width: 15vw;
+  height: auto;
+}
+
+.housePurple {
+  position: absolute;
+  left: 3.5%;
+  bottom: 55.5%;
+  width: 15vw;
+  height: auto;
+}
+
+.houseBlack {
+  position: absolute;
+  left: 80%;
+  bottom: 50%;
+  width: 15vw;
+  height: auto;
+}
+
+.houseDarkGreen {
+  position: absolute;
+  left: 23.5%;
+  bottom: 50%;
+  width: 15vw;
+  height: auto;
+}
+
+.houseDarkBlue {
+  position: absolute;
+  left: 80%;
+  bottom: 86%;
+  width: 15vw;
+  height: auto;
+}
+
+.housePink {
+  position: absolute;
+  left: 80%;
+  bottom: 75%;
+  width: 15vw;
+  height: auto;
+}
+
+#planeGreen1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeYellow1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeBlue1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeRed1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planePurple1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planePink1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeBlack1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeOrange1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeDarkGreen1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#planeDarkBlue1 {
+  visibility: hidden;
+  width: 10vw;
+  height: auto;
+}
+
+#arrowBtn {
+  left: 43%;
+  bottom: 37%;
+}
+
+#arrowBtn2 {
+  left: 43%;
+  bottom: 50%;
+}
+
+#arrowBtn3 {
+  left: 43%;
+  bottom: 61%;
+}
+
+#arrowBtn4 {
+  left: 52.5%;
+  bottom: 75%;
+}
+
+#arrowBtn5 {
+  left: 62%;
+  bottom: 61%;
+}
+
+#arrowBtn6 {
+  left: 62%;
+  bottom: 50%;
+}
+
+#arrowBtn7 {
+  left: 62%;
+  bottom: 39%;
+}
+
+#arrowBtn8 {
+  left: 24.5%;
+  bottom: 72%;
+}
+
+#arrowBtn9 {
+  left: 24.5%;
+  bottom: 30%;
+}
 
 #scoreDisplay {
   position: absolute;
@@ -40,15 +193,23 @@
   z-index: 999;
 }
 
-#restartBtn { 
-  display: none;
-  position: fixed; 
-  top: 20px; 
-  left: 20px; 
-  z-index: 999999999; 
+#restartBtn {
+  display: block; /* always visible */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999999999;
+  opacity: 0.4;
+  pointer-events: none; /* prevents clicking */
+  transition: opacity 0.3s ease;
 }
 
-  body {
+#restartBtn.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body {
   margin: 0;
   overflow: hidden;
   background: rgb(76, 176, 215);
@@ -286,6 +447,7 @@ img {
   width: 2px;
   height: 15vh;
 }
+
 .h10 {
   top: 32vh;
   left: 76vw;

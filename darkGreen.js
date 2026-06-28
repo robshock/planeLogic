@@ -56,7 +56,7 @@ function animateDarkGreen() {
     }
 
     requestAnimationFrame(animateDarkGreen);
-    
+    /*
        if (!blackStarted) {
            blackStarted = true;
    
@@ -64,5 +64,5 @@ function animateDarkGreen() {
                requestAnimationFrame(animateBlack);
            }, 4000);
        }
-    
+    */
 }
