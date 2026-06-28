@@ -86,7 +86,7 @@ function animateBlue() {
     }
 
     requestAnimationFrame(animateBlue);
-/*
+
     if (!orangeStarted) {
         orangeStarted = true;
 
@@ -94,5 +94,5 @@ function animateBlue() {
             requestAnimationFrame(animateOrange);
         }, 4000);
     }
-        */
+        
 }
